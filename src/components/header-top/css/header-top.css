@@ -1,0 +1,35 @@
+.header_top_main {
+  border-bottom: 1px solid lightgray;
+}
+.header_top_main_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.header_top_phone,
+.header_top_email,
+.header_top_open_hours {
+  margin-top: 0px;
+  font-size: 15px;
+  color: rgb(131, 128, 128);
+  font-weight: 530;
+}
+
+.header_top_phone_div,
+.header_top_email_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_top_phone_div i,
+.header_top_email_div i {
+  margin-top: -13px;
+  margin-right: 5px;
+  color: rgb(131, 128, 128);
+  font-size: 15px;
+}

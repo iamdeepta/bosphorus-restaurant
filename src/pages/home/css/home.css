@@ -1,0 +1,16 @@
+.home_page_main_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+
+  background: url("https://designhubtechnologies.com/bosphorus/assets/images/bg3.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home_container {
+  background-color: rgba(255, 255, 255, 0.64);
+  min-height: 100vh;
+}

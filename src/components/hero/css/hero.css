@@ -1,0 +1,199 @@
+.hero_main_div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 80px 0px;
+}
+
+/* .hero_left_content {
+  width: 400px;
+} */
+
+.hero_right_content {
+  margin-left: 40px;
+}
+
+.hero_title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero_description {
+  font-size: 24px;
+  color: rgb(48, 47, 47);
+  margin-top: 26px;
+  margin-bottom: 40px;
+}
+
+.hero_view_menu_btn {
+  margin-top: 42px;
+  background-color: black;
+  padding: 10px 45px 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px 60px 6px 40px;
+  font-size: 16px;
+}
+
+.hero_view_menu_btn:hover {
+  color: white;
+}
+
+.hero_main_baklava_img {
+  height: 400px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.hero_small_slider_div {
+  margin-top: 70px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.hero_small_slider_div .slick-slider {
+  width: 520px;
+}
+
+.hero_small_slider_div .slick-slide {
+  margin-right: 0px;
+}
+
+.hero_small_slider_inside_div {
+  background: rgb(255, 255, 255, 0.3);
+  padding: 15px 0px 0px 0px;
+  width: 100px !important;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.hero_small_slider_inside_div a {
+  color: rgb(112, 112, 112);
+}
+
+.hero_small_slider_inside_div p {
+  color: rgb(112, 112, 112);
+}
+
+.hero_small_slider_div .slick-slider .slick-prev::before {
+  position: absolute;
+  color: rgb(83, 83, 83);
+  font-size: 18px;
+  margin-left: 540px;
+  top: -15px;
+}
+
+.hero_small_slider_div .slick-slider .slick-next::before {
+  position: absolute;
+  color: rgb(83, 83, 83);
+  font-size: 18px;
+  margin-left: -10px;
+  top: 15px;
+}
+
+.hero_large_slider_inside_div {
+  background: rgb(255, 255, 255, 0.36);
+  padding: 25px 20px 20px 20px;
+  width: 200px !important;
+
+  border-radius: 135px 135px 30px 30px;
+}
+
+.hero_large_slider_div .slick-slider {
+  position: absolute;
+  width: 820px;
+  margin-top: -60px;
+  margin-left: -170px;
+}
+
+.hero_large_slider_inside_div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 65px;
+}
+
+.hero_large_slider_title_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0px 0px 0px;
+}
+
+.hero_large_slider_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hero_large_slider_title_section a {
+  padding: 3px;
+  text-decoration: none;
+
+  margin-top: -11px;
+  color: black;
+}
+
+.hero_large_slider_price_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero_large_slider_rating_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero_large_slider_price {
+  font-weight: bold;
+}
+
+.hero_large_slider_rating_star {
+  color: orange;
+}
+
+.hero_large_slider_rating_section a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin-top: -12px;
+  margin-left: 5px;
+}
+
+.hero_large_slider_inside_div img {
+  position: absolute;
+
+  border-radius: 50%;
+  height: 120px;
+  width: auto;
+  margin-top: -80px;
+  margin-left: 20px;
+}
+
+.hero_large_slider_div .slick-slider .slick-list .slick-track .slick-current {
+  margin-top: 60px;
+  transition: 0.5s;
+}
+
+.hero_large_slider_div .slick-slider .slick-prev::before {
+  position: fixed;
+  color: rgb(29, 29, 29);
+  font-size: 24px;
+  margin-left: 630px;
+  margin-top: 130px;
+}
+
+.hero_large_slider_div .slick-slider .slick-next::before {
+  position: fixed;
+  color: rgb(29, 29, 29);
+  font-size: 24px;
+  margin-left: -180px;
+  margin-top: 130px;
+}
