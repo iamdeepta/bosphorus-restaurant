@@ -50,7 +50,7 @@ const Hero = () => {
               View Menu <i className="fa fa-arrow-right"></i>
             </a>
             <div className="hero_small_slider_div">
-              <Slider {...settings}>
+              <Slider className="hero_small_slider_main" {...settings}>
                 <div className="hero_small_slider_inside_div">
                   <a href=".">
                     <FontAwesomeIcon icon={faIceCream} />

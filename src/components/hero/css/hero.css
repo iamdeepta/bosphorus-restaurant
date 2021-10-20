@@ -28,10 +28,10 @@
 .hero_view_menu_btn {
   margin-top: 42px;
   background-color: black;
-  padding: 10px 45px 10px 20px;
+  padding: 10px 45px 10px 45px;
   color: white;
   text-decoration: none;
-  border-radius: 15px 60px 6px 40px;
+  border-radius: 15px 60px 15px 60px;
   font-size: 16px;
 }
 
@@ -57,9 +57,15 @@
   width: 520px;
 }
 
-.hero_small_slider_div .slick-slide {
+/* .hero_small_slider_div
+  .slick-slider
+  .slick-list
+  .slick-track
+  .slick-slide[data-index="2"]
+  + .slick-slide[aria-hidden="false"] {
   margin-right: 0px;
-}
+  margin-top: 130px !important;
+} */
 
 .hero_small_slider_inside_div {
   background: rgb(255, 255, 255, 0.3);
@@ -103,6 +109,7 @@
 
 .hero_large_slider_div .slick-slider {
   position: absolute;
+  z-index: 0;
   width: 820px;
   margin-top: -60px;
   margin-left: -170px;
@@ -177,13 +184,13 @@
   margin-left: 20px;
 }
 
-.hero_large_slider_div .slick-slider .slick-list .slick-track .slick-current {
+/* .hero_large_slider_div .slick-slider .slick-list .slick-track .slick-current {
   margin-top: 60px;
   transition: 0.5s;
-}
+} */
 
 .hero_large_slider_div .slick-slider .slick-prev::before {
-  position: fixed;
+  position: absolute;
   color: rgb(29, 29, 29);
   font-size: 24px;
   margin-left: 630px;
@@ -191,9 +198,35 @@
 }
 
 .hero_large_slider_div .slick-slider .slick-next::before {
-  position: fixed;
+  position: absolute;
   color: rgb(29, 29, 29);
   font-size: 24px;
   margin-left: -180px;
   margin-top: 130px;
+}
+
+.hero_large_slider_div .slick-slider .slick-list .slick-track {
+  height: 350px;
+}
+
+/* slide when not active/center*/
+.hero_large_slider_div .slick-slider .slick-list .slick-track .slick-slide,
+.hero_large_slider_div
+  .slick-slider
+  .slick-list
+  .slick-track
+  .slick-slide[aria-hidden="true"]:not(.slick-cloned)
+  ~ .slick-cloned[aria-hidden="true"] {
+  margin-top: 0px;
+  transition: transform 0.5s;
+}
+/* slide when active/center */
+.hero_large_slider_div .slick-slider .slick-list .slick-track .slick-center,
+.hero_large_slider_div
+  .slick-slider
+  .slick-list
+  .slick-track
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+  + .slick-cloned[aria-hidden="true"] {
+  transform: translateY(60px);
 }
