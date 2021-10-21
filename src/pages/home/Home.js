@@ -4,6 +4,7 @@ import HeaderTop from "../../components/header-top/HeaderTop";
 import Header from "../../components/header/Header";
 import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
+import PopularFood from "../../components/popularFood/PopularFood";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
           <HeaderTop />
           <Header />
           <Hero />
+          <PopularFood />
           <Footer />
         </div>
       </div>
