@@ -5,6 +5,7 @@ import Header from "../../components/header/Header";
 import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 import PopularFood from "../../components/popularFood/PopularFood";
+import AboutUs from "../../components/about-us/AboutUs";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
           <Header />
           <Hero />
           <PopularFood />
+          <AboutUs />
           <Footer />
         </div>
       </div>

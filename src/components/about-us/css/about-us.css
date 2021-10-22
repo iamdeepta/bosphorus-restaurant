@@ -1,0 +1,104 @@
+.about_us_section {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.about_us_inside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about_us_left_image {
+  height: 550px;
+  width: auto;
+}
+
+.about_us_right_content {
+  margin-left: 80px;
+}
+
+.about_us_text {
+  color: rgb(223, 124, 11);
+  font-weight: bold;
+}
+
+.about_us_restaurant_name {
+  font-weight: bold;
+}
+
+.about_us_description {
+  margin-top: 20px;
+  line-height: 28px;
+}
+
+.about_us_list_point1 {
+  margin-top: 25px;
+}
+
+.about_us_list_point2 {
+  margin-top: 18px;
+}
+
+.about_us_list_point3 {
+  margin-top: 18px;
+  margin-bottom: 40px;
+}
+
+.about_us_list_point_icon {
+  color: rgb(223, 124, 11);
+  margin-right: 10px;
+}
+
+.about_us_list_point_name {
+  font-size: 17px;
+}
+
+.about_us_read_more_btn {
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  padding: 10px 25px;
+
+  border-radius: 6px;
+}
+
+.about_us_numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.about_us_menu_numbers_div,
+.about_us_stuff_numbers_div,
+.about_us_customer_numbers_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about_us_numbers_vertical_line {
+  height: 60px;
+  width: 2px;
+  background-color: rgb(216, 215, 215);
+  margin-top: -10px;
+}
+
+.about_us_menu_numbers,
+.about_us_stuff_numbers,
+.about_us_customer_numbers {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+.about_us_menu_text,
+.about_us_stuff_text,
+.about_us_customer_text {
+  font-size: 17px;
+  color: gray;
+  font-weight: bold;
+}
