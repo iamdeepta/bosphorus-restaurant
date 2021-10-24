@@ -58,7 +58,7 @@
 .about_us_read_more_btn {
   background-color: black;
   text-decoration: none;
-  color: white;
+  color: white !important;
   padding: 10px 25px;
 
   border-radius: 6px;
@@ -101,4 +101,19 @@
   font-size: 17px;
   color: gray;
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .about_us_left_image {
+    display: none;
+  }
+
+  .about_us_inside {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about_us_right_content {
+    margin-left: 0px;
+  }
 }

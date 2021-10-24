@@ -33,3 +33,19 @@
   color: rgb(131, 128, 128);
   font-size: 15px;
 }
+
+@media screen and (max-width: 768px) {
+  .header_top_phone,
+  .header_top_email,
+  .header_top_open_hours {
+    font-size: 10px;
+  }
+
+  .header_top_email {
+    display: none;
+  }
+
+  .header_top_email_div i {
+    display: none;
+  }
+}

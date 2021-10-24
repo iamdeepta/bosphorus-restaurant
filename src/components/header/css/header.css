@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.hamburger_menu {
+  display: none;
+}
+
 .header_menu_div ul {
   display: flex;
   list-style: none;
@@ -64,4 +68,20 @@
 
 .header_logo_div a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header_menu_div {
+    display: none;
+  }
+
+  .hamburger_menu {
+    display: block;
+    font-size: 18px;
+  }
+
+  .header_logo_div {
+    margin-left: -12px;
+    margin-top: 5px;
+  }
 }

@@ -27,7 +27,7 @@
 }
 
 .popular_food_slider_inside_div {
-  background: rgb(255, 255, 255, 0.36);
+  background: rgb(255, 255, 255, 0.6);
   padding: 25px 20px 20px 20px;
   width: 220px !important;
 
@@ -237,3 +237,107 @@
   + .slick-cloned[aria-hidden="true"] {
   transform: translateY(60px);
 } */
+
+@media screen and (max-width: 768px) {
+  .popular_food_section {
+    padding-top: 380px;
+  }
+
+  .popular_food_slider_div
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide[data-index="1"]
+    + .slick-slide[aria-hidden="false"] {
+    margin-right: 0px;
+    margin-top: 0px !important;
+  }
+
+  .popular_food_slider_div
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide[data-index="3"]
+    + .slick-slide[aria-hidden="false"] {
+    margin-right: 0px;
+    margin-top: 0px !important;
+  }
+
+  .popular_food_slider_div
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide[data-index="5"]
+    + .slick-slide[aria-hidden="false"] {
+    margin-right: 0px;
+    margin-top: 0px !important;
+  }
+
+  .popular_food_slider_div
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide[data-index="7"]
+    + .slick-slide[aria-hidden="false"] {
+    margin-right: 0px;
+    margin-top: 0px !important;
+  }
+
+  .popular_food_slider_div
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide[data-index="9"]
+    + .slick-slide[aria-hidden="false"] {
+    margin-right: 0px;
+    margin-top: 0px !important;
+  }
+
+  .popular_food_slider_div
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide[data-index="-1"]
+    + .slick-slide[aria-hidden="false"] {
+    margin-right: 0px;
+    margin-top: 0px !important;
+  }
+
+  .popular_food_slider_div
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide[data-index="-3"]
+    + .slick-slide[aria-hidden="false"] {
+    margin-right: 0px;
+    margin-top: 0px !important;
+  }
+
+  .popular_food_slider_div
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide[data-index="-5"]
+    + .slick-slide[aria-hidden="false"] {
+    margin-right: 0px;
+    margin-top: 0px !important;
+  }
+
+  .popular_food_slider_inside_div {
+    padding: 25px 20px 20px 20px;
+    width: 190px !important;
+  }
+
+  .popular_food_slider_inside_div img {
+    margin-top: -80px;
+    margin-left: 20px;
+  }
+
+  .popular_food_slider_div .slick-slider .slick-prev::before {
+    position: absolute;
+    color: rgb(29, 29, 29);
+    font-size: 24px;
+    margin-left: 305px;
+    margin-top: 180px;
+  }
+}

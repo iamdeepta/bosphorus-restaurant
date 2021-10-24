@@ -24,16 +24,30 @@ const Hero = () => {
     autoplay: true,
   };
 
-  let settings1 = {
-    // dots: true,
-    infinite: true,
-    centerMode: true,
-    centerPadding: "0px",
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-  };
+  let settings1;
+  if (window.innerWidth <= 460) {
+    settings1 = {
+      // dots: true,
+      infinite: true,
+      centerMode: true,
+      centerPadding: "0px",
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+    };
+  } else {
+    settings1 = {
+      // dots: true,
+      infinite: true,
+      centerMode: true,
+      centerPadding: "0px",
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+    };
+  }
 
   return (
     <>

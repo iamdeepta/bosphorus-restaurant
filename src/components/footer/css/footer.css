@@ -147,3 +147,21 @@
   color: black !important;
   margin-left: 50px;
 }
+
+@media screen and (max-width: 768px) {
+  .footer_section_inside {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .footer_bottom_inside {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .footer_bottom_right a {
+    margin-left: 0px;
+  }
+}
