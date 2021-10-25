@@ -21,6 +21,7 @@
   width: 270px !important;
 
   border-radius: 135px 135px 30px 30px;
+  box-shadow: 0px 3px 3px 0px rgb(0.2, 0.2, 0.2, 0.2);
 }
 
 .our_menu_slider_inside_div:hover {
@@ -38,6 +39,10 @@
   width: 100%;
   margin-top: 50px;
   margin-left: 0px;
+}
+
+.our_menu_slider_div .slick-slider .slick-list .slick-track {
+  height: 610px;
 }
 
 .our_menu_slider_inside_div {
@@ -128,6 +133,15 @@
   font-size: 24px;
   margin-left: -95px;
   margin-top: 320px;
+}
+
+.our_menu_slider_div
+  .slick-slider
+  .slick-list
+  .slick-track
+  .slick-slide
+  .our_menu_slider_inside_div {
+  margin-bottom: 30px;
 }
 
 /* .our_menu_slider_div .slick-slider .slick-list .slick-track {

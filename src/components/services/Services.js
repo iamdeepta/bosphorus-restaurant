@@ -11,11 +11,24 @@ const Services = () => {
   return (
     <>
       <section className="services_section container">
-        <p className="services_text">SERVICES</p>
-        <h2 className="services_catering_services_text">Catering Services</h2>
+        <p className="services_text" data-aos="fade-up" data-aos-delay="0">
+          SERVICES
+        </p>
+        <h2
+          className="services_catering_services_text"
+          data-aos="fade-up"
+          data-aos-delay="20"
+        >
+          Catering Services
+        </h2>
 
         <div className="services_contents">
-          <a href="." className="services_contents_links">
+          <a
+            href="."
+            className="services_contents_links"
+            data-aos="zoom-in"
+            data-aos-delay="20"
+          >
             <FontAwesomeIcon
               className="services_contents_icon"
               icon={faBirthdayCake}
@@ -27,7 +40,12 @@ const Services = () => {
             </p>
           </a>
 
-          <a href="." className="services_contents_links">
+          <a
+            href="."
+            className="services_contents_links"
+            data-aos="zoom-in"
+            data-aos-delay="20"
+          >
             <FontAwesomeIcon
               className="services_contents_icon"
               icon={faUserFriends}
@@ -39,7 +57,12 @@ const Services = () => {
             </p>
           </a>
 
-          <a href="." className="services_contents_links">
+          <a
+            href="."
+            className="services_contents_links"
+            data-aos="zoom-in"
+            data-aos-delay="20"
+          >
             <FontAwesomeIcon
               className="services_contents_icon"
               icon={faCloudMeatball}

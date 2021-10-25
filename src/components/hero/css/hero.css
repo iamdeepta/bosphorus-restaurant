@@ -105,6 +105,7 @@
   width: 200px !important;
 
   border-radius: 135px 135px 30px 30px;
+  box-shadow: 0px 3px 3px 0px rgb(0.2, 0.2, 0.2, 0.2);
 }
 
 .hero_large_slider_div .slick-slider {
@@ -280,7 +281,17 @@
   }
 
   .hero_large_slider_inside_div {
-    width: 50vw !important;
+    width: 195px !important;
+  }
+
+  .hero_large_slider_inside_div img {
+    position: absolute;
+
+    border-radius: 50%;
+    height: 120px;
+    width: auto;
+    margin-top: -80px;
+    margin-left: 19px;
   }
 
   .hero_large_slider_div .slick-slider {
@@ -315,11 +326,19 @@
     position: absolute;
     color: rgb(29, 29, 29);
     font-size: 24px;
-    margin-left: 170px;
+    margin-left: 320px;
     margin-top: 130px;
   }
 
   .hero_large_slider_div .slick-slider .slick-prev {
     z-index: 1;
+  }
+
+  .hero_large_slider_div .slick-slider .slick-next::before {
+    position: absolute;
+    color: rgb(29, 29, 29);
+    font-size: 24px;
+    margin-left: -80px;
+    margin-top: 130px;
   }
 }

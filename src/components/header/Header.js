@@ -4,6 +4,7 @@ import AppUrl from "../../classes/AppUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   function openSidebar() {
@@ -22,16 +23,16 @@ const Header = () => {
       <header className="header_main">
         <div className="header_main_div container">
           <div className="header_logo_div">
-            <a href=".">
+            <Link to="/">
               <img
                 src={AppUrl.image_url + "assets/images/logo.jpg"}
                 alt="logo"
                 className="header_logo"
               />
-            </a>
-            <a href=".">
+            </Link>
+            <Link to="/">
               <h4 className="header_logo_text">Bosphorus</h4>
-            </a>
+            </Link>
           </div>
 
           <FontAwesomeIcon
@@ -43,22 +44,22 @@ const Header = () => {
           <div className="header_menu_div">
             <ul>
               <li>
-                <a href=".">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href=".">About Us</a>
+                <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                <a href=".">Menu</a>
+                <Link to="/menu">Menu</Link>
               </li>
               <li>
-                <a href=".">Stories</a>
+                <Link to="/stories">Stories</Link>
               </li>
               <li>
-                <a href=".">Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <a href=".">Book a table</a>
+                <Link to="/reservation">Book a table</Link>
               </li>
               <li>
                 <a href=".">

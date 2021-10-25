@@ -42,15 +42,21 @@ const PopularFood = () => {
       <section className="popular_food_section">
         <div className="popular_food_inside container">
           <div className="popular_food_header">
-            <p className="popular_food_text">Popular Food</p>
-            <a href="." className="popular_food_see_all">
+            <p className="popular_food_text" data-aos="fade-right">
+              Popular Food
+            </p>
+            <a href="." className="popular_food_see_all" data-aos="fade-left">
               See all
             </a>
           </div>
 
           <div className="popular_food_slider_div">
             <Slider {...settings1}>
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"
@@ -86,7 +92,11 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"
@@ -122,7 +132,11 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"
@@ -158,7 +172,11 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"
@@ -194,7 +212,11 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"
@@ -230,7 +252,11 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"
@@ -266,7 +292,11 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"
@@ -302,7 +332,11 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"
@@ -338,7 +372,11 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"
@@ -374,7 +412,11 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div className="popular_food_slider_inside_div">
+              <div
+                className="popular_food_slider_inside_div"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+              >
                 <img
                   src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                   alt="baklava"

@@ -16,13 +16,31 @@ const Reservation = () => {
           <img
             src={AppUrl.image_url + "assets/images/reservation.png"}
             alt="reservation"
+            data-aos="zoom-in"
+            data-aos-delay="0"
           />
           <div className="reservation_right_content">
-            <p className="reservation_booking_text">BOOKING</p>
-            <h2 className="reservation_h2">Reserve A Table</h2>
+            <p
+              className="reservation_booking_text"
+              data-aos="fade-up"
+              data-aos-delay="0"
+            >
+              BOOKING
+            </p>
+            <h2
+              className="reservation_h2"
+              data-aos="fade-up"
+              data-aos-delay="10"
+            >
+              Reserve A Table
+            </h2>
 
             <div className="reservation_right_contents">
-              <div className="reservation_right_content1">
+              <div
+                className="reservation_right_content1"
+                data-aos="fade-up"
+                data-aos-delay="40"
+              >
                 <p className="reservation_date_label">
                   Date
                   {/* <span>
@@ -46,7 +64,11 @@ const Reservation = () => {
                 />
               </div>
 
-              <div className="reservation_right_content2">
+              <div
+                className="reservation_right_content2"
+                data-aos="fade-up"
+                data-aos-delay="60"
+              >
                 <p className="reservation_time_label">Time</p>
                 <input
                   type="time"
@@ -75,9 +97,15 @@ const Reservation = () => {
               </div>
             </div>
 
-            <a href="." className="reservation_btn">
-              Confirm Reservation
-            </a>
+            <div
+              className="reservation_btn_div"
+              data-aos="fade-up"
+              data-aos-delay="80"
+            >
+              <a href="." className="reservation_btn">
+                Confirm Reservation
+              </a>
+            </div>
           </div>
         </div>
       </section>

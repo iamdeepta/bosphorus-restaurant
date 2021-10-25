@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 //import { useState } from "react";
 import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   //   const [servicesOpen1, setServicesOpen1] = useState(false);
@@ -32,30 +33,30 @@ const Sidebar = () => {
     <>
       <div className="sidebar_div" id="sidebar_div">
         <ul className="sidebar_ul">
-          <a href="/home" className="sidebar_a">
+          <Link to="/" className="sidebar_a">
             <li className="sidebar_li">Home</li>
-          </a>
+          </Link>
           <hr />
-          <a href="/about" className="sidebar_a">
+          <Link to="/about-us" className="sidebar_a">
             <li className="sidebar_li">About Us</li>
-          </a>
+          </Link>
           <hr />
 
-          <a href="/" className="sidebar_a">
+          <Link to="/menu" className="sidebar_a">
             <li className="sidebar_li">Menu</li>
-          </a>
+          </Link>
           <hr />
           <a href="/" className="sidebar_a">
             <li className="sidebar_li">Stories</li>
           </a>
           <hr />
-          <a href="/" className="sidebar_a">
+          <Link to="/contact" className="sidebar_a">
             <li className="sidebar_li">Contact</li>
-          </a>
+          </Link>
           <hr />
-          <a href="/" className="sidebar_a">
+          <Link to="/reservation" className="sidebar_a">
             <li className="sidebar_li sidebar_book_table">Book a Table</li>
-          </a>
+          </Link>
           <hr />
           <a href="/" className="sidebar_a">
             <li className="sidebar_li">

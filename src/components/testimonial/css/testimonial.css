@@ -101,7 +101,7 @@
   .testimonial_slider_upper_quote {
     position: absolute;
     z-index: 2;
-    margin-top: -200px;
+    margin-top: -230px;
     margin-left: 0px;
     font-size: 18px;
     color: gray;
@@ -110,7 +110,7 @@
   .testimonial_slider_lower_quote {
     position: absolute;
     z-index: 2;
-    margin-top: 70px;
+    margin-top: 100px;
     margin-left: 90vw;
     font-size: 18px;
     color: gray;

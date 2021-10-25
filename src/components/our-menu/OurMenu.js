@@ -43,13 +43,25 @@ const OurMenu = () => {
     <>
       <section className="our_menu_section container">
         <div className="our_menu_header">
-          <p className="our_menu_specialities_text">SPECIALITIES</p>
-          <h2 className="our_menu_text">Our Menu</h2>
+          <p
+            className="our_menu_specialities_text"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            SPECIALITIES
+          </p>
+          <h2 className="our_menu_text" data-aos="fade-up" data-aos-delay="10">
+            Our Menu
+          </h2>
         </div>
 
         <div className="our_menu_slider_div">
           <Slider {...settings1}>
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"
@@ -85,7 +97,11 @@ const OurMenu = () => {
               </div>
             </div>
 
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"
@@ -121,7 +137,11 @@ const OurMenu = () => {
               </div>
             </div>
 
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"
@@ -157,7 +177,11 @@ const OurMenu = () => {
               </div>
             </div>
 
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"
@@ -193,7 +217,11 @@ const OurMenu = () => {
               </div>
             </div>
 
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"
@@ -229,7 +257,11 @@ const OurMenu = () => {
               </div>
             </div>
 
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"
@@ -265,7 +297,11 @@ const OurMenu = () => {
               </div>
             </div>
 
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"
@@ -301,7 +337,11 @@ const OurMenu = () => {
               </div>
             </div>
 
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"
@@ -337,7 +377,11 @@ const OurMenu = () => {
               </div>
             </div>
 
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"
@@ -373,7 +417,11 @@ const OurMenu = () => {
               </div>
             </div>
 
-            <div className="our_menu_slider_inside_div">
+            <div
+              className="our_menu_slider_inside_div"
+              data-aos="zoom-in"
+              data-aos-delay="20"
+            >
               <img
                 src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
                 alt="baklava"

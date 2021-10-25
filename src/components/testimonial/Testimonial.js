@@ -21,8 +21,14 @@ const Testimonial = () => {
     <>
       <section className="testimonial_section container">
         <div className="testimonial_header">
-          <p className="testimonial_text">TESTIMONIAL</p>
-          <h2 className="testimonial_customer_reviews_text">
+          <p className="testimonial_text" data-aos="fade-up" data-aos-delay="0">
+            TESTIMONIAL
+          </p>
+          <h2
+            className="testimonial_customer_reviews_text"
+            data-aos="fade-up"
+            data-aos-delay="10"
+          >
             Customer Reviews
           </h2>
         </div>
@@ -32,6 +38,8 @@ const Testimonial = () => {
             className="testimonial_img"
             src={AppUrl.image_url + "assets/images/person-burger.jpg"}
             alt="burger"
+            data-aos="fade-right"
+            data-aos-delay="20"
           />
 
           <FontAwesomeIcon
@@ -44,7 +52,11 @@ const Testimonial = () => {
             icon={faQuoteRight}
           />
 
-          <div className="testimonial_slider_div">
+          <div
+            className="testimonial_slider_div"
+            data-aos="fade-left"
+            data-aos-delay="20"
+          >
             <Slider className="testimonial_slider_main" {...settings}>
               <div className="testimonial_slider_inside_div">
                 <p className="testimonial_slider_reviews">

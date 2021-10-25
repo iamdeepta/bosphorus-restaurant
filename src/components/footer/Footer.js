@@ -7,24 +7,29 @@ import {
   faPhone,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
       <section className="footer_section">
         <div className="footer_section_inside container">
-          <div className="footer_first_column">
+          <div
+            className="footer_first_column"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div className="footer_first_column_logo_div">
-              <a href=".">
+              <Link to="/">
                 <img
                   className="footer_first_column_logo"
                   src={AppUrl.image_url + "assets/images/logo.jpg"}
                   alt="logo"
                 />
-              </a>
-              <a href="." className="footer_first_column_logo_text">
+              </Link>
+              <Link to="/" className="footer_first_column_logo_text">
                 Bosphorus
-              </a>
+              </Link>
             </div>
 
             <div className="footer_first_column_location_div">
@@ -81,43 +86,54 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="footer_second_column">
-            <a href="." className="footer_second_column_service">
+          <div
+            className="footer_second_column"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            {/* <a href="." className="footer_second_column_service">
               Service
-            </a>
-            <a href="." className="footer_second_column_service_child">
-              How it works
-            </a>
-            <a href="." className="footer_second_column_service_child">
-              Home delivery
-            </a>
-            <a href="." className="footer_second_column_service_child">
-              Products
-            </a>
-            <a href="." className="footer_second_column_service_child">
+            </a> */}
+            <Link to="/" className="footer_second_column_service_child">
+              Home
+            </Link>
+            <Link to="/menu" className="footer_second_column_service_child">
               Menu
-            </a>
+            </Link>
+            <Link to="/contact" className="footer_second_column_service_child">
+              Contact
+            </Link>
+            {/* <a href="." className="footer_second_column_service_child">
+              Menu
+            </a> */}
           </div>
 
-          <div className="footer_third_column">
-            <a href="." className="footer_third_column_company">
+          <div
+            className="footer_third_column"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            {/* <a href="." className="footer_third_column_company">
               Company
-            </a>
-            <a href="." className="footer_third_column_company_child">
+            </a> */}
+            <Link to="/about-us" className="footer_third_column_company_child">
               About us
-            </a>
-            <a href="." className="footer_third_column_company_child">
-              News
-            </a>
-            <a href="." className="footer_third_column_company_child">
-              Our trusted partner
-            </a>
-            <a href="." className="footer_third_column_company_child">
+            </Link>
+            <Link to="/stories" className="footer_third_column_company_child">
+              Stories
+            </Link>
+            <Link
+              to="/reservation"
+              className="footer_third_column_company_child"
+            >
+              Book a table
+            </Link>
+            {/* <a href="." className="footer_third_column_company_child">
               New users FAQ
-            </a>
+            </a> */}
           </div>
 
-          <div className="footer_fourth_column">
+          {/* <div className="footer_fourth_column">
             <a href="." className="footer_fourth_column_supports">
               Supports
             </a>
@@ -133,9 +149,9 @@ const Footer = () => {
             <a href="." className="footer_fourth_column_supports_child">
               Terms conditions
             </a>
-          </div>
+          </div> */}
 
-          <div className="footer_fifth_column">
+          {/* <div className="footer_fifth_column">
             <a href="." className="footer_fifth_column_resources">
               Resources
             </a>
@@ -151,7 +167,7 @@ const Footer = () => {
             <a href="." className="footer_fifth_column_resources_child">
               Sitemap
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 

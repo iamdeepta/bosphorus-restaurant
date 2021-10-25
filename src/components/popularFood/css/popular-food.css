@@ -32,6 +32,7 @@
   width: 220px !important;
 
   border-radius: 135px 135px 30px 30px;
+  box-shadow: 0px 3px 3px 0px rgb(0.2, 0.2, 0.2, 0.2);
 }
 
 .popular_food_slider_div .slick-slider {
@@ -133,7 +134,7 @@
 }
 
 .popular_food_slider_div .slick-slider .slick-list .slick-track {
-  height: 280px;
+  height: 290px;
 }
 
 .popular_food_slider_div
@@ -325,12 +326,12 @@
 
   .popular_food_slider_inside_div {
     padding: 25px 20px 20px 20px;
-    width: 190px !important;
+    width: 185px !important;
   }
 
   .popular_food_slider_inside_div img {
     margin-top: -80px;
-    margin-left: 20px;
+    margin-left: 15px;
   }
 
   .popular_food_slider_div .slick-slider .slick-prev::before {

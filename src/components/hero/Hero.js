@@ -54,16 +54,32 @@ const Hero = () => {
       <section className="hero_main">
         <div className="hero_main_div container">
           <div className="hero_left_content">
-            <h1 className="hero_title">A Tale Of Turkey Healthy Food</h1>
+            <h1 className="hero_title" data-aos="fade-right" data-aos-delay="0">
+              A Tale Of Turkey Healthy Food
+            </h1>
 
-            <h2 className="hero_description">
+            <h2
+              className="hero_description"
+              data-aos="fade-right"
+              data-aos-delay="0"
+            >
               Indulge into the rich variety of mouth watering dishes we have to
               offer
             </h2>
-            <a href="." className="hero_view_menu_btn">
-              View Menu <i className="fa fa-arrow-right"></i>
-            </a>
-            <div className="hero_small_slider_div">
+            <div
+              className="hero_view_menu_btn_div"
+              data-aos="fade-right"
+              data-aos-delay="0"
+            >
+              <a href="." className="hero_view_menu_btn">
+                View Menu <i className="fa fa-arrow-right"></i>
+              </a>
+            </div>
+            <div
+              className="hero_small_slider_div"
+              data-aos="fade-right"
+              data-aos-delay="0"
+            >
               <Slider className="hero_small_slider_main" {...settings}>
                 <div className="hero_small_slider_inside_div">
                   <a href=".">
@@ -103,11 +119,17 @@ const Hero = () => {
               className="hero_main_baklava_img"
               src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
               alt="baklava"
+              data-aos="zoom-in"
+              data-aos-delay="0"
             />
 
             <div className="hero_large_slider_div">
               <Slider {...settings1}>
-                <div className="hero_large_slider_inside_div">
+                <div
+                  className="hero_large_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                >
                   <img
                     src={
                       AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
@@ -145,7 +167,11 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="hero_large_slider_inside_div">
+                <div
+                  className="hero_large_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                >
                   <img
                     src={
                       AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
@@ -183,7 +209,11 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="hero_large_slider_inside_div">
+                <div
+                  className="hero_large_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                >
                   <img
                     src={
                       AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
@@ -221,7 +251,11 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="hero_large_slider_inside_div">
+                <div
+                  className="hero_large_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                >
                   <img
                     src={
                       AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
@@ -259,7 +293,11 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="hero_large_slider_inside_div">
+                <div
+                  className="hero_large_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                >
                   <img
                     src={
                       AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
@@ -297,7 +335,11 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="hero_large_slider_inside_div">
+                <div
+                  className="hero_large_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                >
                   <img
                     src={
                       AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
