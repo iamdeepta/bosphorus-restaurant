@@ -14,7 +14,7 @@ const Reservation = () => {
         </div> */}
         <div className="reservation_content">
           <img
-            src={AppUrl.image_url + "assets/images/reservation.png"}
+            src={AppUrl.image_url + "assets/images/reservation_pic.png"}
             alt="reservation"
             data-aos="zoom-in"
             data-aos-delay="0"

@@ -33,7 +33,7 @@ const Sidebar = () => {
     <>
       <div className="sidebar_div" id="sidebar_div">
         <ul className="sidebar_ul">
-          <Link to="/" className="sidebar_a">
+          <Link to="/bosphorus" className="sidebar_a">
             <li className="sidebar_li">Home</li>
           </Link>
           <hr />

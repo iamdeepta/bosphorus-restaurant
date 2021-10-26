@@ -63,7 +63,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food17.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
@@ -103,7 +103,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food18.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
@@ -143,7 +143,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food19.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
@@ -183,7 +183,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food20.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
@@ -223,7 +223,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food21.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
@@ -263,7 +263,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food22.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
@@ -303,7 +303,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food23.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
@@ -343,7 +343,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food24.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
@@ -383,7 +383,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food25.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
@@ -423,7 +423,7 @@ const OurMenu = () => {
               data-aos-delay="20"
             >
               <img
-                src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+                src={AppUrl.image_url + "assets/images/food6.jpg"}
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">

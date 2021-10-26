@@ -131,9 +131,7 @@ const Hero = () => {
                   data-aos-delay="0"
                 >
                   <img
-                    src={
-                      AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
-                    }
+                    src={AppUrl.image_url + "assets/images/food1.jpg"}
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
@@ -173,9 +171,7 @@ const Hero = () => {
                   data-aos-delay="0"
                 >
                   <img
-                    src={
-                      AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
-                    }
+                    src={AppUrl.image_url + "assets/images/food2.jpg"}
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
@@ -215,9 +211,7 @@ const Hero = () => {
                   data-aos-delay="0"
                 >
                   <img
-                    src={
-                      AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
-                    }
+                    src={AppUrl.image_url + "assets/images/food3.jpg"}
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
@@ -257,9 +251,7 @@ const Hero = () => {
                   data-aos-delay="0"
                 >
                   <img
-                    src={
-                      AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
-                    }
+                    src={AppUrl.image_url + "assets/images/food4.jpg"}
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
@@ -299,9 +291,7 @@ const Hero = () => {
                   data-aos-delay="0"
                 >
                   <img
-                    src={
-                      AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
-                    }
+                    src={AppUrl.image_url + "assets/images/food5.jpg"}
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
@@ -341,9 +331,7 @@ const Hero = () => {
                   data-aos-delay="0"
                 >
                   <img
-                    src={
-                      AppUrl.image_url + "assets/images/hero_main_baklava.jpg"
-                    }
+                    src={AppUrl.image_url + "assets/images/food6.jpg"}
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">

@@ -23,14 +23,14 @@ const Header = () => {
       <header className="header_main">
         <div className="header_main_div container">
           <div className="header_logo_div">
-            <Link to="/">
+            <Link to="/bosphorus">
               <img
-                src={AppUrl.image_url + "assets/images/logo.jpg"}
+                src={AppUrl.image_url + "assets/images/logo.png"}
                 alt="logo"
                 className="header_logo"
               />
             </Link>
-            <Link to="/">
+            <Link to="/bosphorus">
               <h4 className="header_logo_text">Bosphorus</h4>
             </Link>
           </div>
@@ -44,7 +44,7 @@ const Header = () => {
           <div className="header_menu_div">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/bosphorus">Home</Link>
               </li>
               <li>
                 <Link to="/about-us">About Us</Link>

@@ -4,6 +4,7 @@ import "../node_modules/font-awesome/css/font-awesome.min.css";
 import Home from "./pages/home/Home";
 import AboutUsMain from "./pages/about-us/AboutUsMain";
 import Menu from "./pages/menu/Menu";
+import ContactUs from "./pages/contact-us/ContactUs";
 import ReservationMain from "./pages/reservation/ReservationMain";
 import Stories from "./pages/stories/Stories";
 import { Route, Switch } from "react-router-dom";
@@ -20,11 +21,12 @@ function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/bosphorus" component={Home} />
         <Route exact path="/about-us" component={AboutUsMain} />
         <Route exact path="/menu" component={Menu} />
         <Route exact path="/reservation" component={ReservationMain} />
         <Route exact path="/stories" component={Stories} />
+        <Route exact path="/contact" component={ContactUs} />
       </Switch>
     </>
   );
