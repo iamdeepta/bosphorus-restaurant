@@ -62,7 +62,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Havuc Dilim</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -76,7 +76,7 @@ const PopularFood = () => {
                   </p>
                 </div>
                 <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
+                  <p className="popular_food_slider_price">TK. 1550</p>
                   <div className="popular_food_slider_rating_section">
                     <p className="popular_food_slider_rating">
                       4.9{" "}
@@ -102,7 +102,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Square Pistachio</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -116,7 +116,7 @@ const PopularFood = () => {
                   </p>
                 </div>
                 <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
+                  <p className="popular_food_slider_price">TK. 242</p>
                   <div className="popular_food_slider_rating_section">
                     <p className="popular_food_slider_rating">
                       4.9{" "}
@@ -142,7 +142,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Mussel Baklava</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -182,7 +182,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Baklava Rolled</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -196,7 +196,7 @@ const PopularFood = () => {
                   </p>
                 </div>
                 <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
+                  <p className="popular_food_slider_price">TK. 232</p>
                   <div className="popular_food_slider_rating_section">
                     <p className="popular_food_slider_rating">
                       4.9{" "}
@@ -222,7 +222,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Square Walnut</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -236,7 +236,7 @@ const PopularFood = () => {
                   </p>
                 </div>
                 <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
+                  <p className="popular_food_slider_price">TK. 232</p>
                   <div className="popular_food_slider_rating_section">
                     <p className="popular_food_slider_rating">
                       4.9{" "}
@@ -262,7 +262,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Shredded Kadayif</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -276,7 +276,7 @@ const PopularFood = () => {
                   </p>
                 </div>
                 <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
+                  <p className="popular_food_slider_price">TK. 242</p>
                   <div className="popular_food_slider_rating_section">
                     <p className="popular_food_slider_rating">
                       4.9{" "}
@@ -302,7 +302,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Caesar Salad</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -312,11 +312,11 @@ const PopularFood = () => {
                 </div>
                 <div className="popular_food_slider_description_section">
                   <p className="popular_food_slider_description">
-                    Species of baklava
+                    Species of salad
                   </p>
                 </div>
                 <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
+                  <p className="popular_food_slider_price">TK. 495</p>
                   <div className="popular_food_slider_rating_section">
                     <p className="popular_food_slider_rating">
                       4.9{" "}
@@ -342,7 +342,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Greek Salad</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -352,11 +352,11 @@ const PopularFood = () => {
                 </div>
                 <div className="popular_food_slider_description_section">
                   <p className="popular_food_slider_description">
-                    Species of baklava
+                    Species of salad
                   </p>
                 </div>
                 <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
+                  <p className="popular_food_slider_price">TK. 525</p>
                   <div className="popular_food_slider_rating_section">
                     <p className="popular_food_slider_rating">
                       4.9{" "}
@@ -382,7 +382,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Chicken Sandwich</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -392,11 +392,11 @@ const PopularFood = () => {
                 </div>
                 <div className="popular_food_slider_description_section">
                   <p className="popular_food_slider_description">
-                    Species of baklava
+                    Species of sandwich
                   </p>
                 </div>
                 <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
+                  <p className="popular_food_slider_price">TK. 465</p>
                   <div className="popular_food_slider_rating_section">
                     <p className="popular_food_slider_rating">
                       4.9{" "}
@@ -422,7 +422,7 @@ const PopularFood = () => {
                   alt="baklava"
                 />
                 <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Ozel Baklava</p>
+                  <p className="popular_food_slider_title">Chicken Burger</p>
                   <a href=".">
                     <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
@@ -432,11 +432,11 @@ const PopularFood = () => {
                 </div>
                 <div className="popular_food_slider_description_section">
                   <p className="popular_food_slider_description">
-                    Species of baklava
+                    Species of burger
                   </p>
                 </div>
                 <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
+                  <p className="popular_food_slider_price">TK. 595</p>
                   <div className="popular_food_slider_rating_section">
                     <p className="popular_food_slider_rating">
                       4.9{" "}

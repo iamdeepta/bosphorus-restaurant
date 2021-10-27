@@ -6,7 +6,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 
 import Reservation from "../../components/reservation/Reservation";
 import Footer from "../../components/footer/Footer";
-import BottomNav from "../../components/bottom-nav/BottomNav";
+//import BottomNav from "../../components/bottom-nav/BottomNav";
 
 const ReservationMain = () => {
   return (
@@ -19,7 +19,7 @@ const ReservationMain = () => {
 
           <Reservation />
           <Footer />
-          <BottomNav />
+          {/* <BottomNav /> */}
         </div>
       </div>
     </>

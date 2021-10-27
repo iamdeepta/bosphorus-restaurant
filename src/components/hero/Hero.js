@@ -175,7 +175,7 @@ const Hero = () => {
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Ozel Baklava</p>
+                    <p className="hero_large_slider_title">Cevizli Baklava</p>
                     <a href=".">
                       <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
@@ -189,7 +189,7 @@ const Hero = () => {
                     </p>
                   </div>
                   <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 390</p>
+                    <p className="hero_large_slider_price">TK. 1290</p>
                     <div className="hero_large_slider_rating_section">
                       <p className="hero_large_slider_rating">
                         4.9{" "}
@@ -215,7 +215,7 @@ const Hero = () => {
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Ozel Baklava</p>
+                    <p className="hero_large_slider_title">Fistikli Baklava</p>
                     <a href=".">
                       <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
@@ -229,7 +229,7 @@ const Hero = () => {
                     </p>
                   </div>
                   <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 390</p>
+                    <p className="hero_large_slider_price">TK. 1350</p>
                     <div className="hero_large_slider_rating_section">
                       <p className="hero_large_slider_rating">
                         4.9{" "}
@@ -255,7 +255,7 @@ const Hero = () => {
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Ozel Baklava</p>
+                    <p className="hero_large_slider_title">Kadayif</p>
                     <a href=".">
                       <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
@@ -269,7 +269,7 @@ const Hero = () => {
                     </p>
                   </div>
                   <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 390</p>
+                    <p className="hero_large_slider_price">TK. 1660</p>
                     <div className="hero_large_slider_rating_section">
                       <p className="hero_large_slider_rating">
                         4.9{" "}
@@ -295,7 +295,7 @@ const Hero = () => {
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Ozel Baklava</p>
+                    <p className="hero_large_slider_title">Turkish Delight</p>
                     <a href=".">
                       <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
@@ -309,7 +309,7 @@ const Hero = () => {
                     </p>
                   </div>
                   <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 390</p>
+                    <p className="hero_large_slider_price">TK. 690</p>
                     <div className="hero_large_slider_rating_section">
                       <p className="hero_large_slider_rating">
                         4.9{" "}
@@ -335,7 +335,7 @@ const Hero = () => {
                     alt="baklava"
                   />
                   <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Ozel Baklava</p>
+                    <p className="hero_large_slider_title">Chocolate Baklava</p>
                     <a href=".">
                       <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
@@ -349,7 +349,7 @@ const Hero = () => {
                     </p>
                   </div>
                   <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 390</p>
+                    <p className="hero_large_slider_price">TK. 2599</p>
                     <div className="hero_large_slider_rating_section">
                       <p className="hero_large_slider_rating">
                         4.9{" "}

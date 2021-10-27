@@ -11,6 +11,7 @@ import { Route, Switch } from "react-router-dom";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import BottomNav from "./components/bottom-nav/BottomNav";
 
 function App() {
   //initiate animation on scroll
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      <BottomNav />
       <Switch>
         <Route exact path="/bosphorus" render={Home} />
         <Route exact path="/about-us" render={AboutUsMain} />

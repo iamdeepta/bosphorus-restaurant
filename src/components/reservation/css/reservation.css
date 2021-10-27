@@ -73,9 +73,121 @@
   background-color: black;
 }
 
+#talk {
+  animation: talk 1s ease-in-out alternate infinite;
+}
+
+#leaf1,
+#leaf2 {
+  animation: leaf1 1.5s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#leaf4,
+#boyhead,
+#waiterhead {
+  animation: leaf3 1.2s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#girlhead {
+  animation: girlhead 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#girlhand {
+  animation: girlhand 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#waiterhand {
+  animation: waiterhand 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#waiterhand2 {
+  animation: waiterhand2 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes talk {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes leaf1 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-10deg);
+  }
+}
+
+@keyframes leaf3 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(8deg);
+  }
+}
+
+@keyframes girlhead {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-5deg);
+  }
+}
+
+@keyframes girlhand {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-10deg);
+  }
+}
+
+@keyframes waiterhand {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(12deg);
+  }
+}
+
+@keyframes waiterhand2 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(7deg);
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .reservation_content img {
-    display: none;
+  .reservation_content {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+  }
+  .reservation_content svg {
+    height: 180px;
+    margin-bottom: 40px;
   }
 
   .reservation_section {
@@ -83,7 +195,7 @@
   }
 
   .reservation_right_content {
-    margin-left: 0px;
+    margin-left: 20px;
   }
 
   .reservation_date_input,

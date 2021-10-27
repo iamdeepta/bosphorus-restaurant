@@ -67,7 +67,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">Veg Sandwich</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -77,11 +77,11 @@ const OurMenu = () => {
               </div>
               <div className="our_menu_slider_description_section">
                 <p className="our_menu_slider_description">
-                  Species of baklava
+                  Species of sandwich
                 </p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 340</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}
@@ -107,7 +107,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">Tandoori Wrap</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -116,12 +116,10 @@ const OurMenu = () => {
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
-                <p className="our_menu_slider_description">
-                  Species of baklava
-                </p>
+                <p className="our_menu_slider_description">Species of wrap</p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 455</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}
@@ -147,7 +145,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">Spaghetti Bolognese</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -156,12 +154,10 @@ const OurMenu = () => {
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
-                <p className="our_menu_slider_description">
-                  Species of baklava
-                </p>
+                <p className="our_menu_slider_description">Species of pasta</p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 590</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}
@@ -187,7 +183,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">T-Bone Steak</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -196,12 +192,10 @@ const OurMenu = () => {
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
-                <p className="our_menu_slider_description">
-                  Species of baklava
-                </p>
+                <p className="our_menu_slider_description">Species of steak</p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 1490</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}
@@ -227,7 +221,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">Salmon Steak</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -236,12 +230,10 @@ const OurMenu = () => {
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
-                <p className="our_menu_slider_description">
-                  Species of baklava
-                </p>
+                <p className="our_menu_slider_description">Species of steak</p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 1650</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}
@@ -267,7 +259,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">Rib-Eye Steak</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -276,12 +268,10 @@ const OurMenu = () => {
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
-                <p className="our_menu_slider_description">
-                  Species of baklava
-                </p>
+                <p className="our_menu_slider_description">Species of steak</p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 1550</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}
@@ -307,7 +297,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">Buffalo Wings</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -316,12 +306,10 @@ const OurMenu = () => {
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
-                <p className="our_menu_slider_description">
-                  Species of baklava
-                </p>
+                <p className="our_menu_slider_description">Starter</p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 475</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}
@@ -347,7 +335,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">French Fries</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -356,12 +344,10 @@ const OurMenu = () => {
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
-                <p className="our_menu_slider_description">
-                  Species of baklava
-                </p>
+                <p className="our_menu_slider_description">Starter</p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 220</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}
@@ -387,7 +373,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">Prawn Tempura</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -396,12 +382,10 @@ const OurMenu = () => {
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
-                <p className="our_menu_slider_description">
-                  Species of baklava
-                </p>
+                <p className="our_menu_slider_description">Starter</p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 625</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}
@@ -427,7 +411,7 @@ const OurMenu = () => {
                 alt="baklava"
               />
               <div className="our_menu_slider_title_section">
-                <p className="our_menu_slider_title">Ozel Baklava</p>
+                <p className="our_menu_slider_title">Quesadilla</p>
                 <a href=".">
                   <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
@@ -436,12 +420,10 @@ const OurMenu = () => {
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
-                <p className="our_menu_slider_description">
-                  Species of baklava
-                </p>
+                <p className="our_menu_slider_description">Species of burger</p>
               </div>
               <div className="our_menu_slider_price_section">
-                <p className="our_menu_slider_price">TK. 390</p>
+                <p className="our_menu_slider_price">TK. 490</p>
                 <div className="our_menu_slider_rating_section">
                   <p className="our_menu_slider_rating">
                     4.9{" "}

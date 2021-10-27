@@ -5,7 +5,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Gallery from "../../components/gallery/Gallery";
 //import Reservation from "../../components/reservation/Reservation";
 import Footer from "../../components/footer/Footer";
-import BottomNav from "../../components/bottom-nav/BottomNav";
+//import BottomNav from "../../components/bottom-nav/BottomNav";
 
 const Stories = () => {
   return (
@@ -18,7 +18,7 @@ const Stories = () => {
 
           <Gallery />
           <Footer />
-          <BottomNav />
+          {/* <BottomNav /> */}
         </div>
       </div>
     </>

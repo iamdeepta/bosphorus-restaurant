@@ -33,7 +33,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <Link href="/reservation" className="header_book_table_mbl">
+          <Link to="/reservation" className="header_book_table_mbl">
             Book a table
           </Link>
           <FontAwesomeIcon
