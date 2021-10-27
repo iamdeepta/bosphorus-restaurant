@@ -11,6 +11,7 @@ import Services from "../../components/services/Services";
 import OurMenu from "../../components/our-menu/OurMenu";
 import Testimonial from "../../components/testimonial/Testimonial";
 import Reservation from "../../components/reservation/Reservation";
+import BottomNav from "../../components/bottom-nav/BottomNav";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
           <HeaderTop />
           <Header />
           <Sidebar />
+
           <Hero />
           <PopularFood />
           <AboutUs />
@@ -28,6 +30,7 @@ const Home = () => {
           <Testimonial />
           <Reservation />
           <Footer />
+          <BottomNav />
         </div>
       </div>
     </>

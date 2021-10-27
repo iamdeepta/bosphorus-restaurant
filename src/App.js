@@ -21,12 +21,12 @@ function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/bosphorus" component={Home} />
-        <Route exact path="/about-us" component={AboutUsMain} />
-        <Route exact path="/menu" component={Menu} />
-        <Route exact path="/reservation" component={ReservationMain} />
-        <Route exact path="/stories" component={Stories} />
-        <Route exact path="/contact" component={ContactUs} />
+        <Route exact path="/bosphorus" render={Home} />
+        <Route exact path="/about-us" render={AboutUsMain} />
+        <Route exact path="/menu" render={Menu} />
+        <Route exact path="/reservation" render={ReservationMain} />
+        <Route exact path="/stories" render={Stories} />
+        <Route exact path="/contact" render={ContactUs} />
       </Switch>
     </>
   );

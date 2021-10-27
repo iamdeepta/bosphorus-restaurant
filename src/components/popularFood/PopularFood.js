@@ -20,7 +20,7 @@ const PopularFood = () => {
       centerMode: true,
       centerPadding: "0px",
       speed: 500,
-      slidesToShow: 2,
+      slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
     };

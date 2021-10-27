@@ -17,12 +17,12 @@ const Contact = () => {
         </h2>
         <img
           className="contact_map"
-          src={AppUrl.image_url + "assets/images/bosphorus-map.png"}
+          src={AppUrl.image_url + "assets/images/contact_map.webp"}
           alt="map"
         />
         <img
           className="contact_location"
-          src={AppUrl.image_url + "assets/images/location.png"}
+          src={AppUrl.image_url + "assets/images/location.webp"}
           alt="location"
         />
         <div className="contact_inside container">

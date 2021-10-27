@@ -8,6 +8,7 @@ import OurMenu from "../../components/our-menu/OurMenu";
 
 import Reservation from "../../components/reservation/Reservation";
 import Footer from "../../components/footer/Footer";
+import BottomNav from "../../components/bottom-nav/BottomNav";
 
 const Menu = () => {
   return (
@@ -22,6 +23,7 @@ const Menu = () => {
 
           <Reservation />
           <Footer />
+          <BottomNav />
         </div>
       </div>
     </>

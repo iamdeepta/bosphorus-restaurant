@@ -16,28 +16,28 @@ const Gallery = () => {
           </div>
           <div className="gallery_main_content">
             <SRLWrapper>
-              <a href={AppUrl.image_url + "assets/images/burger.jpg"}>
+              <a href={AppUrl.image_url + "assets/images/burger.webp"}>
                 <img
                   className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/burger.jpg"}
+                  src={AppUrl.image_url + "assets/images/burger.webp"}
                   alt="Burger"
                   data-aos="zoom-in"
                   data-aos-delay="0"
                 />
               </a>
-              <a href={AppUrl.image_url + "assets/images/sandwich.jpg"}>
+              <a href={AppUrl.image_url + "assets/images/sandwich.webp"}>
                 <img
                   className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/sandwich.jpg"}
+                  src={AppUrl.image_url + "assets/images/sandwich.webp"}
                   alt="Sndwich"
                   data-aos="zoom-in"
                   data-aos-delay="0"
                 />
               </a>
-              <a href={AppUrl.image_url + "assets/images/kunafa.jpg"}>
+              <a href={AppUrl.image_url + "assets/images/kunafa.webp"}>
                 <img
                   className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/kunafa.jpg"}
+                  src={AppUrl.image_url + "assets/images/kunafa.webp"}
                   alt="Kunafa"
                   data-aos="zoom-in"
                   data-aos-delay="0"
@@ -52,10 +52,10 @@ const Gallery = () => {
                   data-aos-delay="0"
                 />
               </a>
-              <a href={AppUrl.image_url + "assets/images/chickenfry.jpg"}>
+              <a href={AppUrl.image_url + "assets/images/chickenfry.webp"}>
                 <img
                   className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/chickenfry.jpg"}
+                  src={AppUrl.image_url + "assets/images/chickenfry.webp"}
                   alt="Chicken Fry"
                   data-aos="zoom-in"
                   data-aos-delay="0"

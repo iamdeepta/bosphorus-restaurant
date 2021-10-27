@@ -326,19 +326,28 @@
 
   .popular_food_slider_inside_div {
     padding: 25px 20px 20px 20px;
-    width: 185px !important;
+    width: 70% !important;
+    margin-left: 58px;
   }
 
   .popular_food_slider_inside_div img {
     margin-top: -80px;
-    margin-left: 15px;
+    margin-left: 20%;
   }
 
   .popular_food_slider_div .slick-slider .slick-prev::before {
     position: absolute;
     color: rgb(29, 29, 29);
     font-size: 24px;
-    margin-left: 305px;
+    margin-left: 160px;
+    margin-top: 180px;
+  }
+
+  .popular_food_slider_div .slick-slider .slick-next::before {
+    position: absolute;
+    color: rgb(29, 29, 29);
+    font-size: 24px;
+    margin-left: -190px;
     margin-top: 180px;
   }
 }

@@ -281,7 +281,8 @@
   }
 
   .hero_large_slider_inside_div {
-    width: 195px !important;
+    width: 68% !important;
+    margin-left: 60px;
   }
 
   .hero_large_slider_inside_div img {
@@ -291,7 +292,7 @@
     height: 120px;
     width: auto;
     margin-top: -80px;
-    margin-left: 19px;
+    margin-left: 20%;
   }
 
   .hero_large_slider_div .slick-slider {
@@ -326,7 +327,7 @@
     position: absolute;
     color: rgb(29, 29, 29);
     font-size: 24px;
-    margin-left: 320px;
+    margin-left: 170px;
     margin-top: 130px;
   }
 
@@ -338,7 +339,7 @@
     position: absolute;
     color: rgb(29, 29, 29);
     font-size: 24px;
-    margin-left: -80px;
+    margin-left: -200px;
     margin-top: 130px;
   }
 }

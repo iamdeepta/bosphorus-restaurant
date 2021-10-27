@@ -11,8 +11,9 @@
 }
 
 .about_us_left_image {
-  height: 550px;
-  width: auto;
+  width: 700px;
+  height: auto;
+  border-radius: 20px;
 }
 
 .about_us_right_content {

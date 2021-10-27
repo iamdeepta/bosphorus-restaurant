@@ -6,6 +6,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Contact from "../../components/contact/Contact";
 
 import Footer from "../../components/footer/Footer";
+import BottomNav from "../../components/bottom-nav/BottomNav";
 
 const Menu = () => {
   return (
@@ -18,6 +19,7 @@ const Menu = () => {
 
           <Contact />
           <Footer />
+          <BottomNav />
         </div>
       </div>
     </>

@@ -11,7 +11,7 @@ const AboutUs = () => {
         <div className="about_us_inside container">
           <img
             className="about_us_left_image"
-            src={AppUrl.image_url + "assets/images/chef.png"}
+            src={AppUrl.image_url + "assets/images/about_us.webp"}
             alt="chef"
             data-aos="fade-right"
             data-aos-delay="0"

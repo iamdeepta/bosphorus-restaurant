@@ -2,21 +2,19 @@ import React from "react";
 import "./css/header.css";
 import AppUrl from "../../classes/AppUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHamburger } from "@fortawesome/free-solid-svg-icons";
-import ReactDOM from "react-dom";
+import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+//import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  function openSidebar() {
-    let elements = document.getElementById("sidebar_div");
-    ReactDOM.findDOMNode(elements).classList.add("sidebar_opened");
+  // function openSidebar() {
+  //   let elements = document.getElementById("sidebar_div");
+  //   ReactDOM.findDOMNode(elements).classList.add("sidebar_opened");
 
-    let elements1 = document.getElementById("sidebar_blur_bg");
-    ReactDOM.findDOMNode(elements1).classList.add("sidebar_blur_bg_opened");
+  //   let elements1 = document.getElementById("sidebar_blur_bg");
+  //   ReactDOM.findDOMNode(elements1).classList.add("sidebar_blur_bg_opened");
 
-    //   let element1 = document.getElementById("body-overlay");
-    //   ReactDOM.findDOMNode(element1).classList.remove("opened");
-  }
+  // }
 
   return (
     <>
@@ -25,7 +23,7 @@ const Header = () => {
           <div className="header_logo_div">
             <Link to="/bosphorus">
               <img
-                src={AppUrl.image_url + "assets/images/logo.png"}
+                src={AppUrl.image_url + "assets/images/logo.webp"}
                 alt="logo"
                 className="header_logo"
               />
@@ -35,10 +33,12 @@ const Header = () => {
             </Link>
           </div>
 
+          <Link href="/reservation" className="header_book_table_mbl">
+            Book a table
+          </Link>
           <FontAwesomeIcon
-            icon={faHamburger}
-            className="hamburger_menu"
-            onClick={() => openSidebar()}
+            icon={faShoppingBasket}
+            className="header_cart_mbl"
           />
 
           <div className="header_menu_div">

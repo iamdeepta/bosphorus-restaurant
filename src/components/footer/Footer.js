@@ -23,7 +23,7 @@ const Footer = () => {
               <Link to="/bosphorus">
                 <img
                   className="footer_first_column_logo"
-                  src={AppUrl.image_url + "assets/images/logo.png"}
+                  src={AppUrl.image_url + "assets/images/logo.webp"}
                   alt="logo"
                 />
               </Link>
@@ -86,57 +86,64 @@ const Footer = () => {
             </div>
           </div>
 
-          <div
-            className="footer_second_column"
-            data-aos="fade-up"
-            data-aos-delay="250"
-          >
-            {/* <a href="." className="footer_second_column_service">
+          <div className="footer_menus_div">
+            <div
+              className="footer_second_column"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
+              {/* <a href="." className="footer_second_column_service">
               Service
             </a> */}
-            <Link
-              to="/bosphorus"
-              className="footer_second_column_service_child"
-            >
-              Home
-            </Link>
-            <Link to="/menu" className="footer_second_column_service_child">
-              Menu
-            </Link>
-            <Link to="/contact" className="footer_second_column_service_child">
-              Contact
-            </Link>
-            {/* <a href="." className="footer_second_column_service_child">
+              <Link
+                to="/bosphorus"
+                className="footer_second_column_service_child"
+              >
+                Home
+              </Link>
+              <Link to="/menu" className="footer_second_column_service_child">
+                Menu
+              </Link>
+              <Link
+                to="/contact"
+                className="footer_second_column_service_child"
+              >
+                Contact
+              </Link>
+              {/* <a href="." className="footer_second_column_service_child">
               Menu
             </a> */}
-          </div>
+            </div>
 
-          <div
-            className="footer_third_column"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            {/* <a href="." className="footer_third_column_company">
+            <div
+              className="footer_third_column"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              {/* <a href="." className="footer_third_column_company">
               Company
             </a> */}
-            <Link to="/about-us" className="footer_third_column_company_child">
-              About us
-            </Link>
-            <Link to="/stories" className="footer_third_column_company_child">
-              Stories
-            </Link>
-            <Link
-              to="/reservation"
-              className="footer_third_column_company_child"
-            >
-              Book a table
-            </Link>
-            {/* <a href="." className="footer_third_column_company_child">
+              <Link
+                to="/about-us"
+                className="footer_third_column_company_child"
+              >
+                About us
+              </Link>
+              <Link to="/stories" className="footer_third_column_company_child">
+                Stories
+              </Link>
+              <Link
+                to="/reservation"
+                className="footer_third_column_company_child"
+              >
+                Book a table
+              </Link>
+              {/* <a href="." className="footer_third_column_company_child">
               New users FAQ
             </a> */}
-          </div>
+            </div>
 
-          {/* <div className="footer_fourth_column">
+            {/* <div className="footer_fourth_column">
             <a href="." className="footer_fourth_column_supports">
               Supports
             </a>
@@ -154,7 +161,7 @@ const Footer = () => {
             </a>
           </div> */}
 
-          {/* <div className="footer_fifth_column">
+            {/* <div className="footer_fifth_column">
             <a href="." className="footer_fifth_column_resources">
               Resources
             </a>
@@ -171,6 +178,7 @@ const Footer = () => {
               Sitemap
             </a>
           </div> */}
+          </div>
         </div>
       </section>
 

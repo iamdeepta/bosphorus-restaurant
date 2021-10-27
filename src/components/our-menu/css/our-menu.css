@@ -179,7 +179,15 @@
     position: absolute;
     color: rgb(29, 29, 29);
     font-size: 24px;
-    margin-left: 290px;
+    margin-left: 160px;
+    margin-top: 320px;
+  }
+
+  .our_menu_slider_div .slick-slider .slick-next::before {
+    position: absolute;
+    color: rgb(29, 29, 29);
+    font-size: 24px;
+    margin-left: -180px;
     margin-top: 320px;
   }
 }

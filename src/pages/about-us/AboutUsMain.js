@@ -10,6 +10,7 @@ import Services from "../../components/services/Services";
 import Testimonial from "../../components/testimonial/Testimonial";
 import Reservation from "../../components/reservation/Reservation";
 import Footer from "../../components/footer/Footer";
+import BottomNav from "../../components/bottom-nav/BottomNav";
 
 const AboutUsMain = () => {
   return (
@@ -26,6 +27,7 @@ const AboutUsMain = () => {
           <Testimonial />
           <Reservation />
           <Footer />
+          <BottomNav />
         </div>
       </div>
     </>

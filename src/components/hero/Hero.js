@@ -32,7 +32,7 @@ const Hero = () => {
       centerMode: true,
       centerPadding: "0px",
       speed: 500,
-      slidesToShow: 2,
+      slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
     };
@@ -117,7 +117,7 @@ const Hero = () => {
           <div className="hero_right_content">
             <img
               className="hero_main_baklava_img"
-              src={AppUrl.image_url + "assets/images/hero_main_baklava.jpg"}
+              src={AppUrl.image_url + "assets/images/hero_baklava.webp"}
               alt="baklava"
               data-aos="zoom-in"
               data-aos-delay="0"
