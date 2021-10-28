@@ -135,7 +135,7 @@ const BottomNav = () => {
             onClick={clickStories}
           >
             <FontAwesomeIcon className="navbar_stories_icon" icon={faImage} />
-            <span className="title">Stories</span>
+            <span className="title">Gallery</span>
           </Link>
         </li>
 

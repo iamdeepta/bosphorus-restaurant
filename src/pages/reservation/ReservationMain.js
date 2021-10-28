@@ -2,11 +2,12 @@ import React from "react";
 import "./css/reservation.css";
 import HeaderTop from "../../components/header-top/HeaderTop";
 import Header from "../../components/header/Header";
-import Sidebar from "../../components/sidebar/Sidebar";
+//import Sidebar from "../../components/sidebar/Sidebar";
 
 import Reservation from "../../components/reservation/Reservation";
 import Footer from "../../components/footer/Footer";
 //import BottomNav from "../../components/bottom-nav/BottomNav";
+import LazyLoad from "react-lazyload";
 
 const ReservationMain = () => {
   return (
@@ -15,10 +16,12 @@ const ReservationMain = () => {
         <div className="about_us_page_container">
           <HeaderTop />
           <Header />
-          <Sidebar />
+          {/* <Sidebar /> */}
 
-          <Reservation />
-          <Footer />
+          <LazyLoad once={true}>
+            <Reservation />
+            <Footer />
+          </LazyLoad>
           {/* <BottomNav /> */}
         </div>
       </div>

@@ -3,7 +3,7 @@
   list-style-type: none;
   display: flex;
   background-color: black;
-  height: 50px;
+  height: 55px;
   border-radius: 0px;
   bottom: 0;
   width: 100vw;
@@ -21,11 +21,12 @@
   font-size: 18px;
   z-index: 1;
   position: relative;
+  margin-top: 3px;
 }
 
 .nav li .bottom_nav_a .title {
-  display: none;
-  font-size: 14px;
+  display: block;
+  font-size: 12px;
 }
 
 .nav li .bottom_nav_a:hover {
@@ -35,12 +36,13 @@
 .nav li .bottom_nav_a.nav-item-active {
   color: white;
   transform: translateY(-20%);
-  font-size: 20px;
+  font-size: 24px;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .nav li .bottom_nav_a.nav-item-active .title {
   display: block;
+  font-size: 14px;
 }
 
 .nav .nav-indicator {

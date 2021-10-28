@@ -5,6 +5,31 @@ import { SRLWrapper } from "simple-react-lightbox";
 import AppUrl from "../../classes/AppUrl";
 
 const Gallery = () => {
+  const options = {
+    settings: {
+      autoplaySpeed: 3000,
+      boxShadow: "none",
+      disableKeyboardControls: false,
+      disablePanzoom: false,
+      disableWheelControls: false,
+      hideControlsAfter: false,
+      lightboxTransitionSpeed: 0.3,
+      lightboxTransitionTimingFunction: "linear",
+      overlayColor: "rgba(30, 30, 30, 0.9)",
+      slideAnimationType: "slide",
+      slideSpringValues: [300, 50],
+      slideTransitionSpeed: 0.6,
+      slideTransitionTimingFunction: "linear",
+      usingPreact: true,
+    },
+    caption: {},
+    buttons: {},
+    thumbnails: {},
+    progressBar: {},
+    translations: {}, // PRO ONLY
+    icons: {}, // PRO ONLY
+  };
+
   return (
     <>
       <SimpleReactLightbox>
@@ -15,48 +40,111 @@ const Gallery = () => {
             </h2>
           </div>
           <div className="gallery_main_content">
-            <SRLWrapper>
-              <a href={AppUrl.image_url + "assets/images/burger.webp"}>
+            <SRLWrapper options={options}>
+              <a href={AppUrl.image_url + "assets/images/gallery1.jpg"}>
                 <img
                   className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/burger.webp"}
-                  alt="Burger"
+                  src={AppUrl.image_url + "assets/images/gallery1.jpg"}
+                  alt="Location 1"
                   data-aos="zoom-in"
                   data-aos-delay="0"
                 />
               </a>
-              <a href={AppUrl.image_url + "assets/images/sandwich.webp"}>
+              <a href={AppUrl.image_url + "assets/images/gallery2.jpg"}>
                 <img
                   className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/sandwich.webp"}
-                  alt="Sndwich"
+                  src={AppUrl.image_url + "assets/images/gallery2.jpg"}
+                  alt="Location 2"
                   data-aos="zoom-in"
                   data-aos-delay="0"
                 />
               </a>
-              <a href={AppUrl.image_url + "assets/images/kunafa.webp"}>
+              <a href={AppUrl.image_url + "assets/images/gallery3.jpg"}>
                 <img
                   className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/kunafa.webp"}
-                  alt="Kunafa"
+                  src={AppUrl.image_url + "assets/images/gallery3.jpg"}
+                  alt="Location 3"
                   data-aos="zoom-in"
                   data-aos-delay="0"
                 />
               </a>
-              <a href={AppUrl.image_url + "assets/images/icecream.jpg"}>
+              <a href={AppUrl.image_url + "assets/images/gallery4.jpg"}>
                 <img
                   className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/icecream.jpg"}
-                  alt="Icecream"
+                  src={AppUrl.image_url + "assets/images/gallery4.jpg"}
+                  alt="Location 4"
                   data-aos="zoom-in"
                   data-aos-delay="0"
                 />
               </a>
-              <a href={AppUrl.image_url + "assets/images/chickenfry.webp"}>
+              <a href={AppUrl.image_url + "assets/images/gallery5.jpg"}>
                 <img
                   className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/chickenfry.webp"}
-                  alt="Chicken Fry"
+                  src={AppUrl.image_url + "assets/images/gallery5.jpg"}
+                  alt="Location 5"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                />
+              </a>
+              <a href={AppUrl.image_url + "assets/images/gallery6.jpg"}>
+                <img
+                  className="gallery_img"
+                  src={AppUrl.image_url + "assets/images/gallery6.jpg"}
+                  alt="Location 6"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                />
+              </a>
+              <a href={AppUrl.image_url + "assets/images/gallery7.jpg"}>
+                <img
+                  className="gallery_img"
+                  src={AppUrl.image_url + "assets/images/gallery7.jpg"}
+                  alt="Location 7"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                />
+              </a>
+              <a href={AppUrl.image_url + "assets/images/gallery8.jpg"}>
+                <img
+                  className="gallery_img"
+                  src={AppUrl.image_url + "assets/images/gallery8.jpg"}
+                  alt="Location 8"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                />
+              </a>
+              <a href={AppUrl.image_url + "assets/images/gallery9.jpg"}>
+                <img
+                  className="gallery_img"
+                  src={AppUrl.image_url + "assets/images/gallery9.jpg"}
+                  alt="Location 9"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                />
+              </a>
+              <a href={AppUrl.image_url + "assets/images/gallery10.jpg"}>
+                <img
+                  className="gallery_img"
+                  src={AppUrl.image_url + "assets/images/gallery10.jpg"}
+                  alt="Location 10"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                />
+              </a>
+              <a href={AppUrl.image_url + "assets/images/gallery11.jpg"}>
+                <img
+                  className="gallery_img"
+                  src={AppUrl.image_url + "assets/images/gallery11.jpg"}
+                  alt="Location 11"
+                  data-aos="zoom-in"
+                  data-aos-delay="0"
+                />
+              </a>
+              <a href={AppUrl.image_url + "assets/images/gallery12.jpg"}>
+                <img
+                  className="gallery_img"
+                  src={AppUrl.image_url + "assets/images/gallery12.jpg"}
+                  alt="Location 12"
                   data-aos="zoom-in"
                   data-aos-delay="0"
                 />

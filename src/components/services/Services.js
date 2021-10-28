@@ -35,8 +35,9 @@ const Services = () => {
             />
             <p className="services_contents_title">Birthday Party</p>
             <p className="services_contents_description">
-              Even the all powerful pointing has no control about the blind
-              texts it is an almost unorthographic.
+              Want to host your own birthday event but not sure which venue to
+              book ? Look no further, we will take care of the whole event for
+              you.
             </p>
           </a>
 
@@ -50,10 +51,11 @@ const Services = () => {
               className="services_contents_icon"
               icon={faUserFriends}
             />
-            <p className="services_contents_title">Business Meetings</p>
+            <p className="services_contents_title">Corporate Events</p>
             <p className="services_contents_description">
-              Even the all powerful pointing has no control about the blind
-              texts it is an almost unorthographic.
+              Whether its a long or short event, we got you covered. Our team
+              has hosted lots of prominent corporate events in the past and
+              gained countless appreciations.
             </p>
           </a>
 
@@ -67,10 +69,11 @@ const Services = () => {
               className="services_contents_icon"
               icon={faCloudMeatball}
             />
-            <p className="services_contents_title">Wedding Party</p>
+            <p className="services_contents_title">Social Gatherings</p>
             <p className="services_contents_description">
-              Even the all powerful pointing has no control about the blind
-              texts it is an almost unorthographic.
+              Middle of the week or in the weekend, our team are very skilled in
+              providing the best possible service. We can assure you that you
+              and your peers will have a great time.
             </p>
           </a>
         </div>

@@ -1,12 +1,13 @@
 import React from "react";
 import HeaderTop from "../../components/header-top/HeaderTop";
 import Header from "../../components/header/Header";
-import Sidebar from "../../components/sidebar/Sidebar";
+//import Sidebar from "../../components/sidebar/Sidebar";
 
 import Contact from "../../components/contact/Contact";
 
 import Footer from "../../components/footer/Footer";
 //import BottomNav from "../../components/bottom-nav/BottomNav";
+import LazyLoad from "react-lazyload";
 
 const Menu = () => {
   return (
@@ -15,10 +16,12 @@ const Menu = () => {
         <div className="about_us_page_container">
           <HeaderTop />
           <Header />
-          <Sidebar />
+          {/* <Sidebar /> */}
 
-          <Contact />
-          <Footer />
+          <LazyLoad once={true}>
+            <Contact />
+            <Footer />
+          </LazyLoad>
           {/* <BottomNav /> */}
         </div>
       </div>

@@ -1,6 +1,18 @@
 .header_main {
   border-bottom: 1px solid lightgray;
   padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 49px;
+  z-index: 3;
+  /* background-color: rgb(255, 255, 255, 0.9); */
+}
+
+.header_main.sticky {
+  background-color: rgb(255, 255, 255, 0.5);
+  border-bottom: 0px solid lightgray;
+  box-shadow: 0px 4px 10px 0px rgb(0.2, 0.2, 0.2, 0.2);
+  backdrop-filter: blur(5px);
 }
 .header_main_div {
   display: flex;
@@ -72,13 +84,23 @@
 }
 
 @media screen and (max-width: 768px) {
+  .header_main {
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 40px;
+    z-index: 3;
+    /* background-color: rgb(255, 255, 255, 0.9); */
+  }
+
   .header_menu_div {
     display: none;
   }
 
   .header_cart_mbl {
     display: block;
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .header_logo_div {

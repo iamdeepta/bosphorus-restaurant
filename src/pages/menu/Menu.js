@@ -2,13 +2,14 @@ import React from "react";
 import "./css/menu.css";
 import HeaderTop from "../../components/header-top/HeaderTop";
 import Header from "../../components/header/Header";
-import Sidebar from "../../components/sidebar/Sidebar";
+//import Sidebar from "../../components/sidebar/Sidebar";
 
 import OurMenu from "../../components/our-menu/OurMenu";
 
 import Reservation from "../../components/reservation/Reservation";
 import Footer from "../../components/footer/Footer";
 //import BottomNav from "../../components/bottom-nav/BottomNav";
+import LazyLoad from "react-lazyload";
 
 const Menu = () => {
   return (
@@ -17,12 +18,14 @@ const Menu = () => {
         <div className="about_us_page_container">
           <HeaderTop />
           <Header />
-          <Sidebar />
+          {/* <Sidebar /> */}
 
-          <OurMenu />
+          <LazyLoad once={true}>
+            <OurMenu />
 
-          <Reservation />
-          <Footer />
+            <Reservation />
+            <Footer />
+          </LazyLoad>
           {/* <BottomNav /> */}
         </div>
       </div>

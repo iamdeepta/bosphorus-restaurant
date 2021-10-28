@@ -1,11 +1,12 @@
 import React from "react";
 import HeaderTop from "../../components/header-top/HeaderTop";
 import Header from "../../components/header/Header";
-import Sidebar from "../../components/sidebar/Sidebar";
+//import Sidebar from "../../components/sidebar/Sidebar";
 import Gallery from "../../components/gallery/Gallery";
 //import Reservation from "../../components/reservation/Reservation";
 import Footer from "../../components/footer/Footer";
 //import BottomNav from "../../components/bottom-nav/BottomNav";
+import LazyLoad from "react-lazyload";
 
 const Stories = () => {
   return (
@@ -14,10 +15,11 @@ const Stories = () => {
         <div className="about_us_page_container">
           <HeaderTop />
           <Header />
-          <Sidebar />
-
-          <Gallery />
-          <Footer />
+          {/* <Sidebar /> */}
+          <LazyLoad once={true}>
+            <Gallery />
+            <Footer />
+          </LazyLoad>
           {/* <BottomNav /> */}
         </div>
       </div>

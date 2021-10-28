@@ -10,6 +10,7 @@ import {
   faStar,
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
+import LazyLoad from "react-lazyload";
 
 const PopularFood = () => {
   let settings1;
@@ -57,10 +58,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food7.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food7.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Havuc Dilim</p>
                   <a href=".">
@@ -97,10 +100,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food8.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food8.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Square Pistachio</p>
                   <a href=".">
@@ -137,10 +142,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food9.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food9.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Mussel Baklava</p>
                   <a href=".">
@@ -177,10 +184,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food10.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food10.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Baklava Rolled</p>
                   <a href=".">
@@ -217,10 +226,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food11.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food11.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Square Walnut</p>
                   <a href=".">
@@ -257,10 +268,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food12.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food12.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Shredded Kadayif</p>
                   <a href=".">
@@ -297,10 +310,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food13.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food13.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Caesar Salad</p>
                   <a href=".">
@@ -337,10 +352,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food14.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food14.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Greek Salad</p>
                   <a href=".">
@@ -377,10 +394,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food15.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food15.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Chicken Sandwich</p>
                   <a href=".">
@@ -417,10 +436,12 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <img
-                  src={AppUrl.image_url + "assets/images/food16.jpg"}
-                  alt="baklava"
-                />
+                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                  <img
+                    src={AppUrl.image_url + "assets/images/food16.jpg"}
+                    alt="baklava"
+                  />
+                </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Chicken Burger</p>
                   <a href=".">

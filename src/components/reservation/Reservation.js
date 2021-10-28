@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./css/reservation.css";
 //import AppUrl from "../../classes/AppUrl";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 
 const Reservation = () => {
+  const ref_date = useRef();
+  const ref_time = useRef();
   return (
     <>
       <section className="reservation_section container">
@@ -1700,9 +1702,13 @@ const Reservation = () => {
                 </p>
 
                 <input
-                  type="date"
-                  placeholder="Date"
+                  type="text"
+                  ref={ref_date}
+                  onChange={(e) => console.log(e.target.value)}
+                  onFocus={() => (ref_date.current.type = "date")}
+                  onBlur={() => (ref_date.current.type = "text")}
                   className="reservation_date_input"
+                  placeholder="Pick a date"
                 />
 
                 <input
@@ -1719,14 +1725,18 @@ const Reservation = () => {
               >
                 <p className="reservation_time_label">Time</p>
                 <input
-                  type="time"
-                  placeholder="Time"
+                  ref={ref_time}
+                  onChange={(e) => console.log(e.target.value)}
+                  onFocus={() => (ref_time.current.type = "time")}
+                  onBlur={() => (ref_time.current.type = "text")}
                   className="reservation_time_input"
+                  placeholder="Choose a time"
                 />
                 <select
                   name="reservation_person"
                   id="reservation_person_input"
                   className="reservation_person_input"
+                  style={{ color: "gray" }}
                 >
                   <option value="" selected>
                     Person

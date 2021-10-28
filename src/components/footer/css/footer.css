@@ -186,5 +186,6 @@
   .footer_menus_div {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
   }
 }

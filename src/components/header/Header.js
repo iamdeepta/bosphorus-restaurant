@@ -16,6 +16,11 @@ const Header = () => {
 
   // }
 
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+  });
+
   return (
     <>
       <header className="header_main">
@@ -53,7 +58,7 @@ const Header = () => {
                 <Link to="/menu">Menu</Link>
               </li>
               <li>
-                <Link to="/stories">Stories</Link>
+                <Link to="/stories">Gallery</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>

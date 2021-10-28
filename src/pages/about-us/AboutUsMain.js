@@ -2,7 +2,7 @@ import React from "react";
 import "./css/about-us.css";
 import HeaderTop from "../../components/header-top/HeaderTop";
 import Header from "../../components/header/Header";
-import Sidebar from "../../components/sidebar/Sidebar";
+//import Sidebar from "../../components/sidebar/Sidebar";
 
 import AboutUs from "../../components/about-us/AboutUs";
 import Services from "../../components/services/Services";
@@ -11,6 +11,7 @@ import Testimonial from "../../components/testimonial/Testimonial";
 import Reservation from "../../components/reservation/Reservation";
 import Footer from "../../components/footer/Footer";
 //import BottomNav from "../../components/bottom-nav/BottomNav";
+import LazyLoad from "react-lazyload";
 
 const AboutUsMain = () => {
   return (
@@ -19,14 +20,16 @@ const AboutUsMain = () => {
         <div className="about_us_page_container">
           <HeaderTop />
           <Header />
-          <Sidebar />
+          {/* <Sidebar /> */}
 
-          <AboutUs />
-          <Services />
+          <LazyLoad once={true}>
+            <AboutUs />
+            <Services />
 
-          <Testimonial />
-          <Reservation />
-          <Footer />
+            <Testimonial />
+            <Reservation />
+            <Footer />
+          </LazyLoad>
           {/* <BottomNav /> */}
         </div>
       </div>

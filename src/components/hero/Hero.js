@@ -13,6 +13,7 @@ import {
   faStar,
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
+import HappyCustomer from "../happy_customer/HappyCustomer";
 
 const Hero = () => {
   let settings = {
@@ -115,6 +116,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero_right_content">
+            <HappyCustomer />
             <img
               className="hero_main_baklava_img"
               src={AppUrl.image_url + "assets/images/hero_baklava.webp"}
@@ -325,7 +327,7 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div
+                {/* <div
                   className="hero_large_slider_inside_div"
                   data-aos="zoom-in"
                   data-aos-delay="0"
@@ -363,7 +365,7 @@ const Hero = () => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </Slider>
             </div>
           </div>

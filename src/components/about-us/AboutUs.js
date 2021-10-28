@@ -96,7 +96,7 @@ const AboutUs = () => {
                 data-aos="fade-up"
                 data-aos-delay="140"
               >
-                <p className="about_us_menu_numbers">100</p>
+                <p className="about_us_menu_numbers">50+</p>
                 <p className="about_us_menu_text">Menus/Dish</p>
               </div>
               <div className="about_us_numbers_vertical_line"></div>
@@ -105,7 +105,7 @@ const AboutUs = () => {
                 data-aos="fade-up"
                 data-aos-delay="160"
               >
-                <p className="about_us_stuff_numbers">50</p>
+                <p className="about_us_stuff_numbers">12+</p>
                 <p className="about_us_stuff_text">Stuffs</p>
               </div>
               <div className="about_us_numbers_vertical_line"></div>
@@ -114,7 +114,7 @@ const AboutUs = () => {
                 data-aos="fade-up"
                 data-aos-delay="180"
               >
-                <p className="about_us_customer_numbers">1000</p>
+                <p className="about_us_customer_numbers">30000+</p>
                 <p className="about_us_customer_text">Happy customers</p>
               </div>
             </div>

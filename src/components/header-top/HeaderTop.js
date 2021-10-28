@@ -2,6 +2,11 @@ import React from "react";
 import "./css/header-top.css";
 
 const HeaderTop = () => {
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector(".header_top_main");
+    header.classList.toggle("sticky", window.scrollY > 0);
+  });
+
   return (
     <>
       <div className="header_top_main">

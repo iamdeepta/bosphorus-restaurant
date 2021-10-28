@@ -104,11 +104,45 @@ const Footer = () => {
               <Link to="/menu" className="footer_second_column_service_child">
                 Menu
               </Link>
+              {/* <Link
+                to="/contact"
+                className="footer_second_column_service_child"
+              >
+                Contact
+              </Link> */}
+              {/* <a href="." className="footer_second_column_service_child">
+              Menu
+            </a> */}
+            </div>
+
+            <div
+              className="footer_second_column"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
+              {/* <a href="." className="footer_second_column_service">
+              Service
+            </a> */}
+              {/* <Link
+                to="/bosphorus"
+                className="footer_second_column_service_child"
+              >
+                Home
+              </Link>
+              <Link to="/menu" className="footer_second_column_service_child">
+                Menu
+              </Link> */}
               <Link
                 to="/contact"
                 className="footer_second_column_service_child"
               >
                 Contact
+              </Link>
+              <Link
+                to="/about-us"
+                className="footer_third_column_company_child"
+              >
+                About us
               </Link>
               {/* <a href="." className="footer_second_column_service_child">
               Menu
@@ -123,14 +157,9 @@ const Footer = () => {
               {/* <a href="." className="footer_third_column_company">
               Company
             </a> */}
-              <Link
-                to="/about-us"
-                className="footer_third_column_company_child"
-              >
-                About us
-              </Link>
+
               <Link to="/stories" className="footer_third_column_company_child">
-                Stories
+                Gallery
               </Link>
               <Link
                 to="/reservation"
