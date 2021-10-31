@@ -66,3 +66,9 @@
     display: none;
   }
 }
+
+@media (min-width: 1200px) and (max-width: 1560px) {
+  .happy_customer_main_div {
+    left: 84%;
+  }
+}

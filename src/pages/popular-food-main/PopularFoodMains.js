@@ -3,15 +3,12 @@ import "../about-us/css/about-us.css";
 import HeaderTop from "../../components/header-top/HeaderTop";
 import Header from "../../components/header/Header";
 //import Sidebar from "../../components/sidebar/Sidebar";
-
-import OurMenu from "../../components/our-menu/OurMenu";
-
-import Reservation from "../../components/reservation/Reservation";
+import PopularFoodMain from "../../components/popularFoodMain/PopularFoodMain";
 import Footer from "../../components/footer/Footer";
 //import BottomNav from "../../components/bottom-nav/BottomNav";
 import LazyLoad from "react-lazyload";
 
-const Menu = () => {
+const PopularFoodMains = () => {
   return (
     <>
       <div className="about_us_page_main_div">
@@ -21,9 +18,7 @@ const Menu = () => {
           {/* <Sidebar /> */}
 
           <LazyLoad once={true}>
-            <OurMenu />
-
-            <Reservation />
+            <PopularFoodMain />
             <Footer />
           </LazyLoad>
           {/* <BottomNav /> */}
@@ -33,4 +28,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default PopularFoodMains;

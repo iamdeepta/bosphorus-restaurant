@@ -343,3 +343,37 @@
     margin-top: 130px;
   }
 }
+
+@media (min-width: 1200px) and (max-width: 1560px) {
+  .hero_large_slider_inside_div {
+    width: 220px !important;
+  }
+
+  .hero_large_slider_div .slick-slider {
+    width: 700px;
+  }
+
+  .hero_large_slider_inside_div img {
+    margin-left: 32px;
+  }
+
+  .hero_large_slider_div .slick-slider .slick-prev::before {
+    position: absolute;
+    color: rgb(29, 29, 29);
+    font-size: 24px;
+    margin-left: 550px;
+    margin-top: 130px;
+  }
+
+  .hero_large_slider_div .slick-slider .slick-prev {
+    z-index: 1;
+  }
+
+  .hero_large_slider_div .slick-slider .slick-next::before {
+    position: absolute;
+    color: rgb(29, 29, 29);
+    font-size: 24px;
+    margin-left: -120px;
+    margin-top: 130px;
+  }
+}

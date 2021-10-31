@@ -11,6 +11,7 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 
 const PopularFood = () => {
   let settings1;
@@ -46,9 +47,13 @@ const PopularFood = () => {
             <p className="popular_food_text" data-aos="fade-right">
               Popular Food
             </p>
-            <a href="." className="popular_food_see_all" data-aos="fade-left">
+            <Link
+              to="/popular-food"
+              className="popular_food_see_all"
+              data-aos="fade-left"
+            >
               See all
-            </a>
+            </Link>
           </div>
 
           <div className="popular_food_slider_div">

@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/reservation.css";
+import "../about-us/css/about-us.css";
 import HeaderTop from "../../components/header-top/HeaderTop";
 import Header from "../../components/header/Header";
 //import Sidebar from "../../components/sidebar/Sidebar";

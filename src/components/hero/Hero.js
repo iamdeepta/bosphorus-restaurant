@@ -14,6 +14,7 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import HappyCustomer from "../happy_customer/HappyCustomer";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   let settings = {
@@ -72,9 +73,9 @@ const Hero = () => {
               data-aos="fade-right"
               data-aos-delay="0"
             >
-              <a href="." className="hero_view_menu_btn">
+              <Link to="/menu" className="hero_view_menu_btn">
                 View Menu <i className="fa fa-arrow-right"></i>
-              </a>
+              </Link>
             </div>
             <div
               className="hero_small_slider_div"

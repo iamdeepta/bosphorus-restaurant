@@ -218,7 +218,7 @@ const Footer = () => {
               © 2021 Bosphorus - All rights reserved.
             </p>
           </div>
-          <div className="footer_bottom_right">
+          {/* <div className="footer_bottom_right">
             <a href="." className="footer_bottom_right_privacy">
               Privacy
             </a>
@@ -228,7 +228,7 @@ const Footer = () => {
             <a href="." className="footer_bottom_right_terms">
               Terms
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
