@@ -13,6 +13,7 @@ import {
   faStar,
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
+
 import HappyCustomer from "../happy_customer/HappyCustomer";
 import { Link } from "react-router-dom";
 

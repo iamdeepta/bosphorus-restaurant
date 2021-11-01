@@ -68,7 +68,10 @@ const Header = () => {
               </li>
               <li>
                 <a href=".">
-                  <i className="fa fa-shopping-cart"></i>
+                  <FontAwesomeIcon
+                    icon={faShoppingBasket}
+                    className="header_shopping_cart"
+                  />
                 </a>
               </li>
             </ul>

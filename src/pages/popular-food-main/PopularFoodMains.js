@@ -1,5 +1,5 @@
 import React from "react";
-import "../about-us/css/about-us.css";
+import "../home/css/home.css";
 import HeaderTop from "../../components/header-top/HeaderTop";
 import Header from "../../components/header/Header";
 //import Sidebar from "../../components/sidebar/Sidebar";
@@ -11,8 +11,8 @@ import LazyLoad from "react-lazyload";
 const PopularFoodMains = () => {
   return (
     <>
-      <div className="about_us_page_main_div">
-        <div className="about_us_page_container">
+      <div className="home_page_main_div">
+        <div className="home_container">
           <HeaderTop />
           <Header />
           {/* <Sidebar /> */}

@@ -1,16 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
 .home_page_main_div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
 
-  background: url("https://designhubtechnologies.com/bosphorus/assets/images/bg3.webp");
+  background: url("https://designhubtechnologies.com/bosphorus/assets/images/bg5.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-.home_container {
+/* .home_container {
   background-color: rgba(255, 255, 255, 0.64);
   min-height: 100vh;
-}
+  backdrop-filter: blur(40px);
+} */

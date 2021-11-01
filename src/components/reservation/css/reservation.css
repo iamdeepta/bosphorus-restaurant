@@ -60,6 +60,10 @@
   outline: none;
 }
 
+.reservation_date_input {
+  display: none;
+}
+
 .reservation_email_input,
 .reservation_person_input {
   margin-top: 50px;
@@ -179,6 +183,51 @@
   }
 }
 
+/* mui date picker css */
+.css-1smlk3z-MuiPaper-root {
+  background-color: rgb(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(30px) !important;
+  border-radius: 20px !important;
+}
+
+.css-1tihz4g-MuiPaper-root,
+.css-a9rw36 {
+  background-color: rgb(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(30px) !important;
+  border-radius: 20px !important;
+}
+
+.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root,
+.css-ub1r1 {
+  background-color: transparent !important;
+}
+
+.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: #1976d2 !important;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root,
+.css-i44wyl {
+  width: 250px !important;
+}
+
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root,
+.css-1bn53lx {
+  height: 40.5px !important;
+  margin-top: 6px !important;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline,
+.css-1bn53lx.Mui-error .MuiOutlinedInput-notchedOutline {
+  border: 2px solid white !important;
+  box-shadow: 0px 0px 5px 0px rgb(0.3, 0.3, 0.3, 0.3) !important;
+  border-radius: 5px !important;
+}
+
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input::placeholder {
+  color: black !important;
+}
+
 @media screen and (max-width: 768px) {
   .reservation_content {
     display: flex;
@@ -207,5 +256,17 @@
     width: 170px;
     height: 45px;
     outline: none;
+  }
+
+  .reservation_date_input {
+    display: block;
+  }
+
+  .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    display: none !important;
+  }
+
+  .css-i44wyl {
+    display: none !important;
   }
 }

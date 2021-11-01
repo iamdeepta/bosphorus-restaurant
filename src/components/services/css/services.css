@@ -38,13 +38,14 @@
 } */
 
 .services_contents_links:hover {
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgb(255, 255, 255, 0.5);
   box-shadow: 0px 0px 3px 0px rgba(226, 225, 225, 0.7);
-  transition: 0.5s;
+  transition: 0.2s;
+  backdrop-filter: blur(40px);
 }
 
 .services_contents_links:not(:hover) {
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .services_contents_icon {

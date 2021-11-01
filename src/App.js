@@ -12,6 +12,7 @@ import { useEffect, Suspense, lazy } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import BottomNav from "./components/bottom-nav/BottomNav";
+import Preloader from "./components/preloader/Preloader";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const AboutUsMain = lazy(() => import("./pages/about-us/AboutUsMain"));
@@ -34,7 +35,7 @@ function App() {
   return (
     <>
       <BottomNav />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Preloader />}>
         <Switch>
           <Route exact path="/bosphorus" component={Home} />
           <Route exact path="/about-us" component={AboutUsMain} />

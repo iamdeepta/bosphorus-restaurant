@@ -16,12 +16,13 @@
 }
 
 .our_menu_slider_inside_div {
-  background: rgb(255, 255, 255, 0.6);
+  background: rgb(255, 255, 255, 0.5);
   padding: 25px 20px 20px 20px;
   width: 270px !important;
 
   border-radius: 135px 135px 30px 30px;
-  box-shadow: 0px 3px 1px 0px rgb(0.2, 0.2, 0.2, 0.2);
+  box-shadow: 0px 3px 1px 0px rgb(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
 }
 
 .our_menu_slider_inside_div:hover {
@@ -41,9 +42,9 @@
   margin-left: 0px;
 }
 
-.our_menu_slider_div .slick-slider .slick-list .slick-track {
-  height: 610px;
-}
+/* .our_menu_slider_div .slick-slider .slick-list .slick-track {
+  height: 630px;
+} */
 
 .our_menu_slider_inside_div {
   display: flex;

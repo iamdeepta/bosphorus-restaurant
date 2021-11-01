@@ -68,11 +68,12 @@
 } */
 
 .hero_small_slider_inside_div {
-  background: rgb(255, 255, 255, 0.6);
+  background: rgb(255, 255, 255, 0.5);
   padding: 15px 0px 0px 0px;
   width: 100px !important;
   text-align: center;
   border-radius: 15px;
+  backdrop-filter: blur(45px);
 }
 
 .hero_small_slider_inside_div a {
@@ -100,12 +101,13 @@
 }
 
 .hero_large_slider_inside_div {
-  background: rgb(255, 255, 255, 0.6);
+  background: rgb(255, 255, 255, 0.45);
   padding: 25px 20px 20px 20px;
   width: 250px !important;
 
   border-radius: 135px 135px 30px 30px;
-  box-shadow: 0px 3px 3px 0px rgb(0.2, 0.2, 0.2, 0.2);
+  box-shadow: 0px 3px 3px 0px rgb(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
 }
 
 .hero_large_slider_div .slick-slider {
@@ -194,8 +196,8 @@
   position: absolute;
   color: rgb(29, 29, 29);
   font-size: 24px;
-  margin-left: 630px;
-  margin-top: 130px;
+  margin-left: 650px;
+  margin-top: 150px;
 }
 
 .hero_large_slider_div .slick-slider .slick-prev {
@@ -206,8 +208,8 @@
   position: absolute;
   color: rgb(29, 29, 29);
   font-size: 24px;
-  margin-left: -180px;
-  margin-top: 130px;
+  margin-left: -150px;
+  margin-top: 150px;
 }
 
 .hero_large_slider_div .slick-slider .slick-list .slick-track {
@@ -253,6 +255,10 @@
 
   .hero_right_content {
     margin-left: 0px;
+    display: flex;
+    /* text-align: center; */
+    flex-direction: column;
+    justify-content: center;
   }
 
   .hero_main_baklava_img {
@@ -282,7 +288,8 @@
 
   .hero_large_slider_inside_div {
     width: 68% !important;
-    margin-left: 60px;
+    margin-left: 17%;
+    margin-right: 17%;
   }
 
   .hero_large_slider_inside_div img {
@@ -292,13 +299,13 @@
     height: 120px;
     width: auto;
     margin-top: -80px;
-    margin-left: 20%;
+    margin-left: 21%;
   }
 
   .hero_large_slider_div .slick-slider {
-    width: 100vw;
+    width: 94vw;
     margin-top: 20px;
-    margin-left: -130px;
+    margin-left: calc(100% / 2 - 80%);
   }
 
   /* slide when not active/center*/

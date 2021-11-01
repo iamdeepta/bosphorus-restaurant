@@ -1,10 +1,24 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./css/reservation.css";
 //import AppUrl from "../../classes/AppUrl";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
+//import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
+//import TimePicker from "@mui/lab/TimePicker";
+//import DateTimePicker from "@mui/lab/DateTimePicker";
+import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
+//import MobileDatePicker from "@mui/lab/MobileDatePicker";
 
 const Reservation = () => {
+  const [value, setValue] = useState("Pick a date");
+
+  const handleChange = (newValue) => {
+    setValue(newValue);
+  };
+
   const ref_date = useRef();
   const ref_time = useRef();
   return (
@@ -1710,6 +1724,17 @@ const Reservation = () => {
                   className="reservation_date_input"
                   placeholder="Pick a date"
                 />
+
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                  {/* <Stack spacing={3}> */}
+                  <DesktopDatePicker
+                    inputFormat="dd/MM/yyyy"
+                    value={value}
+                    onChange={handleChange}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                  {/* </Stack> */}
+                </LocalizationProvider>
 
                 <input
                   type="text"
