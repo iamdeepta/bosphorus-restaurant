@@ -21,6 +21,22 @@ const Reservation = () => {
 
   const ref_date = useRef();
   const ref_time = useRef();
+
+  function date_on_focus() {
+    ref_date.current.type = "date";
+
+    var date_icon = document.querySelector(".reservation_date_input");
+
+    date_icon.click();
+  }
+
+  function time_on_focus() {
+    ref_time.current.type = "time";
+
+    var time_icon = document.querySelector(".reservation_time_input");
+
+    time_icon.click();
+  }
   return (
     <>
       <section className="reservation_section container">
@@ -1719,7 +1735,7 @@ const Reservation = () => {
                   type="text"
                   ref={ref_date}
                   onChange={(e) => console.log(e.target.value)}
-                  onFocus={() => (ref_date.current.type = "date")}
+                  onFocus={() => date_on_focus()}
                   onBlur={() => (ref_date.current.type = "text")}
                   className="reservation_date_input"
                   placeholder="Pick a date"
@@ -1752,7 +1768,7 @@ const Reservation = () => {
                 <input
                   ref={ref_time}
                   onChange={(e) => console.log(e.target.value)}
-                  onFocus={() => (ref_time.current.type = "time")}
+                  onFocus={() => time_on_focus()}
                   onBlur={() => (ref_time.current.type = "text")}
                   className="reservation_time_input"
                   placeholder="Choose a time"

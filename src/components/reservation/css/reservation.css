@@ -184,7 +184,8 @@
 }
 
 /* mui date picker css */
-.css-1smlk3z-MuiPaper-root {
+.css-1smlk3z-MuiPaper-root,
+.css-1xo7hb2 {
   background-color: rgb(255, 255, 255, 0.5) !important;
   backdrop-filter: blur(30px) !important;
   border-radius: 20px !important;
@@ -202,7 +203,8 @@
   background-color: transparent !important;
 }
 
-.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
+.css-ub1r1.Mui-selected {
   background-color: #1976d2 !important;
 }
 
@@ -218,10 +220,15 @@
 }
 
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline,
-.css-1bn53lx.Mui-error .MuiOutlinedInput-notchedOutline {
+.css-1bn53lx.Mui-error .MuiOutlinedInput-notchedOutline,
+.css-igs3ac {
   border: 2px solid white !important;
   box-shadow: 0px 0px 5px 0px rgb(0.3, 0.3, 0.3, 0.3) !important;
   border-radius: 5px !important;
+}
+
+.css-1bn53lx:hover .MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
 }
 
 .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input::placeholder {
@@ -261,6 +268,10 @@
   .reservation_date_input {
     display: block;
   }
+
+  /* .reservation_date_input::-webkit-calendar-picker-indicator {
+    background-color: red;
+  } */
 
   .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
     display: none !important;

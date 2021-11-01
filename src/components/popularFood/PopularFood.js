@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
+import Preloader from "../preloader/Preloader";
 
 const PopularFood = () => {
   let settings1;
@@ -21,7 +22,7 @@ const PopularFood = () => {
       infinite: true,
       centerMode: true,
       centerPadding: "0px",
-      speed: 500,
+      speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
@@ -32,7 +33,7 @@ const PopularFood = () => {
       infinite: true,
       centerMode: true,
       centerPadding: "0px",
-      speed: 500,
+      speed: 1000,
       slidesToShow: 5,
       slidesToScroll: 1,
       autoplay: true,
@@ -63,7 +64,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food7.jpg"}
                     alt="baklava"
@@ -105,7 +106,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food8.jpg"}
                     alt="baklava"
@@ -147,7 +148,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food9.jpg"}
                     alt="baklava"
@@ -189,7 +190,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food10.jpg"}
                     alt="baklava"
@@ -231,7 +232,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food11.jpg"}
                     alt="baklava"
@@ -273,7 +274,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food12.jpg"}
                     alt="baklava"
@@ -315,7 +316,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food13.jpg"}
                     alt="baklava"
@@ -357,7 +358,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food14.jpg"}
                     alt="baklava"
@@ -399,7 +400,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food15.jpg"}
                     alt="baklava"
@@ -441,7 +442,7 @@ const PopularFood = () => {
                 data-aos="zoom-in"
                 data-aos-delay="50"
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200} placeholder={<Preloader />}>
                   <img
                     src={AppUrl.image_url + "assets/images/food16.jpg"}
                     alt="baklava"
