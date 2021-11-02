@@ -29,6 +29,10 @@
   margin-left: 80px;
 }
 
+.reservation_right_content2 {
+  margin-top: 6px;
+}
+
 .reservation_right_contents {
   display: flex;
   justify-content: space-between;
@@ -60,7 +64,9 @@
   outline: none;
 }
 
-.reservation_date_input {
+.reservation_date_input,
+.reservation_time_input,
+.reservation_person_input {
   display: none;
 }
 
@@ -187,14 +193,14 @@
 .css-1smlk3z-MuiPaper-root,
 .css-1xo7hb2 {
   background-color: rgb(255, 255, 255, 0.5) !important;
-  backdrop-filter: blur(30px) !important;
+  backdrop-filter: blur(10px) !important;
   border-radius: 20px !important;
 }
 
 .css-1tihz4g-MuiPaper-root,
 .css-a9rw36 {
   background-color: rgb(255, 255, 255, 0.5) !important;
-  backdrop-filter: blur(30px) !important;
+  backdrop-filter: blur(10px) !important;
   border-radius: 20px !important;
 }
 
@@ -235,6 +241,26 @@
   color: black !important;
 }
 
+/* person select box */
+.person_select .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  height: 44px !important;
+  margin-top: 14px;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  margin-top: 4px;
+}
+
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  background-color: rgb(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 20px !important;
+}
+
+.person_text {
+  color: gray;
+}
+
 @media screen and (max-width: 768px) {
   .reservation_content {
     display: flex;
@@ -256,6 +282,10 @@
     margin-left: 20px;
   }
 
+  .reservation_right_content2 {
+    margin-top: 0px;
+  }
+
   .reservation_date_input,
   .reservation_time_input,
   .reservation_email_input,
@@ -265,7 +295,9 @@
     outline: none;
   }
 
-  .reservation_date_input {
+  .reservation_date_input,
+  .reservation_time_input,
+  .reservation_person_input {
     display: block;
   }
 
@@ -278,6 +310,15 @@
   }
 
   .css-i44wyl {
+    display: none !important;
+  }
+
+  /* select person box hidden */
+  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+    display: none !important;
+  }
+
+  .person_form_control {
     display: none !important;
   }
 }

@@ -11,7 +11,7 @@ import {
   faPizzaSlice,
   faHeart,
   faStar,
-  faShoppingCart,
+  faShoppingBasket,
 } from "@fortawesome/free-solid-svg-icons";
 
 import HappyCustomer from "../happy_customer/HappyCustomer";
@@ -163,7 +163,7 @@ const Hero = () => {
                         />
                       </p>
                       <a href=".">
-                        <FontAwesomeIcon icon={faShoppingCart} />
+                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
                   </div>
@@ -203,7 +203,7 @@ const Hero = () => {
                         />
                       </p>
                       <a href=".">
-                        <FontAwesomeIcon icon={faShoppingCart} />
+                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
                   </div>
@@ -243,7 +243,7 @@ const Hero = () => {
                         />
                       </p>
                       <a href=".">
-                        <FontAwesomeIcon icon={faShoppingCart} />
+                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
                   </div>
@@ -283,7 +283,7 @@ const Hero = () => {
                         />
                       </p>
                       <a href=".">
-                        <FontAwesomeIcon icon={faShoppingCart} />
+                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
                   </div>
@@ -323,7 +323,7 @@ const Hero = () => {
                         />
                       </p>
                       <a href=".">
-                        <FontAwesomeIcon icon={faShoppingCart} />
+                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
                   </div>
@@ -363,7 +363,7 @@ const Hero = () => {
                         />
                       </p>
                       <a href=".">
-                        <FontAwesomeIcon icon={faShoppingCart} />
+                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
                   </div>

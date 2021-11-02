@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeart,
   faStar,
-  faShoppingCart,
+  faShoppingBasket,
 } from "@fortawesome/free-solid-svg-icons";
 
 const OurMenu = () => {
@@ -91,7 +91,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
@@ -129,7 +129,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
@@ -167,7 +167,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
@@ -205,7 +205,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
@@ -243,7 +243,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
@@ -281,7 +281,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
@@ -319,7 +319,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
@@ -357,7 +357,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
@@ -395,7 +395,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
@@ -433,7 +433,7 @@ const OurMenu = () => {
                     />
                   </p>
                   <a href=".">
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <FontAwesomeIcon icon={faShoppingBasket} />
                   </a>
                 </div>
               </div>
