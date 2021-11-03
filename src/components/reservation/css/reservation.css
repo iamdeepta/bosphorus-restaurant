@@ -29,9 +29,9 @@
   margin-left: 80px;
 }
 
-.reservation_right_content2 {
+/* .reservation_right_content2 {
   margin-top: 6px;
-}
+} */
 
 .reservation_right_contents {
   display: flex;
@@ -261,6 +261,11 @@
   color: gray;
 }
 
+.reservation_pick_time_text,
+.reservation_pick_date_text {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .reservation_content {
     display: flex;
@@ -313,12 +318,28 @@
     display: none !important;
   }
 
-  /* select person box hidden */
   .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
     display: none !important;
   }
 
+  /* select person box hidden */
   .person_form_control {
     display: none !important;
+  }
+
+  .reservation_pick_time_text {
+    display: block;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 10px;
+    color: gray;
+  }
+
+  .reservation_pick_date_text {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: gray;
   }
 }

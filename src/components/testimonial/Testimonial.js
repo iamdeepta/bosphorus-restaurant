@@ -60,27 +60,34 @@ const Testimonial = () => {
             <Slider className="testimonial_slider_main" {...settings}>
               <div className="testimonial_slider_inside_div">
                 <p className="testimonial_slider_reviews">
-                  Bosphorus has the most intriguing food order system in the
-                  country. UI in both their app and web is very simple and easy
-                  to use, enhancing the UX. Their delivery man are also quite
-                  professional and knows the neighborhood well. Till now I never
-                  had to guide them to my address for delivery.
+                  Such a beautiful place to have a hangout with friends. Serves
+                  good coffee and Turkish tea. Tried their fries, it was good.
+                  I've tried Latte, Hazelnut latte, Hazelnut Frappe, Virgin
+                  Mohito, Capuccino - all were good. The place looks good too.
+                  Interior is beautiful and the outside garden area is also lit.
+                  Only downside is the price. It's a bit costly.
                 </p>
 
-                <p className="testimonial_slider_customer_name">Alina Joli</p>
+                <p className="testimonial_slider_customer_name">
+                  Hasanuzzaman Mamun
+                </p>
                 <p className="testimonial_slider_customer_des">Food Lover</p>
               </div>
 
               <div className="testimonial_slider_inside_div">
                 <p className="testimonial_slider_reviews">
-                  Bosphorus has the most intriguing food order system in the
-                  country. UI in both their app and web is very simple and easy
-                  to use, enhancing the UX. Their delivery man are also quite
-                  professional and knows the neighborhood well. Till now I never
-                  had to guide them to my address for delivery.
+                  Wonderful environment. Soothing ambiance, proper beautiful
+                  decor, friendly service, food and drinks are really healthy
+                  and good and baklava is really tasty. Not too sweet and 100%
+                  imported from Turkey. Prices are very reasonable. You won't
+                  experience it unless you visit the place. And can guarantee
+                  you will repeat your visit quite often. So my recommendation
+                  to visit atleast once to confirm the word I wtote above.
                 </p>
 
-                <p className="testimonial_slider_customer_name">Alina Joli</p>
+                <p className="testimonial_slider_customer_name">
+                  Golam Md Iftekhar
+                </p>
                 <p className="testimonial_slider_customer_des">Food Lover</p>
               </div>
             </Slider>

@@ -12,10 +12,10 @@ import TimePicker from "@mui/lab/TimePicker";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 //import MobileDatePicker from "@mui/lab/MobileDatePicker";
 //import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
+//import MenuItem from "@mui/material/MenuItem";
 //import FormHelperText from "@mui/material/FormHelperText";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+//import FormControl from "@mui/material/FormControl";
+//import Select from "@mui/material/Select";
 import ReservationSvg from "./ReservationSvg";
 
 const Reservation = () => {
@@ -31,30 +31,44 @@ const Reservation = () => {
     setTimeValue(newValue);
   };
 
-  const [person, setPerson] = useState("");
+  //   const [person, setPerson] = useState("");
 
-  const handlePersonChange = (event) => {
-    setPerson(event.target.value);
-  };
+  //   const handlePersonChange = (event) => {
+  //     setPerson(event.target.value);
+  //   };
 
   const ref_date = useRef();
   const ref_time = useRef();
 
-  function date_on_focus() {
-    ref_date.current.type = "date";
+  function date_onchange(e) {
+    console.log(e.target.value);
+    var date_text = document.querySelector(".reservation_pick_date_text");
 
-    var date_icon = document.querySelector(".reservation_date_input");
-
-    date_icon.click();
+    date_text.style.display = "none";
   }
 
-  function time_on_focus() {
-    ref_time.current.type = "time";
+  function time_onchange(e) {
+    console.log(e.target.value);
+    var time_text = document.querySelector(".reservation_pick_time_text");
 
-    var time_icon = document.querySelector(".reservation_time_input");
-
-    time_icon.click();
+    time_text.style.display = "none";
   }
+
+  //   function date_on_focus() {
+  //     ref_date.current.type = "date";
+
+  //     var date_icon = document.querySelector(".reservation_date_input");
+
+  //     date_icon.click();
+  //   }
+
+  //   function time_on_focus() {
+  //     ref_time.current.type = "time";
+
+  //     var time_icon = document.querySelector(".reservation_time_input");
+
+  //     time_icon.click();
+  //   }
   return (
     <>
       <section className="reservation_section container">
@@ -104,14 +118,15 @@ const Reservation = () => {
                 </span> */}
                 </p>
 
+                <p className="reservation_pick_date_text">Pick a date</p>
                 <input
-                  type="text"
+                  type="date"
                   ref={ref_date}
-                  onChange={(e) => console.log(e.target.value)}
-                  onFocus={() => date_on_focus()}
-                  onBlur={() => (ref_date.current.type = "text")}
+                  onChange={(e) => date_onchange(e)}
+                  //   onFocus={() => date_on_focus()}
+                  //   onBlur={() => (ref_date.current.type = "text")}
                   className="reservation_date_input"
-                  placeholder="Pick a date"
+                  //   placeholder="Pick a date"
                 />
 
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -137,14 +152,16 @@ const Reservation = () => {
                 data-aos="fade-up"
                 data-aos-delay="60"
               >
+                <p className="reservation_pick_time_text">Choose a time</p>
                 <p className="reservation_time_label">Time</p>
                 <input
                   ref={ref_time}
-                  onChange={(e) => console.log(e.target.value)}
-                  onFocus={() => time_on_focus()}
-                  onBlur={() => (ref_time.current.type = "text")}
+                  type="time"
+                  onChange={(e) => time_onchange(e)}
+                  //   onFocus={() => time_on_focus()}
+                  //   onBlur={() => (ref_time.current.type = "text")}
                   className="reservation_time_input"
-                  placeholder="Choose a time"
+                  //   placeholder="Choose a time"
                 />
 
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -155,7 +172,13 @@ const Reservation = () => {
                   />
                 </LocalizationProvider>
 
-                <select
+                <input
+                  type="number"
+                  placeholder="Person"
+                  className="reservation_email_input"
+                />
+
+                {/* <select
                   name="reservation_person"
                   id="reservation_person_input"
                   className="reservation_person_input"
@@ -174,9 +197,9 @@ const Reservation = () => {
                   <option value="8">8</option>
                   <option value="9">9</option>
                   <option value="10">10</option>
-                </select>
+                </select> */}
 
-                <FormControl
+                {/* <FormControl
                   sx={{ mt: 5, minWidth: 250 }}
                   className="person_form_control"
                 >
@@ -201,7 +224,7 @@ const Reservation = () => {
                     <MenuItem value={9}>Nine</MenuItem>
                     <MenuItem value={10}>Ten</MenuItem>
                   </Select>
-                </FormControl>
+                </FormControl> */}
               </div>
             </div>
 

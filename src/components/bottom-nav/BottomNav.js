@@ -141,7 +141,7 @@ const BottomNav = () => {
 
         <li>
           <Link
-            to="/bosphorus"
+            to="/"
             className="bottom_nav_a nav-item-active bottom_nav_home"
             id="bottom_nav_home"
             onClick={clickHome}

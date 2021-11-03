@@ -6,6 +6,6 @@ export default class AppUrl {
   //   static image_url =
   //     "https://admin.designhubtechnologies.com/backend/storage/app/";
 
-  static base_url = "https://designhubtechnologies.com/bosphorus/";
-  static image_url = "https://designhubtechnologies.com/bosphorus/";
+  static base_url = "https://bosphorus.designhubtechnologies.com/";
+  static image_url = "https://bosphorus.designhubtechnologies.com/";
 }

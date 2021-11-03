@@ -20,14 +20,14 @@ const Footer = () => {
             data-aos-delay="0"
           >
             <div className="footer_first_column_logo_div">
-              <Link to="/bosphorus">
+              <Link to="/">
                 <img
                   className="footer_first_column_logo"
                   src={AppUrl.image_url + "assets/images/logo.webp"}
                   alt="logo"
                 />
               </Link>
-              <Link to="/bosphorus" className="footer_first_column_logo_text">
+              <Link to="/" className="footer_first_column_logo_text">
                 Bosphorus
               </Link>
             </div>
@@ -95,10 +95,7 @@ const Footer = () => {
               {/* <a href="." className="footer_second_column_service">
               Service
             </a> */}
-              <Link
-                to="/bosphorus"
-                className="footer_second_column_service_child"
-              >
+              <Link to="/" className="footer_second_column_service_child">
                 Home
               </Link>
               <Link to="/menu" className="footer_second_column_service_child">

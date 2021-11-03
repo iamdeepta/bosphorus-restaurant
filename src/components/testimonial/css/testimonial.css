@@ -52,7 +52,7 @@
 .testimonial_slider_upper_quote {
   position: absolute;
   z-index: 2;
-  margin-top: -130px;
+  margin-top: -180px;
   margin-left: 500px;
   font-size: 18px;
   color: gray;
@@ -61,7 +61,7 @@
 .testimonial_slider_lower_quote {
   position: absolute;
   z-index: 2;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-left: 1200px;
   font-size: 18px;
   color: gray;
@@ -73,7 +73,7 @@
   color: rgb(29, 29, 29);
   font-size: 24px;
   margin-left: 640px;
-  margin-top: 85px;
+  margin-top: 100px;
 }
 
 .testimonial_slider_div .slick-slider .slick-prev {
@@ -85,7 +85,7 @@
   color: rgb(29, 29, 29);
   font-size: 24px;
   margin-left: -45px;
-  margin-top: 85px;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -96,6 +96,11 @@
   .testimonial_slider_div {
     margin-left: 0px;
     width: 100%;
+  }
+
+  .testimonial_slider_reviews {
+    font-size: 16px;
+    line-height: 32px;
   }
 
   .testimonial_slider_upper_quote {

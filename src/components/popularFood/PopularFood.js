@@ -311,7 +311,7 @@ const PopularFood = () => {
                 </div>
               </div>
 
-              <div
+              {/* <div
                 className="popular_food_slider_inside_div"
                 data-aos="zoom-in"
                 data-aos-delay="50"
@@ -351,9 +351,9 @@ const PopularFood = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              <div
+              {/* <div
                 className="popular_food_slider_inside_div"
                 data-aos="zoom-in"
                 data-aos-delay="50"
@@ -393,9 +393,9 @@ const PopularFood = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              <div
+              {/* <div
                 className="popular_food_slider_inside_div"
                 data-aos="zoom-in"
                 data-aos-delay="50"
@@ -435,9 +435,9 @@ const PopularFood = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              <div
+              {/* <div
                 className="popular_food_slider_inside_div"
                 data-aos="zoom-in"
                 data-aos-delay="50"
@@ -477,7 +477,7 @@ const PopularFood = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </Slider>
           </div>
         </div>

@@ -29,7 +29,7 @@ const PopularFoodMain = lazy(() =>
 function App() {
   //initiate animation on scroll
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
 
   return (
@@ -37,7 +37,7 @@ function App() {
       <BottomNav />
       <Suspense fallback={<Preloader />}>
         <Switch>
-          <Route exact path="/bosphorus" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/about-us" component={AboutUsMain} />
           <Route exact path="/menu" component={Menu} />
           <Route exact path="/reservation" component={ReservationMain} />
