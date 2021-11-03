@@ -27,6 +27,7 @@ const Stories = lazy(() => import("./pages/stories/Stories"));
 const PopularFoodMain = lazy(() =>
   import("./pages/popular-food-main/PopularFoodMains")
 );
+const CheckoutMain = lazy(() => import("./pages/checkout/CheckoutMain"));
 
 function App() {
   //initiate animation on scroll
@@ -48,6 +49,7 @@ function App() {
           <Route exact path="/stories" component={Stories} />
           <Route exact path="/contact" component={ContactUs} />
           <Route exact path="/popular-food" component={PopularFoodMain} />
+          <Route exact path="/checkout" component={CheckoutMain} />
         </Switch>
       </Suspense>
     </>

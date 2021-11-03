@@ -44,6 +44,8 @@ const Cart = () => {
             <GiCrossedBones className="cart_cross"></GiCrossedBones>
           </div>
 
+          <div className="cart_horizontal_divider"></div>
+
           <div className="cart_content_row">
             <div className="cart_inc_dec">
               <MdArrowDropUp className="cart_arrow_up" />
@@ -64,6 +66,8 @@ const Cart = () => {
             <GiCrossedBones className="cart_cross"></GiCrossedBones>
           </div>
 
+          <div className="cart_horizontal_divider"></div>
+
           <div className="cart_content_row">
             <div className="cart_inc_dec">
               <MdArrowDropUp className="cart_arrow_up" />
@@ -83,6 +87,8 @@ const Cart = () => {
             </div>
             <GiCrossedBones className="cart_cross"></GiCrossedBones>
           </div>
+
+          <div className="cart_horizontal_divider"></div>
 
           <div className="cart_content_row">
             <div className="cart_inc_dec">
@@ -110,7 +116,11 @@ const Cart = () => {
           <p className="cart_total_price">TK 2800</p>
         </div>
 
-        <Link to="/" className="cart_checkout_btn">
+        <Link
+          to="/checkout"
+          className="cart_checkout_btn"
+          onClick={() => closeCart()}
+        >
           Checkout
         </Link>
       </div>

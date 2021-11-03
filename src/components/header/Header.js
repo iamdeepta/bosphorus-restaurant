@@ -54,7 +54,7 @@ const Header = () => {
             className="header_cart_mbl"
             onClick={() => openCart()}
           />
-          <span className="header_product_count">2</span>
+          <span className="header_product_count_mbl">2</span>
 
           <div className="header_menu_div">
             <ul>
