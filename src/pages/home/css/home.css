@@ -2,6 +2,7 @@
 
 body {
   font-family: "Rubik", sans-serif;
+  max-width: 100vw;
 }
 
 .home_page_main_div {
@@ -9,7 +10,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
-
+  max-width: 100vw;
   background: url("https://bosphorus.designhubtechnologies.com/assets/images/bg5.webp");
   background-size: cover;
   background-position: center;

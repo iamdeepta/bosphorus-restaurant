@@ -13,6 +13,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import BottomNav from "./components/bottom-nav/BottomNav";
 import Preloader from "./components/preloader/Preloader";
+import Cart from "./components/cart/Cart";
+import BlurBg from "./components/blur-bg/BlurBg";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const AboutUsMain = lazy(() => import("./pages/about-us/AboutUsMain"));
@@ -35,6 +37,8 @@ function App() {
   return (
     <>
       <BottomNav />
+      <Cart />
+      <BlurBg />
       <Suspense fallback={<Preloader />}>
         <Switch>
           <Route exact path="/" component={Home} />

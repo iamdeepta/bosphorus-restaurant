@@ -5,14 +5,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHeart,
-  faStar,
-  faShoppingBasket,
-} from "@fortawesome/free-solid-svg-icons";
+import { faStar, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
 import Preloader from "../preloader/Preloader";
+import { BsHeart } from "react-icons/bs";
 
 const PopularFood = () => {
   let settings1;
@@ -73,10 +70,11 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Havuc Dilim</p>
                   <a href=".">
-                    <FontAwesomeIcon
+                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
-                    />
+                    /> */}
                   </a>
                 </div>
                 <div className="popular_food_slider_description_section">
@@ -115,10 +113,11 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Square Pistachio</p>
                   <a href=".">
-                    <FontAwesomeIcon
+                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
-                    />
+                    /> */}
                   </a>
                 </div>
                 <div className="popular_food_slider_description_section">
@@ -157,10 +156,11 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Mussel Baklava</p>
                   <a href=".">
-                    <FontAwesomeIcon
+                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
-                    />
+                    /> */}
                   </a>
                 </div>
                 <div className="popular_food_slider_description_section">
@@ -199,10 +199,11 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Baklava Rolled</p>
                   <a href=".">
-                    <FontAwesomeIcon
+                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
-                    />
+                    /> */}
                   </a>
                 </div>
                 <div className="popular_food_slider_description_section">
@@ -241,10 +242,11 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Square Walnut</p>
                   <a href=".">
-                    <FontAwesomeIcon
+                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
-                    />
+                    /> */}
                   </a>
                 </div>
                 <div className="popular_food_slider_description_section">
@@ -282,11 +284,12 @@ const PopularFood = () => {
                 </LazyLoad>
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Shredded Kadayif</p>
-                  <a href=".">
-                    <FontAwesomeIcon
+                  <a href="/">
+                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
-                    />
+                    /> */}
                   </a>
                 </div>
                 <div className="popular_food_slider_description_section">

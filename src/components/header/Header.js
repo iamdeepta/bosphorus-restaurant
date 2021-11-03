@@ -21,6 +21,14 @@ const Header = () => {
     header.classList.toggle("sticky", window.scrollY > 0);
   });
 
+  function openCart() {
+    var bg = document.querySelector(".blur_bg_main");
+    bg.classList.add("blur_bg_main_active");
+
+    var cart = document.querySelector(".cart_sidebar_div");
+    cart.classList.add("cart_sidebar_div_active");
+  }
+
   return (
     <>
       <header className="header_main">
@@ -44,7 +52,9 @@ const Header = () => {
           <FontAwesomeIcon
             icon={faShoppingBasket}
             className="header_cart_mbl"
+            onClick={() => openCart()}
           />
+          <span className="header_product_count">2</span>
 
           <div className="header_menu_div">
             <ul>
@@ -66,13 +76,14 @@ const Header = () => {
               <li>
                 <Link to="/reservation">Book a table</Link>
               </li>
-              <li>
-                <a href=".">
-                  <FontAwesomeIcon
-                    icon={faShoppingBasket}
-                    className="header_shopping_cart"
-                  />
-                </a>
+              <li onClick={() => openCart()}>
+                {/* <a href="."> */}
+                <FontAwesomeIcon
+                  icon={faShoppingBasket}
+                  className="header_shopping_cart"
+                />
+                {/* </a> */}
+                <span className="header_product_count">2</span>
               </li>
             </ul>
           </div>

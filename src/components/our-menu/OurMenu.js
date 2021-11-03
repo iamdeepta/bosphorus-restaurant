@@ -5,11 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHeart,
-  faStar,
-  faShoppingBasket,
-} from "@fortawesome/free-solid-svg-icons";
+import { faStar, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+import { BsHeart } from "react-icons/bs";
 
 const OurMenu = () => {
   let settings1;
@@ -69,10 +66,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Veg Sandwich</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
@@ -109,10 +107,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Tandoori Wrap</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
@@ -147,10 +146,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Spaghetti Bolognese</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
@@ -185,10 +185,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">T-Bone Steak</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
@@ -223,10 +224,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Salmon Steak</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
@@ -261,10 +263,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Rib-Eye Steak</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
@@ -299,10 +302,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Buffalo Wings</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
@@ -337,10 +341,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">French Fries</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
@@ -375,10 +380,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Prawn Tempura</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
@@ -413,10 +419,11 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Quesadilla</p>
                 <a href=".">
-                  <FontAwesomeIcon
+                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
-                  />
+                  /> */}
                 </a>
               </div>
               <div className="our_menu_slider_description_section">
