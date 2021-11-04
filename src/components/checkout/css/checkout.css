@@ -662,6 +662,7 @@
   background-color: black !important;
   border: 1px solid transparent;
   outline: none;
+  display: none;
 }
 
 .swal-overlay--show-modal {
