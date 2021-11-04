@@ -132,7 +132,7 @@ const Reservation = () => {
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   {/* <Stack spacing={3}> */}
                   <DesktopDatePicker
-                    inputFormat="dd/MM/yyyy"
+                    inputFormat="MM/dd/yyyy"
                     value={value}
                     onChange={handleChange}
                     renderInput={(params) => <TextField {...params} />}
