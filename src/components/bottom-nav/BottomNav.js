@@ -42,7 +42,7 @@ const BottomNav = () => {
     nav
       .querySelector(".bottom_nav_about_us")
       .classList.remove("nav-item-active");
-    nav_indicator.style.left = `calc(${0 * 80 + 51}px - 45px)`;
+    nav_indicator.style.left = `calc(${0 * 20 + 12.5}vw - 45px)`;
   }
 
   function clickStories() {
@@ -58,7 +58,7 @@ const BottomNav = () => {
     nav
       .querySelector(".bottom_nav_about_us")
       .classList.remove("nav-item-active");
-    nav_indicator.style.left = `calc(${1 * 80 + 51}px - 45px)`;
+    nav_indicator.style.left = `calc(${1 * 20 + 12.5}vw - 45px)`;
   }
 
   function clickHome() {
@@ -76,7 +76,7 @@ const BottomNav = () => {
     nav
       .querySelector(".bottom_nav_about_us")
       .classList.remove("nav-item-active");
-    nav_indicator.style.left = `calc(${2 * 80 + 51}px - 45px)`;
+    nav_indicator.style.left = `calc(${2 * 20 + 12.5}vw - 45px)`;
   }
 
   function clickContact() {
@@ -92,7 +92,7 @@ const BottomNav = () => {
     nav
       .querySelector(".bottom_nav_about_us")
       .classList.remove("nav-item-active");
-    nav_indicator.style.left = `calc(${3 * 80 + 51}px - 45px)`;
+    nav_indicator.style.left = `calc(${3 * 20 + 12.5}vw - 45px)`;
   }
 
   function clickAboutUs() {
@@ -108,7 +108,7 @@ const BottomNav = () => {
     nav
       .querySelector(".bottom_nav_contact")
       .classList.remove("nav-item-active");
-    nav_indicator.style.left = `calc(${4 * 80 + 51}px - 45px)`;
+    nav_indicator.style.left = `calc(${4 * 20 + 12.5}vw - 45px)`;
   }
 
   return (
