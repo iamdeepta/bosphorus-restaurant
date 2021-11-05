@@ -241,7 +241,7 @@ const Checkout = () => {
         <div className="checkout_content">
           <div className="checkout_left_content">
             <div className="checkout_left_content_card">
-              <div>
+              <div className="checkout_left_content_bullets_div">
                 <div className="checkout_left_content_login_a">a</div>
                 <div className="checkout_left_content_login_a">b</div>
                 <div className="checkout_left_content_login_a">c</div>
