@@ -22,10 +22,15 @@ const Checkout = () => {
     let shipping_ui = document.querySelector(
       ".checkout_left_content_shipping_div"
     );
-    let login_header = document.querySelector(".checkout_left_content_card");
+    let login_header = document.querySelector(
+      ".checkout_left_content_login_div"
+    );
     let shipping_header = document.querySelector(
       ".checkout_left_content_card_shipping"
     );
+    let bullet = [
+      ...document.querySelectorAll(".checkout_left_content_login_a"),
+    ];
     guest_btn.classList.add("checkout_left_content_login_guest_text_active");
     user_btn.classList.remove("checkout_left_content_login_user_text_active");
     welcome_msg.classList.add("checkout_left_content_login_body_inactive");
@@ -33,7 +38,8 @@ const Checkout = () => {
     shipping_ui.classList.add("checkout_left_content_shipping_div_active");
 
     login_header.style.display = "none";
-    shipping_header.style.display = "flex";
+    shipping_header.style.display = "block";
+    bullet[0].classList.add("checkout_left_content_login_a_active");
   }
 
   function activeUser() {
@@ -52,11 +58,15 @@ const Checkout = () => {
     let shipping_ui = document.querySelector(
       ".checkout_left_content_shipping_div"
     );
+    let bullet = [
+      ...document.querySelectorAll(".checkout_left_content_login_a"),
+    ];
     user_btn.classList.add("checkout_left_content_login_user_text_active");
     guest_btn.classList.remove("checkout_left_content_login_guest_text_active");
     welcome_msg.classList.add("checkout_left_content_login_body_inactive");
     login_ui.classList.add("checkout_left_content_login_form_div_active");
     shipping_ui.classList.remove("checkout_left_content_shipping_div_active");
+    bullet[0].classList.remove("checkout_left_content_login_a_active");
   }
 
   function backToWelcomeMsg() {
@@ -66,19 +76,25 @@ const Checkout = () => {
     let welcome_msg = document.querySelector(
       ".checkout_left_content_login_body"
     );
-    let login_header = document.querySelector(".checkout_left_content_card");
+    let login_header = document.querySelector(
+      ".checkout_left_content_login_div"
+    );
     let shipping_header = document.querySelector(
       ".checkout_left_content_card_shipping"
     );
     let guest_btn = document.querySelector(
       ".checkout_left_content_login_guest_text"
     );
+    let bullet = [
+      ...document.querySelectorAll(".checkout_left_content_login_a"),
+    ];
 
     shipping_ui.classList.remove("checkout_left_content_shipping_div_active");
     welcome_msg.classList.remove("checkout_left_content_login_body_inactive");
     guest_btn.classList.remove("checkout_left_content_login_guest_text_active");
     login_header.style.display = "flex";
     shipping_header.style.display = "none";
+    bullet[0].classList.remove("checkout_left_content_login_a_active");
   }
 
   function nextToOtp() {
@@ -86,17 +102,21 @@ const Checkout = () => {
       ".checkout_left_content_shipping_div"
     );
     let otp_ui = document.querySelector(".checkout_left_content_otp_form_div");
-    let otp_header_letter = document.querySelector(
-      ".checkout_left_content_login_a_shipping"
-    );
+    // let otp_header_letter = document.querySelector(
+    //   ".checkout_left_content_login_a_shipping"
+    // );
     let otp_header = document.querySelector(
       ".checkout_left_content_login_div_shipping p"
     );
+    let bullet = [
+      ...document.querySelectorAll(".checkout_left_content_login_a"),
+    ];
 
     shipping_ui.classList.remove("checkout_left_content_shipping_div_active");
     otp_ui.classList.add("checkout_left_content_otp_form_div_active");
-    otp_header_letter.innerHTML = "c";
+    //otp_header_letter.innerHTML = "c";
     otp_header.innerHTML = "OTP CONFIRMATION";
+    bullet[1].classList.add("checkout_left_content_login_a_active");
   }
 
   function backToShipping() {
@@ -104,33 +124,41 @@ const Checkout = () => {
       ".checkout_left_content_shipping_div"
     );
     let otp_ui = document.querySelector(".checkout_left_content_otp_form_div");
-    let otp_header_letter = document.querySelector(
-      ".checkout_left_content_login_a_shipping"
-    );
+    // let otp_header_letter = document.querySelector(
+    //   ".checkout_left_content_login_a_shipping"
+    // );
     let otp_header = document.querySelector(
       ".checkout_left_content_login_div_shipping p"
     );
+    let bullet = [
+      ...document.querySelectorAll(".checkout_left_content_login_a"),
+    ];
 
     shipping_ui.classList.add("checkout_left_content_shipping_div_active");
     otp_ui.classList.remove("checkout_left_content_otp_form_div_active");
-    otp_header_letter.innerHTML = "b";
+    //otp_header_letter.innerHTML = "b";
     otp_header.innerHTML = "SHIPPING ADDRESS";
+    bullet[1].classList.remove("checkout_left_content_login_a_active");
   }
 
   function nextToPaymentMethod() {
     let pm_ui = document.querySelector(".checkout_left_content_payment_method");
     let otp_ui = document.querySelector(".checkout_left_content_otp_form_div");
-    let pm_header_letter = document.querySelector(
-      ".checkout_left_content_login_a_shipping"
-    );
+    // let pm_header_letter = document.querySelector(
+    //   ".checkout_left_content_login_a_shipping"
+    // );
     let pm_header = document.querySelector(
       ".checkout_left_content_login_div_shipping p"
     );
+    let bullet = [
+      ...document.querySelectorAll(".checkout_left_content_login_a"),
+    ];
 
     pm_ui.classList.add("checkout_left_content_payment_method_active");
     otp_ui.classList.remove("checkout_left_content_otp_form_div_active");
-    pm_header_letter.innerHTML = "d";
+    //pm_header_letter.innerHTML = "d";
     pm_header.innerHTML = "PAYMENT METHOD";
+    bullet[2].classList.add("checkout_left_content_login_a_active");
   }
 
   function backToOtp() {
@@ -138,17 +166,21 @@ const Checkout = () => {
       ".checkout_left_content_payment_method"
     );
     let otp_ui = document.querySelector(".checkout_left_content_otp_form_div");
-    let otp_header_letter = document.querySelector(
-      ".checkout_left_content_login_a_shipping"
-    );
+    // let otp_header_letter = document.querySelector(
+    //   ".checkout_left_content_login_a_shipping"
+    // );
     let otp_header = document.querySelector(
       ".checkout_left_content_login_div_shipping p"
     );
+    let bullet = [
+      ...document.querySelectorAll(".checkout_left_content_login_a"),
+    ];
 
     payment_ui.classList.remove("checkout_left_content_payment_method_active");
     otp_ui.classList.add("checkout_left_content_otp_form_div_active");
-    otp_header_letter.innerHTML = "c";
+    //otp_header_letter.innerHTML = "c";
     otp_header.innerHTML = "OTP CONFIRMATION";
+    bullet[2].classList.remove("checkout_left_content_login_a_active");
   }
 
   function bkashMethod() {
@@ -184,11 +216,19 @@ const Checkout = () => {
   }
 
   function paymentConfirm() {
+    let bullet = [
+      ...document.querySelectorAll(".checkout_left_content_login_a"),
+    ];
+    bullet[3].classList.add("checkout_left_content_login_a_active");
     swal({
       title: "Order has been placed successfully",
       text: "Thank you for purchasing from us.",
       icon: "success",
     });
+
+    setTimeout(function () {
+      window.location.reload();
+    }, 2000);
   }
 
   return (
@@ -200,7 +240,12 @@ const Checkout = () => {
         <div className="checkout_content">
           <div className="checkout_left_content">
             <div className="checkout_left_content_card">
-              <span className="checkout_left_content_login_a">a</span>
+              <div>
+                <div className="checkout_left_content_login_a">a</div>
+                <div className="checkout_left_content_login_a">b</div>
+                <div className="checkout_left_content_login_a">c</div>
+                <div className="checkout_left_content_login_a">d</div>
+              </div>
               <div className="checkout_left_content_login_div">
                 <p
                   className="checkout_left_content_login_guest_text"
@@ -215,12 +260,10 @@ const Checkout = () => {
                   Login
                 </p>
               </div>
-            </div>
-
-            <div className="checkout_left_content_card_shipping">
-              <span className="checkout_left_content_login_a_shipping">b</span>
-              <div className="checkout_left_content_login_div_shipping">
-                <p>SHIPPING ADDRESS</p>
+              <div className="checkout_left_content_card_shipping">
+                <div className="checkout_left_content_login_div_shipping">
+                  <p>SHIPPING ADDRESS</p>
+                </div>
               </div>
             </div>
 
