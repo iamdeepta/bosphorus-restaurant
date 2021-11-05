@@ -3,6 +3,7 @@ import "./css/checkout.css";
 import AppUrl from "../../classes/AppUrl";
 //import { Link } from "react-router-dom";
 import { FcMoneyTransfer } from "react-icons/fc";
+import { BsPatchCheckFill } from "react-icons/bs";
 import swal from "sweetalert";
 
 const Checkout = () => {
@@ -185,10 +186,10 @@ const Checkout = () => {
 
   function bkashMethod() {
     let bkash_btn = document.querySelector(
-      ".checkout_left_content_payment_method_bkash"
+      ".checkout_left_content_payment_method_bkash_check_icon"
     );
     let user_bcod_btn = document.querySelector(
-      ".checkout_left_content_payment_method_cod"
+      ".checkout_left_content_payment_method_cod_check_icon"
     );
 
     bkash_btn.classList.add(
@@ -201,10 +202,10 @@ const Checkout = () => {
 
   function codMethod() {
     let bkash_btn = document.querySelector(
-      ".checkout_left_content_payment_method_bkash"
+      ".checkout_left_content_payment_method_bkash_check_icon"
     );
     let user_bcod_btn = document.querySelector(
-      ".checkout_left_content_payment_method_cod"
+      ".checkout_left_content_payment_method_cod_check_icon"
     );
 
     bkash_btn.classList.remove(
@@ -405,6 +406,7 @@ const Checkout = () => {
                   >
                     <FcMoneyTransfer className="checkout_left_content_payment_method_cod_icon"></FcMoneyTransfer>
                     Cash On Delivery
+                    <BsPatchCheckFill className="checkout_left_content_payment_method_cod_check_icon"></BsPatchCheckFill>
                   </div>
                   <div
                     className="checkout_left_content_payment_method_bkash"
@@ -416,6 +418,7 @@ const Checkout = () => {
                       alt="bkash"
                     />
                     Bkash
+                    <BsPatchCheckFill className="checkout_left_content_payment_method_bkash_check_icon"></BsPatchCheckFill>
                   </div>
                 </div>
                 <div className="checkout_left_content_payment_method_btn">
@@ -442,6 +445,9 @@ const Checkout = () => {
           <div className="checkout_right_content">
             <div className="checkout_cart_header_div">
               <p className="checkout_cart_header_text">Order Summary</p>
+              <p className="checkout_cart_header_invoice_text">
+                Invoice #33049
+              </p>
             </div>
             <div className="checkout_cart_content_middle_div">
               <div className="checkout_cart_content_row">

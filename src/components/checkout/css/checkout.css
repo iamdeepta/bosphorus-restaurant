@@ -489,33 +489,51 @@
   cursor: pointer;
 }
 
-.checkout_left_content_payment_method_cod_active {
-  background-color: #e95b08;
+/* .checkout_left_content_payment_method_cod:hover {
+  background-color: #ee752e;
   color: white !important;
   transition: 0.5s;
-}
-
-.checkout_left_content_payment_method_cod:hover {
-  background-color: #e95b08;
-  color: white !important;
-  transition: 0.5s;
-}
+} */
 
 .checkout_left_content_payment_method_cod:not(:hover) {
   transition: 0.5s;
 }
 
-.checkout_left_content_payment_method_bkash_active {
-  background-color: #e95b08;
-  color: white !important;
-  transition: 0.5s;
+.checkout_left_content_payment_method_cod_check_icon {
+  position: absolute;
+  font-size: 18px;
+  margin-left: 85%;
+  margin-top: -19%;
+  color: green;
+  transition: 0.3s;
+  transform: scale(0);
 }
 
-.checkout_left_content_payment_method_bkash:hover {
-  background-color: #e95b08;
+.checkout_left_content_payment_method_bkash_check_icon {
+  position: absolute;
+  font-size: 18px;
+  margin-left: 85%;
+  margin-top: -19%;
+  color: green;
+  transition: 0.3s;
+  transform: scale(0);
+}
+
+.checkout_left_content_payment_method_cod_active {
+  transition: 0.3s;
+  transform: scale(1);
+}
+
+.checkout_left_content_payment_method_bkash_active {
+  transition: 0.3s;
+  transform: scale(1);
+}
+
+/* .checkout_left_content_payment_method_bkash:hover {
+  background-color: #ee752e;
   color: white !important;
   transition: 0.5s;
-}
+} */
 
 .checkout_left_content_payment_method_bkash:not(:hover) {
   transition: 0.5s;
@@ -585,8 +603,13 @@
 
 .checkout_cart_header_text {
   color: #e95b08;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
+}
+
+.checkout_cart_header_invoice_text {
+  color: gray;
+  font-size: 16px;
 }
 
 .checkout_cart_content_row {
