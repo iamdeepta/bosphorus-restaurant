@@ -6,8 +6,8 @@
 }
 
 .header_top_main.sticky {
-  background-color: rgb(255, 255, 255, 0.25);
-  backdrop-filter: blur(40px);
+  background-color: rgb(255, 255, 255, 0.35);
+  backdrop-filter: blur(30px);
 }
 
 .header_top_main_div {
@@ -35,9 +35,9 @@
   align-items: center;
 }
 
-.header_top_phone_div i,
-.header_top_email_div i {
-  margin-top: -13px;
+.header_top_phone_icon,
+.header_top_mail_icon {
+  margin-top: -14px;
   margin-right: 5px;
   color: rgb(131, 128, 128);
   font-size: 15px;
@@ -54,7 +54,11 @@
     display: none;
   }
 
-  .header_top_email_div i {
+  .header_top_phone_icon {
+    font-size: 12px;
+  }
+
+  .header_top_mail_icon {
     display: none;
   }
 }

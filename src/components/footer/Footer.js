@@ -1,13 +1,12 @@
 import React from "react";
 import "./css/footer.css";
 import AppUrl from "../../classes/AppUrl";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocationArrow,
-  faPhone,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { GrLocation } from "react-icons/gr";
+import { FiPhoneCall } from "react-icons/fi";
+import { BsEnvelope } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -33,10 +32,11 @@ const Footer = () => {
             </div>
 
             <div className="footer_first_column_location_div">
-              <FontAwesomeIcon
+              <GrLocation className="footer_first_column_location_icon" />
+              {/* <FontAwesomeIcon
                 className="footer_first_column_location_icon"
                 icon={faLocationArrow}
-              />
+              /> */}
 
               <p className="footer_first_column_location_text">
                 Dhaka, Bangladesh
@@ -44,20 +44,22 @@ const Footer = () => {
             </div>
 
             <div className="footer_first_column_phone_div">
-              <FontAwesomeIcon
+              <FiPhoneCall className="footer_first_column_phone_icon" />
+              {/* <FontAwesomeIcon
                 className="footer_first_column_phone_icon"
                 icon={faPhone}
-              />
+              /> */}
               <a href="." className="footer_first_column_phone_text">
                 0178273526
               </a>
             </div>
 
             <div className="footer_first_column_email_div">
-              <FontAwesomeIcon
+              <BsEnvelope className="footer_first_column_email_icon" />
+              {/* <FontAwesomeIcon
                 className="footer_first_column_email_icon"
                 icon={faEnvelope}
-              />
+              /> */}
               <a href="." className="footer_first_column_email_text">
                 support@bosphorus.com
               </a>

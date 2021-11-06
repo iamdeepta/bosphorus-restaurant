@@ -1,5 +1,7 @@
 import React from "react";
 import "./css/header-top.css";
+import { BsTelephone } from "react-icons/bs";
+import { FiSend } from "react-icons/fi";
 
 const HeaderTop = () => {
   window.addEventListener("scroll", function () {
@@ -12,11 +14,11 @@ const HeaderTop = () => {
       <div className="header_top_main">
         <div className="header_top_main_div container">
           <div className="header_top_phone_div">
-            <i className="fa fa-phone"></i>
+            <BsTelephone className="header_top_phone_icon" />
             <p className="header_top_phone">01841-993788</p>
           </div>
           <div className="header_top_email_div">
-            <i className="fa fa-paper-plane"></i>
+            <FiSend className="header_top_mail_icon" />
             <p className="header_top_email">bosphoruscafebd@gmail.com</p>
           </div>
           <div className="header_top_open_hours_div">
