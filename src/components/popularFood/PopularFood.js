@@ -10,6 +10,8 @@ import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
 import Preloader from "../preloader/Preloader";
 //import { BsHeart } from "react-icons/bs";
+import SimpleReactLightbox from "simple-react-lightbox";
+import { SRLWrapper } from "simple-react-lightbox";
 
 const PopularFood = () => {
   let settings1;
@@ -37,284 +39,326 @@ const PopularFood = () => {
     };
   }
 
+  const options = {
+    settings: {
+      autoplaySpeed: 3000,
+      boxShadow: "none",
+      disableKeyboardControls: false,
+      disablePanzoom: false,
+      disableWheelControls: true,
+      hideControlsAfter: false,
+      lightboxTransitionSpeed: 0.3,
+      lightboxTransitionTimingFunction: "linear",
+      overlayColor: "rgba(30, 30, 30, 0.9)",
+      slideAnimationType: "slide",
+      slideSpringValues: [300, 50],
+      slideTransitionSpeed: 0.6,
+      slideTransitionTimingFunction: "linear",
+      usingPreact: false,
+    },
+    caption: {},
+    buttons: {},
+    thumbnails: { showThumbnails: false },
+    progressBar: {},
+    translations: {}, // PRO ONLY
+    icons: {}, // PRO ONLY
+  };
+
   return (
     <>
-      <section className="popular_food_section">
-        <div className="popular_food_inside container">
-          <div className="popular_food_header">
-            <p className="popular_food_text" data-aos="fade-right">
-              Popular Food
-            </p>
-            <Link
-              to="/popular-food"
-              className="popular_food_see_all"
-              data-aos="fade-left"
-            >
-              See all
-            </Link>
-          </div>
-
-          <div className="popular_food_slider_div">
-            <Slider {...settings1}>
-              <div
-                className="popular_food_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="50"
+      <SimpleReactLightbox>
+        <section className="popular_food_section">
+          <div className="popular_food_inside container">
+            <div className="popular_food_header">
+              <p className="popular_food_text" data-aos="fade-right">
+                Popular Food
+              </p>
+              <Link
+                to="/popular-food"
+                className="popular_food_see_all"
+                data-aos="fade-left"
               >
-                <LazyLoad height={200} placeholder={<Preloader />}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food7.jpg"}
-                    alt="baklava"
-                  />
-                </LazyLoad>
-                <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Havuc Dilim</p>
-                  <a href=".">
-                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
+                See all
+              </Link>
+            </div>
+
+            <div className="popular_food_slider_div">
+              <Slider {...settings1}>
+                <div
+                  className="popular_food_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="50"
+                >
+                  <LazyLoad height={200} placeholder={<Preloader />}>
+                    <SRLWrapper options={options}>
+                      <img
+                        src={AppUrl.image_url + "assets/images/food7.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                  </LazyLoad>
+                  <div className="popular_food_slider_title_section">
+                    <p className="popular_food_slider_title">Havuc Dilim</p>
+                    <a href=".">
+                      {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
+                      {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
                     /> */}
-                  </a>
-                </div>
-                <div className="popular_food_slider_description_section">
-                  <p className="popular_food_slider_description">
-                    Species of baklava
-                  </p>
-                </div>
-                <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 1550</p>
-                  <div className="popular_food_slider_rating_section">
-                    <p className="popular_food_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="popular_food_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
                     </a>
                   </div>
+                  <div className="popular_food_slider_description_section">
+                    <p className="popular_food_slider_description">
+                      Species of baklava
+                    </p>
+                  </div>
+                  <div className="popular_food_slider_price_section">
+                    <p className="popular_food_slider_price">TK. 1550</p>
+                    <div className="popular_food_slider_rating_section">
+                      <p className="popular_food_slider_rating">
+                        4.9{" "}
+                        <FontAwesomeIcon
+                          className="popular_food_slider_rating_star"
+                          icon={faStar}
+                        />
+                      </p>
+                      <a href=".">
+                        <FontAwesomeIcon icon={faShoppingBasket} />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                className="popular_food_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="50"
-              >
-                <LazyLoad height={200} placeholder={<Preloader />}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food8.jpg"}
-                    alt="baklava"
-                  />
-                </LazyLoad>
-                <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Square Pistachio</p>
-                  <a href=".">
-                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
+                <div
+                  className="popular_food_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="50"
+                >
+                  <LazyLoad height={200} placeholder={<Preloader />}>
+                    <SRLWrapper options={options}>
+                      <img
+                        src={AppUrl.image_url + "assets/images/food8.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                  </LazyLoad>
+                  <div className="popular_food_slider_title_section">
+                    <p className="popular_food_slider_title">
+                      Square Pistachio
+                    </p>
+                    <a href=".">
+                      {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
+                      {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
                     /> */}
-                  </a>
-                </div>
-                <div className="popular_food_slider_description_section">
-                  <p className="popular_food_slider_description">
-                    Species of baklava
-                  </p>
-                </div>
-                <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 242</p>
-                  <div className="popular_food_slider_rating_section">
-                    <p className="popular_food_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="popular_food_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
                     </a>
                   </div>
+                  <div className="popular_food_slider_description_section">
+                    <p className="popular_food_slider_description">
+                      Species of baklava
+                    </p>
+                  </div>
+                  <div className="popular_food_slider_price_section">
+                    <p className="popular_food_slider_price">TK. 242</p>
+                    <div className="popular_food_slider_rating_section">
+                      <p className="popular_food_slider_rating">
+                        4.9{" "}
+                        <FontAwesomeIcon
+                          className="popular_food_slider_rating_star"
+                          icon={faStar}
+                        />
+                      </p>
+                      <a href=".">
+                        <FontAwesomeIcon icon={faShoppingBasket} />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                className="popular_food_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="50"
-              >
-                <LazyLoad height={200} placeholder={<Preloader />}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food9.jpg"}
-                    alt="baklava"
-                  />
-                </LazyLoad>
-                <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Mussel Baklava</p>
-                  <a href=".">
-                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
+                <div
+                  className="popular_food_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="50"
+                >
+                  <LazyLoad height={200} placeholder={<Preloader />}>
+                    <SRLWrapper options={options}>
+                      <img
+                        src={AppUrl.image_url + "assets/images/food9.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                  </LazyLoad>
+                  <div className="popular_food_slider_title_section">
+                    <p className="popular_food_slider_title">Mussel Baklava</p>
+                    <a href=".">
+                      {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
+                      {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
                     /> */}
-                  </a>
-                </div>
-                <div className="popular_food_slider_description_section">
-                  <p className="popular_food_slider_description">
-                    Species of baklava
-                  </p>
-                </div>
-                <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 390</p>
-                  <div className="popular_food_slider_rating_section">
-                    <p className="popular_food_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="popular_food_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
                     </a>
                   </div>
+                  <div className="popular_food_slider_description_section">
+                    <p className="popular_food_slider_description">
+                      Species of baklava
+                    </p>
+                  </div>
+                  <div className="popular_food_slider_price_section">
+                    <p className="popular_food_slider_price">TK. 390</p>
+                    <div className="popular_food_slider_rating_section">
+                      <p className="popular_food_slider_rating">
+                        4.9{" "}
+                        <FontAwesomeIcon
+                          className="popular_food_slider_rating_star"
+                          icon={faStar}
+                        />
+                      </p>
+                      <a href=".">
+                        <FontAwesomeIcon icon={faShoppingBasket} />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                className="popular_food_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="50"
-              >
-                <LazyLoad height={200} placeholder={<Preloader />}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food10.jpg"}
-                    alt="baklava"
-                  />
-                </LazyLoad>
-                <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Baklava Rolled</p>
-                  <a href=".">
-                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
+                <div
+                  className="popular_food_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="50"
+                >
+                  <LazyLoad height={200} placeholder={<Preloader />}>
+                    <SRLWrapper options={options}>
+                      <img
+                        src={AppUrl.image_url + "assets/images/food10.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                  </LazyLoad>
+                  <div className="popular_food_slider_title_section">
+                    <p className="popular_food_slider_title">Baklava Rolled</p>
+                    <a href=".">
+                      {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
+                      {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
                     /> */}
-                  </a>
-                </div>
-                <div className="popular_food_slider_description_section">
-                  <p className="popular_food_slider_description">
-                    Species of baklava
-                  </p>
-                </div>
-                <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 232</p>
-                  <div className="popular_food_slider_rating_section">
-                    <p className="popular_food_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="popular_food_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
                     </a>
                   </div>
+                  <div className="popular_food_slider_description_section">
+                    <p className="popular_food_slider_description">
+                      Species of baklava
+                    </p>
+                  </div>
+                  <div className="popular_food_slider_price_section">
+                    <p className="popular_food_slider_price">TK. 232</p>
+                    <div className="popular_food_slider_rating_section">
+                      <p className="popular_food_slider_rating">
+                        4.9{" "}
+                        <FontAwesomeIcon
+                          className="popular_food_slider_rating_star"
+                          icon={faStar}
+                        />
+                      </p>
+                      <a href=".">
+                        <FontAwesomeIcon icon={faShoppingBasket} />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                className="popular_food_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="50"
-              >
-                <LazyLoad height={200} placeholder={<Preloader />}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food11.jpg"}
-                    alt="baklava"
-                  />
-                </LazyLoad>
-                <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Square Walnut</p>
-                  <a href=".">
-                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
+                <div
+                  className="popular_food_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="50"
+                >
+                  <LazyLoad height={200} placeholder={<Preloader />}>
+                    <SRLWrapper options={options}>
+                      <img
+                        src={AppUrl.image_url + "assets/images/food11.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                  </LazyLoad>
+                  <div className="popular_food_slider_title_section">
+                    <p className="popular_food_slider_title">Square Walnut</p>
+                    <a href=".">
+                      {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
+                      {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
                     /> */}
-                  </a>
-                </div>
-                <div className="popular_food_slider_description_section">
-                  <p className="popular_food_slider_description">
-                    Species of baklava
-                  </p>
-                </div>
-                <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 232</p>
-                  <div className="popular_food_slider_rating_section">
-                    <p className="popular_food_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="popular_food_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
                     </a>
                   </div>
+                  <div className="popular_food_slider_description_section">
+                    <p className="popular_food_slider_description">
+                      Species of baklava
+                    </p>
+                  </div>
+                  <div className="popular_food_slider_price_section">
+                    <p className="popular_food_slider_price">TK. 232</p>
+                    <div className="popular_food_slider_rating_section">
+                      <p className="popular_food_slider_rating">
+                        4.9{" "}
+                        <FontAwesomeIcon
+                          className="popular_food_slider_rating_star"
+                          icon={faStar}
+                        />
+                      </p>
+                      <a href=".">
+                        <FontAwesomeIcon icon={faShoppingBasket} />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                className="popular_food_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="50"
-              >
-                <LazyLoad height={200} placeholder={<Preloader />}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food12.jpg"}
-                    alt="baklava"
-                  />
-                </LazyLoad>
-                <div className="popular_food_slider_title_section">
-                  <p className="popular_food_slider_title">Shredded Kadayif</p>
-                  <a href="/">
-                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
+                <div
+                  className="popular_food_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="50"
+                >
+                  <LazyLoad height={200} placeholder={<Preloader />}>
+                    <SRLWrapper options={options}>
+                      <img
+                        src={AppUrl.image_url + "assets/images/food12.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                  </LazyLoad>
+                  <div className="popular_food_slider_title_section">
+                    <p className="popular_food_slider_title">
+                      Shredded Kadayif
+                    </p>
+                    <a href="/">
+                      {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
+                      {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
                     /> */}
-                  </a>
-                </div>
-                <div className="popular_food_slider_description_section">
-                  <p className="popular_food_slider_description">
-                    Species of baklava
-                  </p>
-                </div>
-                <div className="popular_food_slider_price_section">
-                  <p className="popular_food_slider_price">TK. 242</p>
-                  <div className="popular_food_slider_rating_section">
-                    <p className="popular_food_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="popular_food_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
                     </a>
                   </div>
+                  <div className="popular_food_slider_description_section">
+                    <p className="popular_food_slider_description">
+                      Species of baklava
+                    </p>
+                  </div>
+                  <div className="popular_food_slider_price_section">
+                    <p className="popular_food_slider_price">TK. 242</p>
+                    <div className="popular_food_slider_rating_section">
+                      <p className="popular_food_slider_rating">
+                        4.9{" "}
+                        <FontAwesomeIcon
+                          className="popular_food_slider_rating_star"
+                          icon={faStar}
+                        />
+                      </p>
+                      <a href=".">
+                        <FontAwesomeIcon icon={faShoppingBasket} />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              {/* <div
+                {/* <div
                 className="popular_food_slider_inside_div"
                 data-aos="zoom-in"
                 data-aos-delay="50"
@@ -356,7 +400,7 @@ const PopularFood = () => {
                 </div>
               </div> */}
 
-              {/* <div
+                {/* <div
                 className="popular_food_slider_inside_div"
                 data-aos="zoom-in"
                 data-aos-delay="50"
@@ -398,7 +442,7 @@ const PopularFood = () => {
                 </div>
               </div> */}
 
-              {/* <div
+                {/* <div
                 className="popular_food_slider_inside_div"
                 data-aos="zoom-in"
                 data-aos-delay="50"
@@ -440,7 +484,7 @@ const PopularFood = () => {
                 </div>
               </div> */}
 
-              {/* <div
+                {/* <div
                 className="popular_food_slider_inside_div"
                 data-aos="zoom-in"
                 data-aos-delay="50"
@@ -481,10 +525,11 @@ const PopularFood = () => {
                   </div>
                 </div>
               </div> */}
-            </Slider>
+              </Slider>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </SimpleReactLightbox>
     </>
   );
 };

@@ -13,11 +13,15 @@ import {
   faShoppingBasket,
 } from "@fortawesome/free-solid-svg-icons";
 //import { BsHeart } from "react-icons/bs";
-
+import SimpleReactLightbox from "simple-react-lightbox";
+import { SRLWrapper } from "simple-react-lightbox";
+//import { useLightbox } from "simple-react-lightbox";
 import HappyCustomer from "../happy_customer/HappyCustomer";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+  //const { openLightbox } = useLightbox();
+
   let settings = {
     // dots: true,
     infinite: true,
@@ -52,289 +56,342 @@ const Hero = () => {
     };
   }
 
+  const options = {
+    settings: {
+      autoplaySpeed: 3000,
+      boxShadow: "none",
+      disableKeyboardControls: false,
+      disablePanzoom: false,
+      disableWheelControls: true,
+      hideControlsAfter: false,
+      lightboxTransitionSpeed: 0.3,
+      lightboxTransitionTimingFunction: "linear",
+      overlayColor: "rgba(30, 30, 30, 0.9)",
+      slideAnimationType: "slide",
+      slideSpringValues: [300, 50],
+      slideTransitionSpeed: 0.6,
+      slideTransitionTimingFunction: "linear",
+      usingPreact: false,
+    },
+    caption: {},
+    buttons: {},
+    thumbnails: { showThumbnails: false },
+    progressBar: {},
+    translations: {}, // PRO ONLY
+    icons: {}, // PRO ONLY
+  };
+
+  // function openLightbox() {
+  //   let images = document.querySelector(".hero_large_slider_image");
+  //   images.classList.add("hero_large_slider_image_active");
+  // }
+
   return (
     <>
-      <section className="hero_main">
-        <div className="hero_main_div container">
-          <div className="hero_left_content">
-            <h1 className="hero_title" data-aos="fade-right" data-aos-delay="0">
-              A Tale Of Turkey Healthy Food
-            </h1>
+      <SimpleReactLightbox>
+        <section className="hero_main">
+          <div className="hero_main_div container">
+            <div className="hero_left_content">
+              <h1
+                className="hero_title"
+                data-aos="fade-right"
+                data-aos-delay="0"
+              >
+                A Tale Of Turkey Healthy Food
+              </h1>
 
-            <h2
-              className="hero_description"
-              data-aos="fade-right"
-              data-aos-delay="0"
-            >
-              Indulge into the rich variety of mouth watering dishes we have to
-              offer
-            </h2>
-            <div
-              className="hero_view_menu_btn_div"
-              data-aos="fade-right"
-              data-aos-delay="0"
-            >
-              <Link to="/menu" className="hero_view_menu_btn">
-                View Menu <i className="fa fa-arrow-right"></i>
-              </Link>
+              <h2
+                className="hero_description"
+                data-aos="fade-right"
+                data-aos-delay="0"
+              >
+                Indulge into the rich variety of mouth watering dishes we have
+                to offer
+              </h2>
+              <div
+                className="hero_view_menu_btn_div"
+                data-aos="fade-right"
+                data-aos-delay="0"
+              >
+                <Link to="/menu" className="hero_view_menu_btn">
+                  View Menu <i className="fa fa-arrow-right"></i>
+                </Link>
+              </div>
+              <div
+                className="hero_small_slider_div"
+                data-aos="fade-right"
+                data-aos-delay="0"
+              >
+                <Slider className="hero_small_slider_main" {...settings}>
+                  <div className="hero_small_slider_inside_div">
+                    <a href=".">
+                      <FontAwesomeIcon icon={faIceCream} />
+                    </a>
+                    <p>Baklava</p>
+                  </div>
+                  <div className="hero_small_slider_inside_div">
+                    <a href=".">
+                      <FontAwesomeIcon icon={faHamburger} />
+                    </a>
+                    <p>Baklava</p>
+                  </div>
+                  <div className="hero_small_slider_inside_div">
+                    <a href=".">
+                      <FontAwesomeIcon icon={faPizzaSlice} />
+                    </a>
+                    <p>Baklava</p>
+                  </div>
+                  <div className="hero_small_slider_inside_div">
+                    <a href=".">
+                      <FontAwesomeIcon icon={faIceCream} />
+                    </a>
+                    <p>Baklava</p>
+                  </div>
+                  <div className="hero_small_slider_inside_div">
+                    <a href=".">
+                      <FontAwesomeIcon icon={faHamburger} />
+                    </a>
+                    <p>Baklava</p>
+                  </div>
+                </Slider>
+              </div>
             </div>
-            <div
-              className="hero_small_slider_div"
-              data-aos="fade-right"
-              data-aos-delay="0"
-            >
-              <Slider className="hero_small_slider_main" {...settings}>
-                <div className="hero_small_slider_inside_div">
-                  <a href=".">
-                    <FontAwesomeIcon icon={faIceCream} />
-                  </a>
-                  <p>Baklava</p>
-                </div>
-                <div className="hero_small_slider_inside_div">
-                  <a href=".">
-                    <FontAwesomeIcon icon={faHamburger} />
-                  </a>
-                  <p>Baklava</p>
-                </div>
-                <div className="hero_small_slider_inside_div">
-                  <a href=".">
-                    <FontAwesomeIcon icon={faPizzaSlice} />
-                  </a>
-                  <p>Baklava</p>
-                </div>
-                <div className="hero_small_slider_inside_div">
-                  <a href=".">
-                    <FontAwesomeIcon icon={faIceCream} />
-                  </a>
-                  <p>Baklava</p>
-                </div>
-                <div className="hero_small_slider_inside_div">
-                  <a href=".">
-                    <FontAwesomeIcon icon={faHamburger} />
-                  </a>
-                  <p>Baklava</p>
-                </div>
-              </Slider>
-            </div>
-          </div>
-          <div className="hero_right_content">
-            <HappyCustomer />
-            <img
-              className="hero_main_baklava_img"
-              src={AppUrl.image_url + "assets/images/hero_baklava.webp"}
-              alt="baklava"
-              data-aos="zoom-in"
-              data-aos-delay="0"
-            />
+            <div className="hero_right_content">
+              <HappyCustomer />
+              <img
+                className="hero_main_baklava_img"
+                src={AppUrl.image_url + "assets/images/hero_baklava.webp"}
+                alt="baklava"
+                data-aos="zoom-in"
+                data-aos-delay="0"
+              />
 
-            <div className="hero_large_slider_div">
-              <Slider {...settings1}>
-                <div
-                  className="hero_large_slider_inside_div"
-                  data-aos="zoom-in"
-                  data-aos-delay="0"
-                >
-                  <img
-                    src={AppUrl.image_url + "assets/images/food1.jpg"}
-                    alt="baklava"
-                  />
-                  <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Ozel Baklava</p>
-                    <a href=".">
-                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
-                      {/* <FontAwesomeIcon
+              <div className="hero_large_slider_div">
+                <Slider {...settings1}>
+                  <div
+                    className="hero_large_slider_inside_div"
+                    data-aos="zoom-in"
+                    data-aos-delay="0"
+                  >
+                    <SRLWrapper options={options}>
+                      <img
+                        className="hero_large_slider_image"
+                        src={AppUrl.image_url + "assets/images/food1.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+
+                    <div className="hero_large_slider_title_section">
+                      <p className="hero_large_slider_title">Ozel Baklava</p>
+                      <a href=".">
+                        {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
+                        {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}
                       /> */}
-                    </a>
-                  </div>
-                  <div className="hero_large_slider_description_section">
-                    <p className="hero_large_slider_description">
-                      Species of baklava
-                    </p>
-                  </div>
-                  <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 390</p>
-                    <div className="hero_large_slider_rating_section">
-                      <p className="hero_large_slider_rating">
-                        4.9{" "}
-                        <FontAwesomeIcon
-                          className="hero_large_slider_rating_star"
-                          icon={faStar}
-                        />
-                      </p>
-                      <a href=".">
-                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
+                    <div className="hero_large_slider_description_section">
+                      <p className="hero_large_slider_description">
+                        Species of baklava
+                      </p>
+                    </div>
+                    <div className="hero_large_slider_price_section">
+                      <p className="hero_large_slider_price">TK. 390</p>
+                      <div className="hero_large_slider_rating_section">
+                        <p className="hero_large_slider_rating">
+                          4.9{" "}
+                          <FontAwesomeIcon
+                            className="hero_large_slider_rating_star"
+                            icon={faStar}
+                          />
+                        </p>
+                        <a href=".">
+                          <FontAwesomeIcon icon={faShoppingBasket} />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <div
-                  className="hero_large_slider_inside_div"
-                  data-aos="zoom-in"
-                  data-aos-delay="0"
-                >
-                  <img
-                    src={AppUrl.image_url + "assets/images/food2.jpg"}
-                    alt="baklava"
-                  />
-                  <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Cevizli Baklava</p>
-                    <a href=".">
-                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
-                      {/* <FontAwesomeIcon
+                  <div
+                    className="hero_large_slider_inside_div"
+                    data-aos="zoom-in"
+                    data-aos-delay="0"
+                  >
+                    <SRLWrapper options={options}>
+                      <img
+                        className="hero_large_slider_image"
+                        src={AppUrl.image_url + "assets/images/food2.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                    <div className="hero_large_slider_title_section">
+                      <p className="hero_large_slider_title">Cevizli Baklava</p>
+                      <a href=".">
+                        {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
+                        {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}
                       /> */}
-                    </a>
-                  </div>
-                  <div className="hero_large_slider_description_section">
-                    <p className="hero_large_slider_description">
-                      Species of baklava
-                    </p>
-                  </div>
-                  <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 1290</p>
-                    <div className="hero_large_slider_rating_section">
-                      <p className="hero_large_slider_rating">
-                        4.9{" "}
-                        <FontAwesomeIcon
-                          className="hero_large_slider_rating_star"
-                          icon={faStar}
-                        />
-                      </p>
-                      <a href=".">
-                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
+                    <div className="hero_large_slider_description_section">
+                      <p className="hero_large_slider_description">
+                        Species of baklava
+                      </p>
+                    </div>
+                    <div className="hero_large_slider_price_section">
+                      <p className="hero_large_slider_price">TK. 1290</p>
+                      <div className="hero_large_slider_rating_section">
+                        <p className="hero_large_slider_rating">
+                          4.9{" "}
+                          <FontAwesomeIcon
+                            className="hero_large_slider_rating_star"
+                            icon={faStar}
+                          />
+                        </p>
+                        <a href=".">
+                          <FontAwesomeIcon icon={faShoppingBasket} />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <div
-                  className="hero_large_slider_inside_div"
-                  data-aos="zoom-in"
-                  data-aos-delay="0"
-                >
-                  <img
-                    src={AppUrl.image_url + "assets/images/food3.jpg"}
-                    alt="baklava"
-                  />
-                  <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Fistikli Baklava</p>
-                    <a href=".">
-                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
-                      {/* <FontAwesomeIcon
+                  <div
+                    className="hero_large_slider_inside_div"
+                    data-aos="zoom-in"
+                    data-aos-delay="0"
+                  >
+                    <SRLWrapper options={options}>
+                      <img
+                        className="hero_large_slider_image"
+                        src={AppUrl.image_url + "assets/images/food3.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                    <div className="hero_large_slider_title_section">
+                      <p className="hero_large_slider_title">
+                        Fistikli Baklava
+                      </p>
+                      <a href=".">
+                        {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
+                        {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}
                       /> */}
-                    </a>
-                  </div>
-                  <div className="hero_large_slider_description_section">
-                    <p className="hero_large_slider_description">
-                      Species of baklava
-                    </p>
-                  </div>
-                  <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 1350</p>
-                    <div className="hero_large_slider_rating_section">
-                      <p className="hero_large_slider_rating">
-                        4.9{" "}
-                        <FontAwesomeIcon
-                          className="hero_large_slider_rating_star"
-                          icon={faStar}
-                        />
-                      </p>
-                      <a href=".">
-                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
+                    <div className="hero_large_slider_description_section">
+                      <p className="hero_large_slider_description">
+                        Species of baklava
+                      </p>
+                    </div>
+                    <div className="hero_large_slider_price_section">
+                      <p className="hero_large_slider_price">TK. 1350</p>
+                      <div className="hero_large_slider_rating_section">
+                        <p className="hero_large_slider_rating">
+                          4.9{" "}
+                          <FontAwesomeIcon
+                            className="hero_large_slider_rating_star"
+                            icon={faStar}
+                          />
+                        </p>
+                        <a href=".">
+                          <FontAwesomeIcon icon={faShoppingBasket} />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <div
-                  className="hero_large_slider_inside_div"
-                  data-aos="zoom-in"
-                  data-aos-delay="0"
-                >
-                  <img
-                    src={AppUrl.image_url + "assets/images/food4.jpg"}
-                    alt="baklava"
-                  />
-                  <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Kadayif</p>
-                    <a href=".">
-                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
-                      {/* <FontAwesomeIcon
+                  <div
+                    className="hero_large_slider_inside_div"
+                    data-aos="zoom-in"
+                    data-aos-delay="0"
+                  >
+                    <SRLWrapper options={options}>
+                      <img
+                        className="hero_large_slider_image"
+                        src={AppUrl.image_url + "assets/images/food4.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                    <div className="hero_large_slider_title_section">
+                      <p className="hero_large_slider_title">Kadayif</p>
+                      <a href=".">
+                        {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
+                        {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}
                       /> */}
-                    </a>
-                  </div>
-                  <div className="hero_large_slider_description_section">
-                    <p className="hero_large_slider_description">
-                      Species of baklava
-                    </p>
-                  </div>
-                  <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 1660</p>
-                    <div className="hero_large_slider_rating_section">
-                      <p className="hero_large_slider_rating">
-                        4.9{" "}
-                        <FontAwesomeIcon
-                          className="hero_large_slider_rating_star"
-                          icon={faStar}
-                        />
-                      </p>
-                      <a href=".">
-                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
+                    <div className="hero_large_slider_description_section">
+                      <p className="hero_large_slider_description">
+                        Species of baklava
+                      </p>
+                    </div>
+                    <div className="hero_large_slider_price_section">
+                      <p className="hero_large_slider_price">TK. 1660</p>
+                      <div className="hero_large_slider_rating_section">
+                        <p className="hero_large_slider_rating">
+                          4.9{" "}
+                          <FontAwesomeIcon
+                            className="hero_large_slider_rating_star"
+                            icon={faStar}
+                          />
+                        </p>
+                        <a href=".">
+                          <FontAwesomeIcon icon={faShoppingBasket} />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <div
-                  className="hero_large_slider_inside_div"
-                  data-aos="zoom-in"
-                  data-aos-delay="0"
-                >
-                  <img
-                    src={AppUrl.image_url + "assets/images/food5.jpg"}
-                    alt="baklava"
-                  />
-                  <div className="hero_large_slider_title_section">
-                    <p className="hero_large_slider_title">Turkish Delight</p>
-                    <a href=".">
-                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
-                      {/* <FontAwesomeIcon
+                  <div
+                    className="hero_large_slider_inside_div"
+                    data-aos="zoom-in"
+                    data-aos-delay="0"
+                  >
+                    <SRLWrapper options={options}>
+                      <img
+                        className="hero_large_slider_image"
+                        src={AppUrl.image_url + "assets/images/food5.jpg"}
+                        alt="baklava"
+                      />
+                    </SRLWrapper>
+                    <div className="hero_large_slider_title_section">
+                      <p className="hero_large_slider_title">Turkish Delight</p>
+                      <a href=".">
+                        {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
+                        {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}
                       /> */}
-                    </a>
-                  </div>
-                  <div className="hero_large_slider_description_section">
-                    <p className="hero_large_slider_description">
-                      Species of baklava
-                    </p>
-                  </div>
-                  <div className="hero_large_slider_price_section">
-                    <p className="hero_large_slider_price">TK. 690</p>
-                    <div className="hero_large_slider_rating_section">
-                      <p className="hero_large_slider_rating">
-                        4.9{" "}
-                        <FontAwesomeIcon
-                          className="hero_large_slider_rating_star"
-                          icon={faStar}
-                        />
-                      </p>
-                      <a href=".">
-                        <FontAwesomeIcon icon={faShoppingBasket} />
                       </a>
                     </div>
+                    <div className="hero_large_slider_description_section">
+                      <p className="hero_large_slider_description">
+                        Species of baklava
+                      </p>
+                    </div>
+                    <div className="hero_large_slider_price_section">
+                      <p className="hero_large_slider_price">TK. 690</p>
+                      <div className="hero_large_slider_rating_section">
+                        <p className="hero_large_slider_rating">
+                          4.9{" "}
+                          <FontAwesomeIcon
+                            className="hero_large_slider_rating_star"
+                            icon={faStar}
+                          />
+                        </p>
+                        <a href=".">
+                          <FontAwesomeIcon icon={faShoppingBasket} />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                {/* <div
+                  {/* <div
                   className="hero_large_slider_inside_div"
                   data-aos="zoom-in"
                   data-aos-delay="0"
@@ -373,11 +430,12 @@ const Hero = () => {
                     </div>
                   </div>
                 </div> */}
-              </Slider>
+                </Slider>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </SimpleReactLightbox>
     </>
   );
 };

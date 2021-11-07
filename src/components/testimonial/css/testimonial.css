@@ -23,13 +23,14 @@
 }
 
 .testimonial_img {
-  height: 450px;
-  width: auto;
+  height: 360px;
+  width: 550px;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 .testimonial_slider_div {
-  margin-left: 150px;
+  margin-left: 50px;
   width: 700px;
 }
 
@@ -53,7 +54,7 @@
   position: absolute;
   z-index: 2;
   margin-top: -180px;
-  margin-left: 500px;
+  margin-left: 570px;
   font-size: 18px;
   color: gray;
 }
@@ -62,7 +63,7 @@
   position: absolute;
   z-index: 2;
   margin-top: 50px;
-  margin-left: 1200px;
+  margin-left: 1280px;
   font-size: 18px;
   color: gray;
 }

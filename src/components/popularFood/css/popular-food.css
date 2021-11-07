@@ -116,6 +116,18 @@
   width: auto;
   margin-top: -80px;
   margin-left: 28px;
+  cursor: pointer;
+}
+
+.SRLPrevButton,
+.SRLNextButton {
+  display: none !important;
+}
+
+.SRLImage {
+  border-radius: 50% !important;
+  /* width: 400px !important;
+  height: 400px !important; */
 }
 
 /* .popular_food_slider_div .slick-slider .slick-list .slick-track .slick-current {

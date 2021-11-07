@@ -36,7 +36,7 @@ const Testimonial = () => {
         <div className="testimonial_content">
           <img
             className="testimonial_img"
-            src={AppUrl.image_url + "assets/images/person-burger.webp"}
+            src={AppUrl.image_url + "assets/images/review_pic.webp"}
             alt="burger"
             data-aos="fade-right"
             data-aos-delay="20"

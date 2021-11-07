@@ -66,6 +66,17 @@
   border-radius: 50%;
 }
 
+.SRLPrevButton,
+.SRLNextButton {
+  display: none !important;
+}
+
+.SRLImage {
+  border-radius: 50% !important;
+  /* width: 400px !important;
+  height: 400px !important; */
+}
+
 .cart_inc_dec {
   text-align: center;
 }
