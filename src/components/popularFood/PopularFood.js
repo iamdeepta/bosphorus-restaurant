@@ -9,7 +9,7 @@ import { faStar, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
 import Preloader from "../preloader/Preloader";
-import { BsHeart } from "react-icons/bs";
+//import { BsHeart } from "react-icons/bs";
 
 const PopularFood = () => {
   let settings1;
@@ -70,7 +70,7 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Havuc Dilim</p>
                   <a href=".">
-                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
                     {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
@@ -113,7 +113,7 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Square Pistachio</p>
                   <a href=".">
-                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
                     {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
@@ -156,7 +156,7 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Mussel Baklava</p>
                   <a href=".">
-                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
                     {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
@@ -199,7 +199,7 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Baklava Rolled</p>
                   <a href=".">
-                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
                     {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
@@ -242,7 +242,7 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Square Walnut</p>
                   <a href=".">
-                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
                     {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}
@@ -285,7 +285,7 @@ const PopularFood = () => {
                 <div className="popular_food_slider_title_section">
                   <p className="popular_food_slider_title">Shredded Kadayif</p>
                   <a href="/">
-                    <BsHeart className="popular_food_slider_heart_icon" />
+                    {/* <BsHeart className="popular_food_slider_heart_icon" /> */}
                     {/* <FontAwesomeIcon
                       className="popular_food_slider_heart_icon"
                       icon={faHeart}

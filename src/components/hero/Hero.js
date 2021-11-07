@@ -12,7 +12,7 @@ import {
   faStar,
   faShoppingBasket,
 } from "@fortawesome/free-solid-svg-icons";
-import { BsHeart } from "react-icons/bs";
+//import { BsHeart } from "react-icons/bs";
 
 import HappyCustomer from "../happy_customer/HappyCustomer";
 import { Link } from "react-router-dom";
@@ -141,7 +141,7 @@ const Hero = () => {
                   <div className="hero_large_slider_title_section">
                     <p className="hero_large_slider_title">Ozel Baklava</p>
                     <a href=".">
-                      <BsHeart className="hero_large_slider_heart_icon" />
+                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
                       {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}
@@ -182,7 +182,7 @@ const Hero = () => {
                   <div className="hero_large_slider_title_section">
                     <p className="hero_large_slider_title">Cevizli Baklava</p>
                     <a href=".">
-                      <BsHeart className="hero_large_slider_heart_icon" />
+                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
                       {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}
@@ -223,7 +223,7 @@ const Hero = () => {
                   <div className="hero_large_slider_title_section">
                     <p className="hero_large_slider_title">Fistikli Baklava</p>
                     <a href=".">
-                      <BsHeart className="hero_large_slider_heart_icon" />
+                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
                       {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}
@@ -264,7 +264,7 @@ const Hero = () => {
                   <div className="hero_large_slider_title_section">
                     <p className="hero_large_slider_title">Kadayif</p>
                     <a href=".">
-                      <BsHeart className="hero_large_slider_heart_icon" />
+                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
                       {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}
@@ -305,7 +305,7 @@ const Hero = () => {
                   <div className="hero_large_slider_title_section">
                     <p className="hero_large_slider_title">Turkish Delight</p>
                     <a href=".">
-                      <BsHeart className="hero_large_slider_heart_icon" />
+                      {/* <BsHeart className="hero_large_slider_heart_icon" /> */}
                       {/* <FontAwesomeIcon
                         className="hero_large_slider_heart_icon"
                         icon={faHeart}

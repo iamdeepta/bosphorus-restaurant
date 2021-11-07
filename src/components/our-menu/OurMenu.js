@@ -6,10 +6,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
-import { BsHeart } from "react-icons/bs";
+//import { BsHeart } from "react-icons/bs";
 
 const OurMenu = () => {
   let settings1;
+  let settings2;
   if (window.innerWidth <= 460) {
     settings1 = {
       // dots: true,
@@ -36,6 +37,40 @@ const OurMenu = () => {
     };
   }
 
+  if (window.innerWidth <= 460) {
+    settings2 = {
+      // dots: true,
+      infinite: false,
+      rows: 1,
+      centerMode: true,
+      centerPadding: "0px",
+      speed: 1000,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: false,
+    };
+  } else {
+    settings2 = {
+      // dots: true,
+      infinite: false,
+      rows: 1,
+      centerMode: true,
+      centerPadding: "0px",
+      speed: 1000,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: false,
+    };
+  }
+
+  function selectCat(id) {
+    let category = [...document.querySelectorAll(".our_menu_category")];
+
+    //category.map((i, j) => i.classList.add("our_menu_category_active"));
+    category[id].classList.add("our_menu_category_active");
+    //category[!id].classList.remove("our_menu_category_active");
+  }
+
   return (
     <>
       <section className="our_menu_section container">
@@ -52,6 +87,33 @@ const OurMenu = () => {
           </h2>
         </div>
 
+        <div
+          className="our_menu_category_div"
+          data-aos="fade-up"
+          data-aos-delay="20"
+        >
+          <Slider {...settings2} className="our_menu_category_slider">
+            <div className="our_menu_category" onClick={() => selectCat(0)}>
+              Breakfast
+            </div>
+            <div className="our_menu_category" onClick={() => selectCat(1)}>
+              Lunch
+            </div>
+            <div className="our_menu_category" onClick={() => selectCat(2)}>
+              Dinner
+            </div>
+            <div className="our_menu_category" onClick={() => selectCat(3)}>
+              Baklava
+            </div>
+            <div className="our_menu_category" onClick={() => selectCat(4)}>
+              Icecream
+            </div>
+            <div className="our_menu_category" onClick={() => selectCat(5)}>
+              Sandwich
+            </div>
+          </Slider>
+        </div>
+
         <div className="our_menu_slider_div">
           <Slider {...settings1}>
             <div
@@ -66,7 +128,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Veg Sandwich</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
@@ -107,7 +169,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Tandoori Wrap</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
@@ -146,7 +208,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Spaghetti Bolognese</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
@@ -185,7 +247,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">T-Bone Steak</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
@@ -224,7 +286,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Salmon Steak</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
@@ -263,7 +325,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Rib-Eye Steak</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
@@ -302,7 +364,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Buffalo Wings</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
@@ -341,7 +403,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">French Fries</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
@@ -380,7 +442,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Prawn Tempura</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
@@ -419,7 +481,7 @@ const OurMenu = () => {
               <div className="our_menu_slider_title_section">
                 <p className="our_menu_slider_title">Quesadilla</p>
                 <a href=".">
-                  <BsHeart className="our_menu_slider_heart_icon" />
+                  {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
                   {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
