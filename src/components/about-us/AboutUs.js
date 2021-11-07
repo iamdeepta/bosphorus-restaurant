@@ -1,21 +1,23 @@
 import React from "react";
 import "./css/about-us.css";
-import AppUrl from "../../classes/AppUrl";
+//import AppUrl from "../../classes/AppUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import AboutUsSvg from "./AboutUsSvg";
 
 const AboutUs = () => {
   return (
     <>
       <section className="about_us_section">
         <div className="about_us_inside container">
-          <img
+          {/* <img
             className="about_us_left_image"
             src={AppUrl.image_url + "assets/images/about_us.webp"}
             alt="chef"
             data-aos="fade-right"
             data-aos-delay="0"
-          />
+          /> */}
+          <AboutUsSvg />
           <div className="about_us_right_content">
             <p className="about_us_text" data-aos="fade-up" data-aos-delay="0">
               ABOUT US

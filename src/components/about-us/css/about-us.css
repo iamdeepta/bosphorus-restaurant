@@ -16,6 +16,10 @@
   border-radius: 20px;
 }
 
+.about_us_svg_image {
+  margin-top: 0px;
+}
+
 .about_us_right_content {
   margin-left: 80px;
 }
@@ -104,8 +108,285 @@
   font-weight: bold;
 }
 
+#boy1_head {
+  animation: boy1_head 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes boy1_head {
+  100% {
+    transform: rotateZ(6deg);
+  }
+}
+
+#boy1_phone {
+  animation: boy1_phone 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes boy1_phone {
+  100% {
+    transform: rotateZ(-17deg);
+  }
+}
+
+#leaves1,
+#leaves2,
+#leaves10,
+#leaves11,
+#leaves12,
+#leaves13,
+#flower1,
+#flower3 {
+  animation: leaves1 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes leaves1 {
+  100% {
+    transform: rotateZ(3deg);
+  }
+}
+
+#leaves3,
+#leaves4,
+#leaves5,
+#leaves6,
+#leaves7,
+#leaves8,
+#leaves9,
+#leaves14,
+#leaves15,
+#leaves16,
+#flower2 {
+  animation: leaves3 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes leaves3 {
+  100% {
+    transform: rotateZ(-3deg);
+  }
+}
+
+#girl1_face,
+#girl2_face {
+  animation: girl1_head 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes girl1_head {
+  100% {
+    transform: rotateZ(-5deg);
+  }
+}
+
+#girl2_whole_hand {
+  animation: girl2_whole_hand 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes girl2_whole_hand {
+  100% {
+    transform: rotateZ(-5deg);
+  }
+}
+
+#old_man_head {
+  animation: old_man_head 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes old_man_head {
+  100% {
+    transform: rotateZ(4deg);
+  }
+}
+
+#old_man_arm,
+#old_man_cup {
+  animation: old_man_arm 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes old_man_arm {
+  100% {
+    transform: translateY(-9px);
+  }
+}
+
+#waiter_head,
+#waiter_right_hand,
+#waiter_food_tray,
+#waiter_left_hand {
+  animation: waiter_head 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes waiter_head {
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+#boy3_head {
+  animation: boy3_head 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes boy3_head {
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+#boy3_hand {
+  animation: boy3_hand 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes boy3_hand {
+  100% {
+    transform: translateY(-21px) rotate(-6deg);
+  }
+}
+
+#boy3_leg,
+#boy3_shoe {
+  animation: boy3_hand 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes boy3_hand {
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+#girl3_head {
+  animation: girl3_head 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes girl3_head {
+  100% {
+    transform: rotateZ(-8deg);
+  }
+}
+
+#girl3_wrist,
+#girl3_right_arm {
+  animation: girl3_wrist 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes girl3_wrist {
+  100% {
+    transform: rotateZ(8deg) translateX(8px);
+  }
+}
+
+#girl3_shoe {
+  animation: girl3_shoe 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes girl3_shoe {
+  100% {
+    transform: rotateZ(10deg) translateX(4px);
+  }
+}
+
+#boy2_head {
+  animation: boy2_head 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes boy2_head {
+  100% {
+    transform: rotateZ(10deg) translateX(4px);
+  }
+}
+
+#boy2_right_arm {
+  animation: boy2_right_arm 1s ease-in-out alternate infinite;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes boy2_right_arm {
+  100% {
+    transform: rotateZ(-70deg);
+  }
+}
+
+#boy2_right_wrist {
+  animation: boy2_right_wrist 1s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes boy2_right_wrist {
+  100% {
+    transform: translateX(-62px) translateY(-120px);
+  }
+}
+
+#boy2_shoe {
+  animation: boy2_shoe 0.8s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes boy2_shoe {
+  100% {
+    transform: rotateZ(-20deg) translateX(4px);
+  }
+}
+
+#boy2_arm {
+  animation: boy2_arm 0.8s ease-in-out alternate infinite;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes boy2_arm {
+  100% {
+    transform: rotateZ(8deg) translateY(10px);
+  }
+}
+
+/* #old_man_upper_arm {
+  animation: old_man_upper_arm 0.7s ease-in-out alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes old_man_upper_arm {
+  100% {
+    transform: rotateZ(10deg);
+  }
+} */
+
 @media screen and (max-width: 768px) {
-  .about_us_left_image {
+  .about_us_left_image,
+  .about_us_svg_image {
     display: none;
   }
 
