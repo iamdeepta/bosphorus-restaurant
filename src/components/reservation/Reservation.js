@@ -17,19 +17,21 @@ import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 //import FormControl from "@mui/material/FormControl";
 //import Select from "@mui/material/Select";
 import ReservationSvg from "./ReservationSvg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Reservation = () => {
-  const [value, setValue] = useState("");
+  // const [value, setValue] = useState("");
 
-  const handleChange = (newValue) => {
-    setValue(newValue);
-  };
+  // const handleChange = (newValue) => {
+  //   setValue(newValue);
+  // };
 
-  const [time_value, setTimeValue] = useState("");
+  // const [time_value, setTimeValue] = useState("");
 
-  const handleTimeChange = (newValue) => {
-    setTimeValue(newValue);
-  };
+  // const handleTimeChange = (newValue) => {
+  //   setTimeValue(newValue);
+  // };
 
   //   const [person, setPerson] = useState("");
 
@@ -37,21 +39,89 @@ const Reservation = () => {
   //     setPerson(event.target.value);
   //   };
 
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [time1, setTime1] = useState("");
+  const [email, setEmail] = useState("");
+  const [person, setPerson] = useState("");
+
   const ref_date = useRef();
   const ref_time = useRef();
 
   function date_onchange(e) {
-    console.log(e.target.value);
-    var date_text = document.querySelector(".reservation_pick_date_text");
+    if (window.innerWidth <= 768) {
+      console.log(e.target.value);
+      setDate(e.target.value);
+      var date_text = document.querySelector(".reservation_pick_date_text");
 
-    date_text.style.display = "none";
+      date_text.style.display = "none";
+    } else {
+      //console.log(JSON.stringify(e).substr(1, 10));
+      setDate(JSON.stringify(e).substr(1, 10));
+    }
   }
 
-  function time_onchange(e) {
-    console.log(e.target.value);
-    var time_text = document.querySelector(".reservation_pick_time_text");
+  function time_onchange(e1) {
+    if (window.innerWidth <= 768) {
+      console.log(e1.target.value);
+      setTime(e1.target.value);
+      var time_text = document.querySelector(".reservation_pick_time_text");
 
-    time_text.style.display = "none";
+      time_text.style.display = "none";
+    } else {
+      let time_hour = parseInt(JSON.stringify(e1).substr(12, 2));
+      let time_minute = JSON.stringify(e1).substr(14, 3);
+      if (time_hour === 19) {
+        time_hour = -5;
+      }
+      if (time_hour === 20) {
+        time_hour = -4;
+      }
+      if (time_hour === 21) {
+        time_hour = -3;
+      }
+      if (time_hour === 22) {
+        time_hour = -2;
+      }
+      if (time_hour === 23) {
+        time_hour = -1;
+      }
+
+      let time_hour1 = time_hour + 6;
+      time_hour1 = time_hour1.toString();
+      let whole_time = time_hour1 + time_minute;
+
+      //console.log(whole_time);
+      setTime(whole_time);
+      setTime1(e1);
+    }
+  }
+
+  function reservation_system() {
+    // if (email === "") {
+    //   toast.error("Please enter email");
+    // }
+    // if (person === "" || person <= 0) {
+    //   toast.error("Please enter person number");
+    // }
+    // if (date === "") {
+    //   toast.error("Please select a date");
+    // }
+    // if (time === "") {
+    //   toast.error("Please choose a time");
+    // }
+    if (
+      email !== "" &&
+      person !== "" &&
+      person > 0 &&
+      date !== "" &&
+      time !== ""
+    ) {
+      toast.success("Email sent");
+    } else {
+      toast.error("Please fill up all the fields correctly");
+    }
+    //console.log(email, person, time, date);
   }
 
   //   function date_on_focus() {
@@ -133,8 +203,8 @@ const Reservation = () => {
                   {/* <Stack spacing={3}> */}
                   <DesktopDatePicker
                     inputFormat="MM/dd/yyyy"
-                    value={value}
-                    onChange={handleChange}
+                    value={date}
+                    onChange={(e) => date_onchange(e)}
                     renderInput={(params) => <TextField {...params} />}
                   />
                   {/* </Stack> */}
@@ -143,6 +213,8 @@ const Reservation = () => {
                 <input
                   type="text"
                   placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="reservation_email_input"
                 />
               </div>
@@ -166,8 +238,11 @@ const Reservation = () => {
 
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <TimePicker
-                    value={time_value}
-                    onChange={handleTimeChange}
+                    value={time1}
+                    // views={["hours", "minutes"]}
+                    // inputFormat="HH:mm"
+                    // mask="__:__"
+                    onChange={(e1) => time_onchange(e1)}
                     renderInput={(params) => <TextField {...params} />}
                   />
                 </LocalizationProvider>
@@ -175,6 +250,8 @@ const Reservation = () => {
                 <input
                   type="number"
                   placeholder="Person"
+                  value={person}
+                  onChange={(e) => setPerson(e.target.value)}
                   className="reservation_email_input"
                 />
 
@@ -233,12 +310,16 @@ const Reservation = () => {
               data-aos="fade-up"
               data-aos-delay="80"
             >
-              <a href="." className="reservation_btn">
+              <span
+                className="reservation_btn"
+                onClick={() => reservation_system()}
+              >
                 Confirm Reservation
-              </a>
+              </span>
             </div>
           </div>
         </div>
+        <ToastContainer />
       </section>
     </>
   );

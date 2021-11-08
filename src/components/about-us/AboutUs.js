@@ -4,6 +4,7 @@ import "./css/about-us.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import AboutUsSvg from "./AboutUsSvg";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -87,9 +88,9 @@ const AboutUs = () => {
               data-aos="fade-up"
               data-aos-delay="120"
             >
-              <a href="." className="about_us_read_more_btn">
+              <Link to="/about-us" className="about_us_read_more_btn">
                 Read More
-              </a>
+              </Link>
             </div>
 
             <div className="about_us_numbers">
