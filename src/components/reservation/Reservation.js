@@ -19,6 +19,7 @@ import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import ReservationSvg from "./ReservationSvg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AppUrl from "../../classes/AppUrl";
 
 const Reservation = () => {
   // const [value, setValue] = useState("");
@@ -97,7 +98,7 @@ const Reservation = () => {
     }
   }
 
-  function reservation_system() {
+  async function reservation_system() {
     // if (email === "") {
     //   toast.error("Please enter email");
     // }
@@ -117,6 +118,28 @@ const Reservation = () => {
       date !== "" &&
       time !== ""
     ) {
+      let items = { email, person, date, time };
+
+      //let result =
+      await fetch(AppUrl.base_url + "reservation_mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(items),
+      });
+      //result = await result.json();
+
+      // if (result.error) {
+      //   toast.error("Incorrect username or password");
+      // } else if (result.success_top) {
+      // } else {
+      // }
+      setEmail("");
+      setPerson("");
+      setDate("");
+      setTime("");
       toast.success("Email sent");
     } else {
       toast.error("Please fill up all the fields correctly");
