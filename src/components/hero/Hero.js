@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./css/hero.css";
 import AppUrl from "../../classes/AppUrl";
 import Slider from "react-slick";
@@ -6,9 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faIceCream,
+  // faIceCream,
   faHamburger,
-  faPizzaSlice,
+  // faPizzaSlice,
   faStar,
   faShoppingBasket,
 } from "@fortawesome/free-solid-svg-icons";
@@ -18,9 +18,30 @@ import { SRLWrapper } from "simple-react-lightbox";
 //import { useLightbox } from "simple-react-lightbox";
 import HappyCustomer from "../happy_customer/HappyCustomer";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Hero = () => {
   //const { openLightbox } = useLightbox();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "categoryGet")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
   let settings = {
     // dots: true,
@@ -123,36 +144,42 @@ const Hero = () => {
                 data-aos-delay="0"
               >
                 <Slider className="hero_small_slider_main" {...settings}>
-                  <div className="hero_small_slider_inside_div">
-                    <a href=".">
-                      <FontAwesomeIcon icon={faIceCream} />
-                    </a>
-                    <p>Baklava</p>
-                  </div>
-                  <div className="hero_small_slider_inside_div">
+                  {data.map((item) => (
+                    <div
+                      className="hero_small_slider_inside_div"
+                      key={item.cat_id}
+                    >
+                      <a href="/">
+                        <FontAwesomeIcon icon={faHamburger} />
+                      </a>
+                      <p>{item.cat_name}</p>
+                    </div>
+                  ))}
+
+                  {/* <div className="hero_small_slider_inside_div">
                     <a href=".">
                       <FontAwesomeIcon icon={faHamburger} />
                     </a>
                     <p>Baklava</p>
-                  </div>
-                  <div className="hero_small_slider_inside_div">
+                  </div> */}
+                  {/* <div className="hero_small_slider_inside_div">
                     <a href=".">
                       <FontAwesomeIcon icon={faPizzaSlice} />
                     </a>
                     <p>Baklava</p>
-                  </div>
-                  <div className="hero_small_slider_inside_div">
+                  </div> */}
+                  {/* <div className="hero_small_slider_inside_div">
                     <a href=".">
                       <FontAwesomeIcon icon={faIceCream} />
                     </a>
                     <p>Baklava</p>
-                  </div>
-                  <div className="hero_small_slider_inside_div">
+                  </div> */}
+                  {/* <div className="hero_small_slider_inside_div">
                     <a href=".">
                       <FontAwesomeIcon icon={faHamburger} />
                     </a>
                     <p>Baklava</p>
-                  </div>
+                  </div> */}
                 </Slider>
               </div>
             </div>
