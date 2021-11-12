@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./css/our-menu.css";
 import AppUrl from "../../classes/AppUrl";
 import Slider from "react-slick";
@@ -9,8 +9,47 @@ import { faStar, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 //import { BsHeart } from "react-icons/bs";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { SRLWrapper } from "simple-react-lightbox";
+import axios from "axios";
 
 const OurMenu = () => {
+  const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
+
+  useEffect(() => {
+    getData();
+    getData1();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "productGet")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function getData1() {
+    axios
+      .get(AppUrl.base_url + "categoryGet")
+      .then(function (response) {
+        if (response) {
+          setData1(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   let settings1;
   let settings2;
   if (window.innerWidth <= 460) {
@@ -125,450 +164,66 @@ const OurMenu = () => {
             data-aos-delay="20"
           >
             <Slider {...settings2} className="our_menu_category_slider">
-              <div className="our_menu_category" onClick={() => selectCat(0)}>
-                Breakfast
-              </div>
-              <div className="our_menu_category" onClick={() => selectCat(1)}>
-                Lunch
-              </div>
-              <div className="our_menu_category" onClick={() => selectCat(2)}>
-                Dinner
-              </div>
-              <div className="our_menu_category" onClick={() => selectCat(3)}>
-                Baklava
-              </div>
-              <div className="our_menu_category" onClick={() => selectCat(4)}>
-                Icecream
-              </div>
-              <div className="our_menu_category" onClick={() => selectCat(5)}>
-                Sandwich
-              </div>
+              {data1.map((item, index) => (
+                <div
+                  className="our_menu_category"
+                  onClick={() => selectCat(index)}
+                >
+                  {item.cat_name}
+                </div>
+              ))}
             </Slider>
           </div>
 
           <div className="our_menu_slider_div">
             <Slider {...settings1}>
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food17.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">Veg Sandwich</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
+              {data.map((item) => (
+                <div
+                  className="our_menu_slider_inside_div"
+                  data-aos="zoom-in"
+                  data-aos-delay="20"
+                  key={item.product_id}
+                >
+                  <SRLWrapper options={options}>
+                    <img
+                      src={AppUrl.image_url_backend + item.product_image}
+                      alt="baklava"
+                    />
+                  </SRLWrapper>
+                  <div className="our_menu_slider_title_section">
+                    <p className="our_menu_slider_title">{item.product_name}</p>
+                    <a href=".">
+                      {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
+                      {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
                   /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">
-                    Species of sandwich
-                  </p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 340</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
                     </a>
                   </div>
-                </div>
-              </div>
-
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food18.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">Tandoori Wrap</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
-                    className="our_menu_slider_heart_icon"
-                    icon={faHeart}
-                  /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">Species of wrap</p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 455</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
+                  <div className="our_menu_slider_description_section">
+                    <p className="our_menu_slider_description">
+                      {item.product_detail}
                     </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
+                  </div>
+                  <div className="our_menu_slider_price_section">
+                    <p className="our_menu_slider_price">
+                      TK. {item.product_price}
+                    </p>
+                    <div className="our_menu_slider_rating_section">
+                      <p className="our_menu_slider_rating">
+                        4.9{" "}
+                        <FontAwesomeIcon
+                          className="our_menu_slider_rating_star"
+                          icon={faStar}
+                        />
+                      </p>
+                      <a href=".">
+                        <FontAwesomeIcon icon={faShoppingBasket} />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food19.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">Spaghetti Bolognese</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
-                    className="our_menu_slider_heart_icon"
-                    icon={faHeart}
-                  /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">
-                    Species of pasta
-                  </p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 590</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food20.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">T-Bone Steak</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
-                    className="our_menu_slider_heart_icon"
-                    icon={faHeart}
-                  /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">
-                    Species of steak
-                  </p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 1490</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food21.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">Salmon Steak</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
-                    className="our_menu_slider_heart_icon"
-                    icon={faHeart}
-                  /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">
-                    Species of steak
-                  </p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 1650</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food22.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">Rib-Eye Steak</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
-                    className="our_menu_slider_heart_icon"
-                    icon={faHeart}
-                  /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">
-                    Species of steak
-                  </p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 1550</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food23.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">Buffalo Wings</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
-                    className="our_menu_slider_heart_icon"
-                    icon={faHeart}
-                  /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">Starter</p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 475</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food24.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">French Fries</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
-                    className="our_menu_slider_heart_icon"
-                    icon={faHeart}
-                  /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">Starter</p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 220</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food25.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">Prawn Tempura</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
-                    className="our_menu_slider_heart_icon"
-                    icon={faHeart}
-                  /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">Starter</p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 625</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="our_menu_slider_inside_div"
-                data-aos="zoom-in"
-                data-aos-delay="20"
-              >
-                <SRLWrapper options={options}>
-                  <img
-                    src={AppUrl.image_url + "assets/images/food6.jpg"}
-                    alt="baklava"
-                  />
-                </SRLWrapper>
-                <div className="our_menu_slider_title_section">
-                  <p className="our_menu_slider_title">Quesadilla</p>
-                  <a href=".">
-                    {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                    {/* <FontAwesomeIcon
-                    className="our_menu_slider_heart_icon"
-                    icon={faHeart}
-                  /> */}
-                  </a>
-                </div>
-                <div className="our_menu_slider_description_section">
-                  <p className="our_menu_slider_description">
-                    Species of burger
-                  </p>
-                </div>
-                <div className="our_menu_slider_price_section">
-                  <p className="our_menu_slider_price">TK. 490</p>
-                  <div className="our_menu_slider_rating_section">
-                    <p className="our_menu_slider_rating">
-                      4.9{" "}
-                      <FontAwesomeIcon
-                        className="our_menu_slider_rating_star"
-                        icon={faStar}
-                      />
-                    </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              ))}
             </Slider>
           </div>
         </section>

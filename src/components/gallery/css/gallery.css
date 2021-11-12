@@ -39,6 +39,17 @@
   border: 3px solid white;
 }
 
+.SRL_Gallery .SRLPrevButton,
+.SRL_Gallery .SRLNextButton {
+  display: block !important;
+}
+
+.SRL_Gallery .SRLImage {
+  border-radius: 10px !important;
+  /* width: 400px !important;
+  height: 400px !important; */
+}
+
 @media screen and (max-width: 768px) {
   /* .gallery_img {
     width: 94vw;

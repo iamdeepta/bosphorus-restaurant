@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./css/gallery.css";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { SRLWrapper } from "simple-react-lightbox";
 import AppUrl from "../../classes/AppUrl";
+import axios from "axios";
 
 const Gallery = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "galleryGet")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function change_gallery_class() {
+    let light_box_div = document.getElementById("SRLLightbox");
+    light_box_div.classList.add("SRL_Gallery");
+  }
+
   const options = {
     settings: {
       autoplaySpeed: 3000,
@@ -40,17 +67,24 @@ const Gallery = () => {
             </h2>
           </div>
           <div className="gallery_main_content">
-            <SRLWrapper options={options}>
-              <a href={AppUrl.image_url + "assets/images/gallery1.jpg"}>
-                <img
-                  className="gallery_img"
-                  src={AppUrl.image_url + "assets/images/gallery1.jpg"}
-                  alt="Location 1"
-                  data-aos="zoom-in"
-                  data-aos-delay="0"
-                />
-              </a>
-              <a href={AppUrl.image_url + "assets/images/gallery2.jpg"}>
+            <SRLWrapper options={options} className="gallery_srl">
+              {data.map((item) => (
+                <a
+                  href={AppUrl.image_url_backend + item.gallery_image}
+                  key={item.gallery_id}
+                  onClick={() => change_gallery_class()}
+                >
+                  <img
+                    className="gallery_img"
+                    src={AppUrl.image_url_backend + item.gallery_image}
+                    alt={item.gallery_caption}
+                    data-aos="zoom-in"
+                    data-aos-delay="0"
+                  />
+                </a>
+              ))}
+
+              {/* <a href={AppUrl.image_url + "assets/images/gallery2.jpg"}>
                 <img
                   className="gallery_img"
                   src={AppUrl.image_url + "assets/images/gallery2.jpg"}
@@ -148,7 +182,7 @@ const Gallery = () => {
                   data-aos="zoom-in"
                   data-aos-delay="0"
                 />
-              </a>
+              </a> */}
             </SRLWrapper>
           </div>
         </section>
