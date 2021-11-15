@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./css/contact.css";
 import AppUrl from "../../classes/AppUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,8 +7,30 @@ import {
   faEnvelope,
   faLocationArrow,
 } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 
 const Contact = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "aboutGet")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="contact_section">
@@ -76,7 +98,11 @@ const Contact = () => {
                   icon={faPhone}
                 />
               </span>
-              <span className="contact_phone">01841-993788</span>
+              {data.map((item) => (
+                <span className="contact_phone" key={item.about_id}>
+                  {item.about_phone}
+                </span>
+              ))}
             </div>
 
             <div className="contact_email_div">
@@ -86,9 +112,11 @@ const Contact = () => {
                   icon={faEnvelope}
                 />
               </span>
-              <span className="contact_email_text">
-                bosphoruscafebd@gmail.com
-              </span>
+              {data.map((item) => (
+                <span className="contact_email_text" key={item.about_id}>
+                  {item.about_email}
+                </span>
+              ))}
             </div>
 
             <div className="contact_location_div">
@@ -98,9 +126,11 @@ const Contact = () => {
                   icon={faLocationArrow}
                 />
               </span>
-              <span className="contact_location_text">
-                BTI Landmark, 16 Gulshan Avenue
-              </span>
+              {data.map((item) => (
+                <span className="contact_location_text" key={item.about_id}>
+                  {item.about_location}
+                </span>
+              ))}
             </div>
           </div>
         </div>

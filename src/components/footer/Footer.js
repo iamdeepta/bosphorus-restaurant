@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./css/footer.css";
 import AppUrl from "../../classes/AppUrl";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,8 +7,30 @@ import { Link } from "react-router-dom";
 import { GrLocation } from "react-icons/gr";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsEnvelope } from "react-icons/bs";
+import axios from "axios";
 
 const Footer = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "aboutGet")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="footer_section">
@@ -38,9 +60,14 @@ const Footer = () => {
                 icon={faLocationArrow}
               /> */}
 
-              <p className="footer_first_column_location_text">
-                Dhaka, Bangladesh
-              </p>
+              {data.map((item) => (
+                <p
+                  className="footer_first_column_location_text"
+                  key={item.about_id}
+                >
+                  {item.about_location}
+                </p>
+              ))}
             </div>
 
             <div className="footer_first_column_phone_div">
@@ -49,9 +76,15 @@ const Footer = () => {
                 className="footer_first_column_phone_icon"
                 icon={faPhone}
               /> */}
-              <a href="." className="footer_first_column_phone_text">
-                0178273526
-              </a>
+              {data.map((item) => (
+                <a
+                  href="!#"
+                  className="footer_first_column_phone_text"
+                  key={item.about_id}
+                >
+                  {item.about_phone}
+                </a>
+              ))}
             </div>
 
             <div className="footer_first_column_email_div">
@@ -60,9 +93,15 @@ const Footer = () => {
                 className="footer_first_column_email_icon"
                 icon={faEnvelope}
               /> */}
-              <a href="." className="footer_first_column_email_text">
-                support@bosphorus.com
-              </a>
+              {data.map((item) => (
+                <a
+                  href="!#"
+                  className="footer_first_column_email_text"
+                  key={item.about_id}
+                >
+                  {item.about_email}
+                </a>
+              ))}
             </div>
 
             <div className="footer_first_column_social_media_div">
