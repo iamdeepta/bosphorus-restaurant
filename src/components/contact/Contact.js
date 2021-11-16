@@ -7,14 +7,52 @@ import {
   faEnvelope,
   faLocationArrow,
 } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const Contact = () => {
   const [data, setData] = useState([]);
 
+  const [inbox_name, setInboxName] = useState("");
+  const [inbox_email, setInboxEmail] = useState("");
+  const [inbox_subject, setInboxSubject] = useState("");
+  const [inbox_message, setInboxMessage] = useState("");
+  const [loader, setLoader] = useState(false);
+
   useEffect(() => {
     getData();
   }, []);
+
+  async function inboxAdd(e) {
+    e.preventDefault();
+    setLoader(true);
+
+    const formData = new FormData();
+    formData.append("inbox_name", inbox_name);
+    formData.append("inbox_email", inbox_email);
+    formData.append("inbox_subject", inbox_subject);
+    formData.append("inbox_message", inbox_message);
+
+    let result = await fetch(AppUrl.base_url + "inboxAdd", {
+      method: "POST",
+      body: formData,
+    });
+
+    result = await result.json();
+
+    if (result.success) {
+      toast.success(result.success);
+      setInboxName("");
+      setInboxEmail("");
+      setInboxSubject("");
+      setInboxMessage("");
+      setLoader(false);
+    } else {
+      toast.error(result.error);
+      setLoader(false);
+    }
+  }
 
   function getData() {
     axios
@@ -33,6 +71,7 @@ const Contact = () => {
 
   return (
     <>
+      <ToastContainer />
       <section className="contact_section">
         <h2 className="contact_us_text" data-aos="fade-down" data-aos-delay="0">
           Contact Us
@@ -58,16 +97,22 @@ const Contact = () => {
               type="text"
               className="contact_full_name"
               placeholder="Full Name"
+              value={inbox_name}
+              onChange={(e) => setInboxName(e.target.value)}
             />
             <input
               type="text"
               className="contact_email"
               placeholder="Enter Your Email"
+              value={inbox_email}
+              onChange={(e) => setInboxEmail(e.target.value)}
             />
             <input
               type="text"
               className="contact_subject"
               placeholder="Subject"
+              value={inbox_subject}
+              onChange={(e) => setInboxSubject(e.target.value)}
             />
             <textarea
               name="contact_message"
@@ -76,12 +121,26 @@ const Contact = () => {
               cols="30"
               rows="4"
               placeholder="Type your message"
+              value={inbox_message}
+              onChange={(e) => setInboxMessage(e.target.value)}
             ></textarea>
 
             <div className="contact_form_btn_div">
-              <a href="." className="contact_form_btn">
-                Send Message
-              </a>
+              {loader === true ? (
+                <>
+                  <div class="spinner-border"></div>
+                </>
+              ) : (
+                <>
+                  <a
+                    href="!#"
+                    className="contact_form_btn"
+                    onClick={(e) => inboxAdd(e)}
+                  >
+                    Send Message
+                  </a>
+                </>
+              )}
             </div>
           </div>
 

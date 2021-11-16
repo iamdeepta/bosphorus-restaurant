@@ -42,6 +42,10 @@
   margin-top: 25px;
 }
 
+.about_us_list_point1:last-child {
+  margin-bottom: 40px;
+}
+
 .about_us_list_point2 {
   margin-top: 18px;
 }

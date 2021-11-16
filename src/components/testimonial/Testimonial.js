@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./css/testimonial.css";
 import AppUrl from "../../classes/AppUrl";
 import Slider from "react-slick";
@@ -6,8 +6,47 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 
 const Testimonial = () => {
+  const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
+
+  useEffect(() => {
+    getData();
+    getData1();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "reviewGet")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  function getData1() {
+    axios
+      .get(AppUrl.base_url + "reviewPicGet")
+      .then(function (response) {
+        if (response) {
+          setData1(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   let settings = {
     // dots: true,
     infinite: true,
@@ -34,13 +73,16 @@ const Testimonial = () => {
         </div>
 
         <div className="testimonial_content">
-          <img
-            className="testimonial_img"
-            src={AppUrl.image_url + "assets/images/review_pic.webp"}
-            alt="burger"
-            data-aos="fade-right"
-            data-aos-delay="20"
-          />
+          {data1.map((item) => (
+            <img
+              className="testimonial_img"
+              src={AppUrl.image_url_backend + item.review_pic_image}
+              alt="burger"
+              data-aos="fade-right"
+              data-aos-delay="20"
+              key={item.review_pic_id}
+            />
+          ))}
 
           <FontAwesomeIcon
             className="testimonial_slider_upper_quote"
@@ -58,23 +100,25 @@ const Testimonial = () => {
             data-aos-delay="20"
           >
             <Slider className="testimonial_slider_main" {...settings}>
-              <div className="testimonial_slider_inside_div">
-                <p className="testimonial_slider_reviews">
-                  Such a beautiful place to have a hangout with friends. Serves
-                  good coffee and Turkish tea. Tried their fries, it was good.
-                  I've tried Latte, Hazelnut latte, Hazelnut Frappe, Virgin
-                  Mohito, Capuccino - all were good. The place looks good too.
-                  Interior is beautiful and the outside garden area is also lit.
-                  Only downside is the price. It's a bit costly.
-                </p>
+              {data.map((item) => (
+                <div
+                  className="testimonial_slider_inside_div"
+                  key={item.review_id}
+                >
+                  <p className="testimonial_slider_reviews">
+                    {item.review_message}
+                  </p>
 
-                <p className="testimonial_slider_customer_name">
-                  Hasanuzzaman Mamun
-                </p>
-                <p className="testimonial_slider_customer_des">Food Lover</p>
-              </div>
+                  <p className="testimonial_slider_customer_name">
+                    {item.review_name}
+                  </p>
+                  <p className="testimonial_slider_customer_des">
+                    {item.review_title}
+                  </p>
+                </div>
+              ))}
 
-              <div className="testimonial_slider_inside_div">
+              {/* <div className="testimonial_slider_inside_div">
                 <p className="testimonial_slider_reviews">
                   Wonderful environment. Soothing ambiance, proper beautiful
                   decor, friendly service, food and drinks are really healthy
@@ -89,7 +133,7 @@ const Testimonial = () => {
                   Golam Md Iftekhar
                 </p>
                 <p className="testimonial_slider_customer_des">Food Lover</p>
-              </div>
+              </div> */}
             </Slider>
           </div>
         </div>

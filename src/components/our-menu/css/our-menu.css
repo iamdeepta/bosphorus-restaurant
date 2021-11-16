@@ -34,6 +34,18 @@
   transition: 0.5s !important;
 }
 
+.our_menu_loader {
+  position: absolute;
+  top: 45%;
+  left: 49%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.no_food_avail {
+  text-align: center;
+  margin-top: 70px;
+}
+
 .our_menu_slider_div .slick-slider {
   position: relative;
   z-index: 0;

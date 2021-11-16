@@ -10,6 +10,7 @@ import AppUrl from "../../classes/AppUrl";
 
 const AboutUs = () => {
   const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
 
   useEffect(() => {
     getData();
@@ -21,8 +22,9 @@ const AboutUs = () => {
       .then(function (response) {
         if (response) {
           setData(response.data);
+          setData1(response.data[0].about_list.split(","));
           // setLoader(false);
-          //console.log(response.data);
+          //console.log(response.data[0].about_list.split(","));
         }
       })
       .catch(function (error) {
@@ -67,22 +69,26 @@ const AboutUs = () => {
                 {item.about_description}
               </p>
 
-              <div
-                className="about_us_list_point1"
-                data-aos="fade-up"
-                data-aos-delay="60"
-              >
-                <span>
-                  <FontAwesomeIcon
-                    className="about_us_list_point_icon"
-                    icon={faCheckCircle}
-                  />
-                </span>
-                <span className="about_us_list_point_name">
-                  Best service than others
-                </span>
+              <div>
+                {data1.map((item1, index) => (
+                  <div
+                    className="about_us_list_point1"
+                    data-aos="fade-up"
+                    data-aos-delay="60"
+                    key={index}
+                  >
+                    <span>
+                      <FontAwesomeIcon
+                        className="about_us_list_point_icon"
+                        icon={faCheckCircle}
+                      />
+                    </span>
+                    <span className="about_us_list_point_name">{item1}</span>
+                  </div>
+                ))}
               </div>
-              <div
+
+              {/* <div
                 className="about_us_list_point2"
                 data-aos="fade-up"
                 data-aos-delay="80"
@@ -96,8 +102,8 @@ const AboutUs = () => {
                 <span className="about_us_list_point_name">
                   Experience stuff
                 </span>
-              </div>
-              <div
+              </div> */}
+              {/* <div
                 className="about_us_list_point3"
                 data-aos="fade-up"
                 data-aos-delay="100"
@@ -111,7 +117,7 @@ const AboutUs = () => {
                 <span className="about_us_list_point_name">
                   Quality guarantee
                 </span>
-              </div>
+              </div> */}
               <div
                 className="about_us_read_more_btn_div"
                 data-aos="fade-up"

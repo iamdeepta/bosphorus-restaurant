@@ -14,6 +14,7 @@ import axios from "axios";
 const OurMenu = () => {
   const [data, setData] = useState([]);
   const [data1, setData1] = useState([]);
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     getData();
@@ -26,7 +27,7 @@ const OurMenu = () => {
       .then(function (response) {
         if (response) {
           setData(response.data);
-          // setLoader(false);
+          setLoader(false);
           //console.log(response.data);
         }
       })
@@ -129,12 +130,26 @@ const OurMenu = () => {
     icons: {}, // PRO ONLY
   };
 
-  function selectCat(id) {
+  function selectCat(id, cat_name) {
+    setLoader(false);
     let category = [...document.querySelectorAll(".our_menu_category")];
 
     //category.map((i, j) => i.classList.add("our_menu_category_active"));
     category[id].classList.add("our_menu_category_active");
     //category[!id].classList.remove("our_menu_category_active");
+
+    axios
+      .get(AppUrl.base_url + "productGetByCat/" + cat_name)
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   return (
@@ -167,7 +182,7 @@ const OurMenu = () => {
               {data1.map((item, index) => (
                 <div
                   className="our_menu_category"
-                  onClick={() => selectCat(index)}
+                  onClick={() => selectCat(index, item.cat_name)}
                 >
                   {item.cat_name}
                 </div>
@@ -176,55 +191,69 @@ const OurMenu = () => {
           </div>
 
           <div className="our_menu_slider_div">
-            <Slider {...settings1}>
-              {data.map((item) => (
-                <div
-                  className="our_menu_slider_inside_div"
-                  data-aos="zoom-in"
-                  data-aos-delay="20"
-                  key={item.product_id}
-                >
-                  <SRLWrapper options={options}>
-                    <img
-                      src={AppUrl.image_url_backend + item.product_image}
-                      alt="baklava"
-                    />
-                  </SRLWrapper>
-                  <div className="our_menu_slider_title_section">
-                    <p className="our_menu_slider_title">{item.product_name}</p>
-                    <a href=".">
-                      {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
-                      {/* <FontAwesomeIcon
+            {data.length <= 0 ? (
+              <>
+                {loader ? (
+                  <div class="spinner-border our_menu_loader"></div>
+                ) : (
+                  <p className="no_food_avail">No Food Available</p>
+                )}
+              </>
+            ) : (
+              <>
+                <Slider {...settings1}>
+                  {data.map((item) => (
+                    <div
+                      className="our_menu_slider_inside_div"
+                      data-aos="zoom-in"
+                      data-aos-delay="20"
+                      key={item.product_id}
+                    >
+                      <SRLWrapper options={options}>
+                        <img
+                          src={AppUrl.image_url_backend + item.product_image}
+                          alt="baklava"
+                        />
+                      </SRLWrapper>
+                      <div className="our_menu_slider_title_section">
+                        <p className="our_menu_slider_title">
+                          {item.product_name}
+                        </p>
+                        <a href=".">
+                          {/* <BsHeart className="our_menu_slider_heart_icon" /> */}
+                          {/* <FontAwesomeIcon
                     className="our_menu_slider_heart_icon"
                     icon={faHeart}
                   /> */}
-                    </a>
-                  </div>
-                  <div className="our_menu_slider_description_section">
-                    <p className="our_menu_slider_description">
-                      {item.product_detail}
-                    </p>
-                  </div>
-                  <div className="our_menu_slider_price_section">
-                    <p className="our_menu_slider_price">
-                      TK. {item.product_price}
-                    </p>
-                    <div className="our_menu_slider_rating_section">
-                      <p className="our_menu_slider_rating">
-                        4.9{" "}
-                        <FontAwesomeIcon
-                          className="our_menu_slider_rating_star"
-                          icon={faStar}
-                        />
-                      </p>
-                      <a href=".">
-                        <FontAwesomeIcon icon={faShoppingBasket} />
-                      </a>
+                        </a>
+                      </div>
+                      <div className="our_menu_slider_description_section">
+                        <p className="our_menu_slider_description">
+                          {item.product_detail}
+                        </p>
+                      </div>
+                      <div className="our_menu_slider_price_section">
+                        <p className="our_menu_slider_price">
+                          TK. {item.product_price}
+                        </p>
+                        <div className="our_menu_slider_rating_section">
+                          <p className="our_menu_slider_rating">
+                            4.9{" "}
+                            <FontAwesomeIcon
+                              className="our_menu_slider_rating_star"
+                              icon={faStar}
+                            />
+                          </p>
+                          <a href=".">
+                            <FontAwesomeIcon icon={faShoppingBasket} />
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
+                  ))}
+                </Slider>
+              </>
+            )}
           </div>
         </section>
       </SimpleReactLightbox>
