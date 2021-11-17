@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./css/popular-food-main.css";
 // import "../popularFood/css/popular-food.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faShoppingBasket,
+  faMinusCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import LazyLoad from "react-lazyload";
 import AppUrl from "../../classes/AppUrl";
 //import { BsHeart } from "react-icons/bs";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { SRLWrapper } from "simple-react-lightbox";
 import axios from "axios";
+import CartContext from "../../context/cart/CartContext";
 
 const PopularFoodMain = () => {
+  const { addToCart, cartItems, removeItem } = useContext(CartContext);
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -110,9 +117,27 @@ const PopularFoodMain = () => {
                         icon={faStar}
                       />
                     </p>
-                    <a href=".">
-                      <FontAwesomeIcon icon={faShoppingBasket} />
-                    </a>
+                    {cartItems.some((p) => p.product_id === item.product_id) ? (
+                      <>
+                        <a
+                          href="!#"
+                          onClick={(e) =>
+                            removeItem(item.product_id, e.preventDefault())
+                          }
+                        >
+                          <FontAwesomeIcon icon={faMinusCircle} />
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        <a
+                          href="!#"
+                          onClick={(e) => addToCart(item, e.preventDefault())}
+                        >
+                          <FontAwesomeIcon icon={faShoppingBasket} />
+                        </a>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>

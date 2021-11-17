@@ -5,12 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./functions/ScrollToTop";
+import CartState from "./context/cart/CartState";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
-      <App />
+      <CartState>
+        <App />
+      </CartState>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

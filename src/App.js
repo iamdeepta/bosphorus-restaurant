@@ -40,6 +40,7 @@ function App() {
       <BottomNav />
       <Cart />
       <BlurBg />
+
       <Suspense fallback={<Preloader />}>
         <Switch>
           <Route exact path="/" component={Home} />

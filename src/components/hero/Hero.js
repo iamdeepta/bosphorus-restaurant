@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./css/hero.css";
 import AppUrl from "../../classes/AppUrl";
 import Slider from "react-slick";
@@ -11,6 +11,7 @@ import {
   // faPizzaSlice,
   faStar,
   faShoppingBasket,
+  faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 //import { BsHeart } from "react-icons/bs";
 import SimpleReactLightbox from "simple-react-lightbox";
@@ -19,8 +20,11 @@ import { SRLWrapper } from "simple-react-lightbox";
 import HappyCustomer from "../happy_customer/HappyCustomer";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import CartContext from "../../context/cart/CartContext";
 
 const Hero = () => {
+  const { addToCart, cartItems, removeItem } = useContext(CartContext);
+
   //const { openLightbox } = useLightbox();
   const [data, setData] = useState([]);
   const [data1, setData1] = useState([]);
@@ -258,9 +262,34 @@ const Hero = () => {
                               icon={faStar}
                             />
                           </p>
-                          <a href=".">
-                            <FontAwesomeIcon icon={faShoppingBasket} />
-                          </a>
+                          {cartItems.some(
+                            (p) => p.product_id === item.product_id
+                          ) ? (
+                            <>
+                              <a
+                                href="!#"
+                                onClick={(e) =>
+                                  removeItem(
+                                    item.product_id,
+                                    e.preventDefault()
+                                  )
+                                }
+                              >
+                                <FontAwesomeIcon icon={faMinusCircle} />
+                              </a>
+                            </>
+                          ) : (
+                            <>
+                              <a
+                                href="!#"
+                                onClick={(e) =>
+                                  addToCart(item, e.preventDefault())
+                                }
+                              >
+                                <FontAwesomeIcon icon={faShoppingBasket} />
+                              </a>
+                            </>
+                          )}
                         </div>
                       </div>
                     </div>

@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./css/header.css";
 import AppUrl from "../../classes/AppUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 //import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
+import CartContext from "../../context/cart/CartContext";
 
 const Header = () => {
+  const { cartItems } = useContext(CartContext);
   // function openSidebar() {
   //   let elements = document.getElementById("sidebar_div");
   //   ReactDOM.findDOMNode(elements).classList.add("sidebar_opened");
@@ -83,7 +85,11 @@ const Header = () => {
                   className="header_shopping_cart"
                 />
                 {/* </a> */}
-                <span className="header_product_count">2</span>
+                {cartItems.length > 0 && (
+                  <span className="header_product_count">
+                    {cartItems.length}
+                  </span>
+                )}
               </li>
             </ul>
           </div>

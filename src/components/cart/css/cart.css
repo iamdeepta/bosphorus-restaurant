@@ -145,6 +145,22 @@
   margin-top: 20px;
 }
 
+.cart_empty_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  font-size: 16px;
+}
+
+.cart_total_price_hidden {
+  display: none;
+}
+
+.cart_cross {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .cart_sidebar_div {
     height: 100vh;
