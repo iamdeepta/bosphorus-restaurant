@@ -220,7 +220,7 @@ const OurMenu = () => {
                       <SRLWrapper options={options}>
                         <img
                           src={AppUrl.image_url_backend + item.product_image}
-                          alt="baklava"
+                          alt={item.product_name}
                         />
                       </SRLWrapper>
                       <div className="our_menu_slider_title_section">

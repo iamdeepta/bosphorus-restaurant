@@ -105,7 +105,18 @@
   margin-left: -10px;
   margin-top: -10px;
   position: absolute;
+  /* animation: product_count_zoom_in 0.2s linear; */
 }
+
+/* @keyframes product_count_zoom_in {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+} */
 
 .header_product_count_mbl {
   display: none;
