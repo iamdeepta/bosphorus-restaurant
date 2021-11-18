@@ -29,6 +29,7 @@ const Checkout = () => {
   const [payment_method, setPaymentMethod] = useState("");
 
   let item_count = cartItems.length;
+  let cartItem = JSON.stringify(cartItems);
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -90,7 +91,7 @@ const Checkout = () => {
     setOtpNo(getRandomInt(111111, 999999).toString());
     setInvoiceNo(getRandomInt(11111, 99999).toString());
     //localStorage.setItem("customer_otp", otp_no);
-    //console.log(cartItems);
+    //console.log(cartItem);
   }
 
   function activeUser() {
@@ -355,7 +356,7 @@ const Checkout = () => {
       bullet[3].classList.add("checkout_left_content_login_a_active");
       swal({
         title: "Order has been placed successfully",
-        text: "Thank you for purchasing from us.",
+        text: "Your order receipt has been sent to your mail. Thank you for purchasing from us. ",
         icon: "success",
       });
 
@@ -369,6 +370,7 @@ const Checkout = () => {
         totalAmount,
         item_count,
         payment_method,
+        cartItem,
       };
 
       //let result =
