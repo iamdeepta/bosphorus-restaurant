@@ -100,12 +100,13 @@
   color: orange;
 }
 
-.popular_food_slider_rating_section a {
+.popular_food_slider_rating_section span {
   text-decoration: none;
   color: black;
   font-size: 20px;
   margin-top: -12px;
   margin-left: 5px;
+  cursor: pointer;
 }
 
 .popular_food_slider_inside_div img {
@@ -113,10 +114,23 @@
 
   border-radius: 50%;
   height: 130px;
-  width: auto;
+  width: 130px;
   margin-top: -80px;
   margin-left: 28px;
   cursor: pointer;
+}
+
+.popular_food_slider_img_skeleton {
+  animation: popular_food_slider_img_skeleton 1s linear infinite alternate;
+}
+
+@keyframes popular_food_slider_img_skeleton {
+  0% {
+    background-color: hsla(199, 20%, 70%, 0.938);
+  }
+  100% {
+    background-color: hsla(204, 20%, 95%, 0.904);
+  }
 }
 
 .SRLPrevButton,

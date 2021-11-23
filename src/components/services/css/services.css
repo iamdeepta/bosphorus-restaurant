@@ -17,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 40px;
+  flex-wrap: wrap;
 }
 
 .services_contents_links {

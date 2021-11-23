@@ -18,11 +18,35 @@ const CartState = ({ children }) => {
   const [state, dispatch] = useReducer(CartReducer, initialState);
 
   const addToCart = (item) => {
+    let header_product_count = document.querySelector(".header_product_count");
+
+    if (header_product_count !== null) {
+      header_product_count.classList.add("header_product_count_zoom");
+    }
+
     dispatch({ type: ADD_TO_CART, payload: item });
+
+    setTimeout(() => {
+      if (header_product_count !== null) {
+        header_product_count.classList.remove("header_product_count_zoom");
+      }
+    }, 300);
   };
 
   const removeItem = (id) => {
+    let header_product_count = document.querySelector(".header_product_count");
+
+    if (header_product_count !== null) {
+      header_product_count.classList.add("header_product_count_zoom");
+    }
+
     dispatch({ type: REMOVE_ITEM, payload: id });
+
+    setTimeout(() => {
+      if (header_product_count !== null) {
+        header_product_count.classList.remove("header_product_count_zoom");
+      }
+    }, 300);
   };
 
   const incrementItem = (id) => {

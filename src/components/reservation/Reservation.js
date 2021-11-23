@@ -46,8 +46,25 @@ const Reservation = () => {
   const [email, setEmail] = useState("");
   const [person, setPerson] = useState("");
 
+  const [loader, setLoader] = useState(false);
+
+  const [date_open, setDateOpen] = useState(false);
+  const [time_open, setTimeOpen] = useState(false);
+
   const ref_date = useRef();
   const ref_time = useRef();
+
+  // function openTimePicker() {
+
+  //   let time_icon = document
+  //     .querySelector(".MuiSvgIcon-root")
+  //     .setAttribute("data-testid", "ClockIcon");
+  //   console.log(time_icon);
+
+  //   if (time_icon === "ClockIcon") {
+  //     document.querySelector(".MuiSvgIcon-root").click();
+  //   }
+  // }
 
   function date_onchange(e) {
     if (window.innerWidth <= 768) {
@@ -99,6 +116,7 @@ const Reservation = () => {
   }
 
   async function reservation_system() {
+    setLoader(true);
     // if (email === "") {
     //   toast.error("Please enter email");
     // }
@@ -129,6 +147,7 @@ const Reservation = () => {
         },
         body: JSON.stringify(items),
       });
+
       //result = await result.json();
 
       // if (result.error) {
@@ -136,12 +155,14 @@ const Reservation = () => {
       // } else if (result.success_top) {
       // } else {
       // }
+      setLoader(false);
       setEmail("");
       setPerson("");
       setDate("");
       setTime("");
-      toast.success("Email sent");
+      toast.success("Congratulations, your table is reserved");
     } else {
+      setLoader(false);
       toast.error("Please fill up all the fields correctly");
     }
     //console.log(email, person, time, date);
@@ -225,10 +246,18 @@ const Reservation = () => {
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   {/* <Stack spacing={3}> */}
                   <DesktopDatePicker
+                    open={date_open}
+                    onOpen={() => setDateOpen(true)}
+                    onClose={() => setDateOpen(false)}
                     inputFormat="MM/dd/yyyy"
                     value={date}
                     onChange={(e) => date_onchange(e)}
-                    renderInput={(params) => <TextField {...params} />}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        onClick={(e) => setDateOpen(true)}
+                      />
+                    )}
                   />
                   {/* </Stack> */}
                 </LocalizationProvider>
@@ -261,12 +290,21 @@ const Reservation = () => {
 
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <TimePicker
+                    open={time_open}
+                    onOpen={() => setTimeOpen(true)}
+                    onClose={() => setTimeOpen(false)}
                     value={time1}
                     // views={["hours", "minutes"]}
                     // inputFormat="HH:mm"
                     // mask="__:__"
                     onChange={(e1) => time_onchange(e1)}
-                    renderInput={(params) => <TextField {...params} />}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        onClick={(e) => setTimeOpen(true)}
+                        //onClick={() => openTimePicker()}
+                      />
+                    )}
                   />
                 </LocalizationProvider>
 
@@ -276,6 +314,7 @@ const Reservation = () => {
                   value={person}
                   onChange={(e) => setPerson(e.target.value)}
                   className="reservation_email_input"
+                  min="1"
                 />
 
                 {/* <select
@@ -333,12 +372,20 @@ const Reservation = () => {
               data-aos="fade-up"
               data-aos-delay="80"
             >
-              <span
-                className="reservation_btn"
-                onClick={() => reservation_system()}
-              >
-                Confirm Reservation
-              </span>
+              {loader === true ? (
+                <>
+                  <div class="spinner-border"></div>
+                </>
+              ) : (
+                <>
+                  <span
+                    className="reservation_btn"
+                    onClick={() => reservation_system()}
+                  >
+                    Confirm Reservation
+                  </span>
+                </>
+              )}
             </div>
           </div>
         </div>

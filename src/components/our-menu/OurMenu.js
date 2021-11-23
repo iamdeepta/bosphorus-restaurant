@@ -11,6 +11,7 @@ import {
   faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 //import { BsHeart } from "react-icons/bs";
+//import LazyLoad from "react-lazyload";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { SRLWrapper } from "simple-react-lightbox";
 import axios from "axios";
@@ -64,8 +65,8 @@ const OurMenu = () => {
   if (window.innerWidth <= 460) {
     settings1 = {
       // dots: true,
-      infinite: true,
-      rows: 2,
+      infinite: data.length > 2 ? true : false,
+      rows: data.length <= 1 ? 1 : 2,
       centerMode: true,
       centerPadding: "0px",
       speed: 1000,
@@ -76,8 +77,8 @@ const OurMenu = () => {
   } else {
     settings1 = {
       // dots: true,
-      infinite: true,
-      rows: 2,
+      infinite: data.length > 8 ? true : false,
+      rows: data.length <= 4 ? 1 : 2,
       centerMode: true,
       centerPadding: "0px",
       speed: 1000,
@@ -219,10 +220,12 @@ const OurMenu = () => {
                     >
                       <SRLWrapper options={options}>
                         <img
+                          className="our_menu_slider_img_skeleton"
                           src={AppUrl.image_url_backend + item.product_image}
                           alt={item.product_name}
                         />
                       </SRLWrapper>
+
                       <div className="our_menu_slider_title_section">
                         <p className="our_menu_slider_title">
                           {item.product_name}
@@ -256,28 +259,21 @@ const OurMenu = () => {
                             (p) => p.product_id === item.product_id
                           ) ? (
                             <>
-                              <a
-                                href="!#"
-                                onClick={(e) =>
-                                  removeItem(
-                                    item.product_id,
-                                    e.preventDefault()
-                                  )
-                                }
-                              >
-                                <FontAwesomeIcon icon={faMinusCircle} />
-                              </a>
+                              <span onClick={() => removeItem(item.product_id)}>
+                                <FontAwesomeIcon
+                                  icon={faMinusCircle}
+                                  className="remove_from_cart_icon"
+                                />
+                              </span>
                             </>
                           ) : (
                             <>
-                              <a
-                                href="!#"
-                                onClick={(e) =>
-                                  addToCart(item, e.preventDefault())
-                                }
-                              >
-                                <FontAwesomeIcon icon={faShoppingBasket} />
-                              </a>
+                              <span onClick={() => addToCart(item)}>
+                                <FontAwesomeIcon
+                                  icon={faShoppingBasket}
+                                  className="add_to_cart_icon"
+                                />
+                              </span>
                             </>
                           )}
                         </div>

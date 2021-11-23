@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
-import Preloader from "../preloader/Preloader";
+//import Preloader from "../preloader/Preloader";
 //import { BsHeart } from "react-icons/bs";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { SRLWrapper } from "simple-react-lightbox";
@@ -120,9 +120,10 @@ const PopularFood = () => {
                     data-aos-delay="50"
                     key={item.product_id}
                   >
-                    <LazyLoad height={200} placeholder={<Preloader />}>
+                    <LazyLoad height={200}>
                       <SRLWrapper options={options}>
                         <img
+                          className="popular_food_slider_img_skeleton"
                           src={AppUrl.image_url_backend + item.product_image}
                           alt={item.product_name}
                         />
@@ -161,25 +162,21 @@ const PopularFood = () => {
                           (p) => p.product_id === item.product_id
                         ) ? (
                           <>
-                            <a
-                              href="!#"
-                              onClick={(e) =>
-                                removeItem(item.product_id, e.preventDefault())
-                              }
-                            >
-                              <FontAwesomeIcon icon={faMinusCircle} />
-                            </a>
+                            <span onClick={() => removeItem(item.product_id)}>
+                              <FontAwesomeIcon
+                                icon={faMinusCircle}
+                                className="remove_from_cart_icon"
+                              />
+                            </span>
                           </>
                         ) : (
                           <>
-                            <a
-                              href="!#"
-                              onClick={(e) =>
-                                addToCart(item, e.preventDefault())
-                              }
-                            >
-                              <FontAwesomeIcon icon={faShoppingBasket} />
-                            </a>
+                            <span onClick={() => addToCart(item)}>
+                              <FontAwesomeIcon
+                                icon={faShoppingBasket}
+                                className="add_to_cart_icon"
+                              />
+                            </span>
                           </>
                         )}
                       </div>

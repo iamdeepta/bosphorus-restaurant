@@ -274,18 +274,27 @@
     align-items: center;
     justify-content: center;
     margin-top: -20px;
+    flex-wrap: wrap;
   }
   .reservation_content svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     height: 230px;
     margin-bottom: 40px;
+    width: 90vw;
+    margin-left: -40px;
   }
 
   .reservation_section {
     padding-top: 140px;
+    width: 96vw;
   }
 
   .reservation_right_content {
-    margin-left: 20px;
+    margin-left: 0px;
+    flex-wrap: wrap;
   }
 
   .reservation_right_content2 {
@@ -296,7 +305,7 @@
   .reservation_time_input,
   .reservation_email_input,
   .reservation_person_input {
-    width: 170px;
+    width: 40vw;
     height: 45px;
     outline: none;
   }

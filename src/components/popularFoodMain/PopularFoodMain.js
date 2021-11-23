@@ -80,9 +80,10 @@ const PopularFoodMain = () => {
                 data-aos-delay="50"
                 key={item.product_id}
               >
-                <LazyLoad height={200} placeholder={<div>Loading...</div>}>
+                <LazyLoad height={200}>
                   <SRLWrapper options={options}>
                     <img
+                      className="popular_food_main_slider_img_skeleton"
                       src={AppUrl.image_url_backend + item.product_image}
                       alt="baklava"
                     />
@@ -119,23 +120,21 @@ const PopularFoodMain = () => {
                     </p>
                     {cartItems.some((p) => p.product_id === item.product_id) ? (
                       <>
-                        <a
-                          href="!#"
-                          onClick={(e) =>
-                            removeItem(item.product_id, e.preventDefault())
-                          }
-                        >
-                          <FontAwesomeIcon icon={faMinusCircle} />
-                        </a>
+                        <span onClick={() => removeItem(item.product_id)}>
+                          <FontAwesomeIcon
+                            icon={faMinusCircle}
+                            className="remove_from_cart_icon"
+                          />
+                        </span>
                       </>
                     ) : (
                       <>
-                        <a
-                          href="!#"
-                          onClick={(e) => addToCart(item, e.preventDefault())}
-                        >
-                          <FontAwesomeIcon icon={faShoppingBasket} />
-                        </a>
+                        <span onClick={() => addToCart(item)}>
+                          <FontAwesomeIcon
+                            icon={faShoppingBasket}
+                            className="add_to_cart_icon"
+                          />
+                        </span>
                       </>
                     )}
                   </div>

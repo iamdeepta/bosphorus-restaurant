@@ -147,6 +147,9 @@ const Checkout = () => {
     login_header.style.display = "flex";
     shipping_header.style.display = "none";
     bullet[0].classList.remove("checkout_left_content_login_a_active");
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
   async function nextToOtp() {
@@ -230,6 +233,11 @@ const Checkout = () => {
     } else {
       toast.error("Please fill up all the required fields");
     }
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
+    console.log(otp_no);
   }
 
   function backToShipping() {
@@ -252,6 +260,9 @@ const Checkout = () => {
     //otp_header_letter.innerHTML = "b";
     otp_header.innerHTML = "SHIPPING ADDRESS";
     bullet[1].classList.remove("checkout_left_content_login_a_active");
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
   function nextToPaymentMethod() {
@@ -286,6 +297,9 @@ const Checkout = () => {
     } else {
       toast.error("Please enter your OTP");
     }
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     //console.log(otp_no);
     //console.log(otp);
   }
@@ -310,6 +324,9 @@ const Checkout = () => {
     //otp_header_letter.innerHTML = "c";
     otp_header.innerHTML = "OTP CONFIRMATION";
     bullet[2].classList.remove("checkout_left_content_login_a_active");
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
   function bkashMethod() {
@@ -370,6 +387,7 @@ const Checkout = () => {
         totalAmount,
         item_count,
         payment_method,
+        invoice_no,
         cartItem,
       };
 

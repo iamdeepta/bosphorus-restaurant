@@ -162,11 +162,13 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .footer_bottom_inside {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     /* flex-direction: column; */
   }
 
@@ -187,5 +189,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    flex-wrap: wrap;
   }
 }

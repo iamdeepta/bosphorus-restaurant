@@ -9,6 +9,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow: hidden;
+}
+
 /*custom scrollbar*/
 /* width */
 ::-webkit-scrollbar {

@@ -21,6 +21,7 @@ import HappyCustomer from "../happy_customer/HappyCustomer";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import CartContext from "../../context/cart/CartContext";
+//import LazyLoad from "react-lazyload";
 
 const Hero = () => {
   const { addToCart, cartItems, removeItem } = useContext(CartContext);
@@ -227,7 +228,7 @@ const Hero = () => {
                     >
                       <SRLWrapper options={options}>
                         <img
-                          className="hero_large_slider_image"
+                          className="hero_large_slider_image hero_large_slider_img_skeleton"
                           src={AppUrl.image_url_backend + item.product_image}
                           alt={item.product_name}
                         />
@@ -266,28 +267,21 @@ const Hero = () => {
                             (p) => p.product_id === item.product_id
                           ) ? (
                             <>
-                              <a
-                                href="!#"
-                                onClick={(e) =>
-                                  removeItem(
-                                    item.product_id,
-                                    e.preventDefault()
-                                  )
-                                }
-                              >
-                                <FontAwesomeIcon icon={faMinusCircle} />
-                              </a>
+                              <span onClick={() => removeItem(item.product_id)}>
+                                <FontAwesomeIcon
+                                  icon={faMinusCircle}
+                                  className="remove_from_cart_icon"
+                                />
+                              </span>
                             </>
                           ) : (
                             <>
-                              <a
-                                href="!#"
-                                onClick={(e) =>
-                                  addToCart(item, e.preventDefault())
-                                }
-                              >
-                                <FontAwesomeIcon icon={faShoppingBasket} />
-                              </a>
+                              <span onClick={() => addToCart(item)}>
+                                <FontAwesomeIcon
+                                  icon={faShoppingBasket}
+                                  className="add_to_cart_icon"
+                                />
+                              </span>
                             </>
                           )}
                         </div>

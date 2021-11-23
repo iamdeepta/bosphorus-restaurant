@@ -64,6 +64,7 @@
   align-items: center;
   flex-direction: column;
   margin-top: 65px;
+  flex-wrap: wrap;
 }
 
 .our_menu_slider_title_section {
@@ -109,12 +110,13 @@
   color: orange;
 }
 
-.our_menu_slider_rating_section a {
+.our_menu_slider_rating_section span {
   text-decoration: none;
   color: black;
   font-size: 20px;
   margin-top: -12px;
   margin-left: 5px;
+  cursor: pointer;
 }
 
 .our_menu_slider_inside_div img {
@@ -122,10 +124,23 @@
 
   border-radius: 50%;
   height: 130px;
-  width: auto;
+  width: 130px;
   margin-top: -80px;
   margin-left: 50px;
   cursor: pointer;
+}
+
+.our_menu_slider_img_skeleton {
+  animation: our_menu_slider_img_skeleton 1s linear infinite alternate;
+}
+
+@keyframes our_menu_slider_img_skeleton {
+  0% {
+    background-color: hsla(199, 20%, 70%, 0.938);
+  }
+  100% {
+    background-color: hsla(204, 20%, 95%, 0.904);
+  }
 }
 
 .SRLPrevButton,
@@ -228,6 +243,14 @@
 .our_menu_category_div .slick-slider .slick-next::before {
   display: none !important;
 }
+
+/* .add_to_cart_icon {
+  animation: add_to_cart_zoom_in 0.1s linear;
+}
+
+.remove_from_cart_icon {
+  animation: remove_from_cart_zoom_in 0.1s linear;
+} */
 
 @media screen and (max-width: 768px) {
   .our_menu_slider_inside_div {

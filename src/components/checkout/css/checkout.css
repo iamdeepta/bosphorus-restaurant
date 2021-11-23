@@ -502,8 +502,8 @@
 .checkout_left_content_payment_method_cod_check_icon {
   position: absolute;
   font-size: 18px;
-  margin-left: 85%;
-  margin-top: -19%;
+  left: 350px;
+  top: 18px;
   color: green;
   transition: 0.3s;
   transform: scale(0);
@@ -512,8 +512,8 @@
 .checkout_left_content_payment_method_bkash_check_icon {
   position: absolute;
   font-size: 18px;
-  margin-left: 85%;
-  margin-top: -19%;
+  left: 350px;
+  top: 18px;
   color: green;
   transition: 0.3s;
   transform: scale(0);
