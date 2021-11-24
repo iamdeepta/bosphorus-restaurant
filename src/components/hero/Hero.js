@@ -230,7 +230,7 @@ const Hero = () => {
                         <img
                           className="hero_large_slider_image hero_large_slider_img_skeleton"
                           src={AppUrl.image_url_backend + item.product_image}
-                          alt={item.product_name}
+                          alt={item.product_name + " - " + item.product_detail}
                         />
                       </SRLWrapper>
 

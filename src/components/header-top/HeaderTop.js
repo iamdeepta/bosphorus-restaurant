@@ -53,9 +53,11 @@ const HeaderTop = () => {
             ))}
           </div>
           <div className="header_top_open_hours_div">
-            <p className="header_top_open_hours">
-              Open Hours: Monday - Sunday 8.00 AM - 9.00 PM
-            </p>
+            {data.map((item) => (
+              <p className="header_top_open_hours" key={item.about_id}>
+                {item.about_open_hour}
+              </p>
+            ))}
           </div>
         </div>
       </div>

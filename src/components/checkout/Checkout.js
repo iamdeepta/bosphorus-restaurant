@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./css/checkout.css";
 import AppUrl from "../../classes/AppUrl";
 //import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ import CartContext from "../../context/cart/CartContext";
 import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-//import axios from "axios";
+import axios from "axios";
 
 const Checkout = () => {
   const { cartItems, totalAmount } = useContext(CartContext);
@@ -28,8 +28,32 @@ const Checkout = () => {
 
   const [payment_method, setPaymentMethod] = useState("");
 
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "aboutGet")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   let item_count = cartItems.length;
   let cartItem = JSON.stringify(cartItems);
+
+  let delivery_charge = data.map((item) => item.about_delivery_charge);
+  delivery_charge = parseInt(delivery_charge);
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -388,6 +412,7 @@ const Checkout = () => {
         item_count,
         payment_method,
         invoice_no,
+        delivery_charge,
         cartItem,
       };
 
@@ -721,7 +746,11 @@ const Checkout = () => {
                 <p className="checkout_cart_delivery_price_text">
                   Delivery Charge
                 </p>
-                <p className="checkout_cart_delivery_price">TK 100</p>
+                {data.map((item) => (
+                  <p className="checkout_cart_delivery_price">
+                    TK {item.about_delivery_charge}
+                  </p>
+                ))}
               </div>
               {/* <div className="checkout_cart_delivery_price_div">
                 <p className="checkout_cart_delivery_price_text">Vat</p>
@@ -732,7 +761,7 @@ const Checkout = () => {
             <div className="checkout_cart_total_div">
               <p className="checkout_cart_total_price_text">Subtotal Price:</p>
               <p className="checkout_cart_total_price">
-                TK {totalAmount + 100}
+                TK {totalAmount + delivery_charge}
               </p>
             </div>
 
