@@ -450,12 +450,38 @@
   opacity: 0;
   transition: 0.5s;
   margin-left: -200%;
+  width: 57%;
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .checkout_left_content_payment_method {
+    width: 50% !important;
+  }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1900px) {
+  .checkout_left_content_payment_method {
+    width: 51% !important;
+  }
+}
+
+@media screen and (min-width: 1901px) and (max-width: 2100px) {
+  .checkout_left_content_payment_method {
+    width: 45.5% !important;
+  }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 3000px) {
+  .checkout_left_content_payment_method {
+    width: 42.5% !important;
+  }
 }
 
 .checkout_left_content_payment_method_row {
   /* position: absolute; */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkout_left_content_payment_method_cod {
@@ -471,6 +497,7 @@
   margin-top: 15px;
   width: 410px;
   cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.2);
 }
 
 .checkout_left_content_payment_method_bkash {

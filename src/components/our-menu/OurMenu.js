@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStar,
   faShoppingBasket,
-  faMinusCircle,
+  //faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 //import { BsHeart } from "react-icons/bs";
 //import LazyLoad from "react-lazyload";
@@ -19,7 +19,7 @@ import CartContext from "../../context/cart/CartContext";
 //import { Link } from "react-router-dom";
 
 const OurMenu = () => {
-  const { addToCart, cartItems, removeItem } = useContext(CartContext);
+  const { addToCart, cartItems, incrementItem } = useContext(CartContext);
 
   const [data, setData] = useState([]);
   const [data1, setData1] = useState([]);
@@ -259,10 +259,16 @@ const OurMenu = () => {
                             (p) => p.product_id === item.product_id
                           ) ? (
                             <>
-                              <span onClick={() => removeItem(item.product_id)}>
-                                <FontAwesomeIcon
+                              <span
+                                onClick={() => incrementItem(item.product_id)}
+                              >
+                                {/* <FontAwesomeIcon
                                   icon={faMinusCircle}
                                   className="remove_from_cart_icon"
+                                /> */}
+                                <FontAwesomeIcon
+                                  icon={faShoppingBasket}
+                                  className="add_to_cart_icon"
                                 />
                               </span>
                             </>

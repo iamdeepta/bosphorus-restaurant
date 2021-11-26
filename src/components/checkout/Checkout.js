@@ -261,7 +261,7 @@ const Checkout = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 
-    console.log(otp_no);
+    //console.log(otp_no);
   }
 
   function backToShipping() {
@@ -353,35 +353,35 @@ const Checkout = () => {
     document.documentElement.scrollTop = 0;
   }
 
-  function bkashMethod() {
-    let bkash_btn = document.querySelector(
-      ".checkout_left_content_payment_method_bkash_check_icon"
-    );
-    let user_bcod_btn = document.querySelector(
-      ".checkout_left_content_payment_method_cod_check_icon"
-    );
+  // function bkashMethod() {
+  //   let bkash_btn = document.querySelector(
+  //     ".checkout_left_content_payment_method_bkash_check_icon"
+  //   );
+  //   let user_bcod_btn = document.querySelector(
+  //     ".checkout_left_content_payment_method_cod_check_icon"
+  //   );
 
-    bkash_btn.classList.add(
-      "checkout_left_content_payment_method_bkash_active"
-    );
-    user_bcod_btn.classList.remove(
-      "checkout_left_content_payment_method_cod_active"
-    );
+  //   bkash_btn.classList.add(
+  //     "checkout_left_content_payment_method_bkash_active"
+  //   );
+  //   user_bcod_btn.classList.remove(
+  //     "checkout_left_content_payment_method_cod_active"
+  //   );
 
-    setPaymentMethod("Bkash");
-  }
+  //   setPaymentMethod("Bkash");
+  // }
 
   function codMethod() {
-    let bkash_btn = document.querySelector(
-      ".checkout_left_content_payment_method_bkash_check_icon"
-    );
+    // let bkash_btn = document.querySelector(
+    //   ".checkout_left_content_payment_method_bkash_check_icon"
+    // );
     let user_bcod_btn = document.querySelector(
       ".checkout_left_content_payment_method_cod_check_icon"
     );
 
-    bkash_btn.classList.remove(
-      "checkout_left_content_payment_method_bkash_active"
-    );
+    // bkash_btn.classList.remove(
+    //   "checkout_left_content_payment_method_bkash_active"
+    // );
     user_bcod_btn.classList.add(
       "checkout_left_content_payment_method_cod_active"
     );
@@ -625,7 +625,7 @@ const Checkout = () => {
                     Cash On Delivery
                     <BsPatchCheckFill className="checkout_left_content_payment_method_cod_check_icon"></BsPatchCheckFill>
                   </div>
-                  <div
+                  {/* <div
                     className="checkout_left_content_payment_method_bkash"
                     onClick={() => bkashMethod()}
                   >
@@ -636,7 +636,7 @@ const Checkout = () => {
                     />
                     Bkash
                     <BsPatchCheckFill className="checkout_left_content_payment_method_bkash_check_icon"></BsPatchCheckFill>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="checkout_left_content_payment_method_btn">
                   <div

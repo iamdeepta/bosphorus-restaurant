@@ -11,7 +11,7 @@ import {
   // faPizzaSlice,
   faStar,
   faShoppingBasket,
-  faMinusCircle,
+  //faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 //import { BsHeart } from "react-icons/bs";
 import SimpleReactLightbox from "simple-react-lightbox";
@@ -24,7 +24,7 @@ import CartContext from "../../context/cart/CartContext";
 //import LazyLoad from "react-lazyload";
 
 const Hero = () => {
-  const { addToCart, cartItems, removeItem } = useContext(CartContext);
+  const { addToCart, cartItems, incrementItem } = useContext(CartContext);
 
   //const { openLightbox } = useLightbox();
   const [data, setData] = useState([]);
@@ -267,10 +267,16 @@ const Hero = () => {
                             (p) => p.product_id === item.product_id
                           ) ? (
                             <>
-                              <span onClick={() => removeItem(item.product_id)}>
-                                <FontAwesomeIcon
+                              <span
+                                onClick={() => incrementItem(item.product_id)}
+                              >
+                                {/* <FontAwesomeIcon
                                   icon={faMinusCircle}
                                   className="remove_from_cart_icon"
+                                /> */}
+                                <FontAwesomeIcon
+                                  icon={faShoppingBasket}
+                                  className="add_to_cart_icon"
                                 />
                               </span>
                             </>
