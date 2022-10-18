@@ -40,15 +40,23 @@ const HeaderTop = () => {
             <BsTelephone className="header_top_phone_icon" />
             {data.map((item) => (
               <p className="header_top_phone" key={item.about_id}>
-                {item.about_phone}
+                <a
+                  href={`tel:${item.about_phone}`}
+                  style={{
+                    textDecoration: "none",
+                    color: "rgb(131, 128, 128)",
+                  }}
+                >
+                  {item.about_phone}
+                </a>
               </p>
             ))}
           </div>
           <div className="header_top_email_div">
-            <FiSend className="header_top_mail_icon" />
+            {/* <FiSend className="header_top_mail_icon" /> */}
             {data.map((item) => (
               <p className="header_top_email" key={item.about_id}>
-                {item.about_email}
+                {/* {item.about_email} */}
               </p>
             ))}
           </div>

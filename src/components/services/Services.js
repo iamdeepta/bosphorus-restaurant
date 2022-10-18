@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./css/services.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,8 +6,31 @@ import {
   faUserFriends,
   faCloudMeatball,
 } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import AppUrl from "../../classes/AppUrl";
 
 const Services = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  function getData() {
+    axios
+      .get(AppUrl.base_url + "serviceGet")
+      .then(function (response) {
+        if (response) {
+          setData(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   return (
     <>
       <section className="services_section container">
@@ -23,25 +46,33 @@ const Services = () => {
         </h2>
 
         <div className="services_contents">
-          <a
-            href="."
-            className="services_contents_links"
-            data-aos="zoom-in"
-            data-aos-delay="20"
-          >
-            <FontAwesomeIcon
-              className="services_contents_icon"
-              icon={faBirthdayCake}
-            />
-            <p className="services_contents_title">Birthday Party</p>
-            <p className="services_contents_description">
-              Want to host your own birthday event but not sure which venue to
-              book ? Look no further, we will take care of the whole event for
-              you.
-            </p>
-          </a>
+          {data.map((item) => {
+            return (
+              <a
+                href="."
+                className="services_contents_links"
+                data-aos="zoom-in"
+                data-aos-delay="20"
+                key={item.service_id}
+              >
+                {/* <FontAwesomeIcon
+                  className="services_contents_icon"
+                  icon={faBirthdayCake}
+                /> */}
+                <img
+                  className="services_contents_icon"
+                  src={AppUrl.image_url_backend + item.service_image}
+                  alt={item.service_title}
+                />
+                <p className="services_contents_title">{item.service_title}</p>
+                <p className="services_contents_description">
+                  {item.service_description}
+                </p>
+              </a>
+            );
+          })}
 
-          <a
+          {/* <a
             href="."
             className="services_contents_links"
             data-aos="zoom-in"
@@ -75,7 +106,7 @@ const Services = () => {
               providing the best possible service. We can assure you that you
               and your peers will have a great time.
             </p>
-          </a>
+          </a> */}
         </div>
       </section>
     </>

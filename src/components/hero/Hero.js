@@ -29,10 +29,14 @@ const Hero = () => {
   //const { openLightbox } = useLightbox();
   const [data, setData] = useState([]);
   const [data1, setData1] = useState([]);
+  const [data2, setData2] = useState([]);
+  const [data3, setData3] = useState([]);
 
   useEffect(() => {
     getData();
     getData1();
+    getFeaturedProduct();
+    getHeroSection();
   }, []);
 
   function getData() {
@@ -57,6 +61,38 @@ const Hero = () => {
       .then(function (response) {
         if (response) {
           setData1(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  //getting featured products
+  function getFeaturedProduct() {
+    axios
+      .get(AppUrl.base_url + "featuredProductGetTen")
+      .then(function (response) {
+        if (response) {
+          setData2(response.data);
+          // setLoader(false);
+          //console.log(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  //getting hero section data
+  function getHeroSection() {
+    axios
+      .get(AppUrl.base_url + "heroSectionGet")
+      .then(function (response) {
+        if (response) {
+          setData3(response.data);
           // setLoader(false);
           //console.log(response.data);
         }
@@ -141,7 +177,7 @@ const Hero = () => {
                 data-aos="fade-right"
                 data-aos-delay="0"
               >
-                A Tale Of Turkey Healthy Food
+                {data3[0]?.hero_section_title}
               </h1>
 
               <h2
@@ -149,8 +185,7 @@ const Hero = () => {
                 data-aos="fade-right"
                 data-aos-delay="0"
               >
-                Indulge into the rich variety of mouth watering dishes we have
-                to offer
+                {data3[0]?.hero_section_description}
               </h2>
               <div
                 className="hero_view_menu_btn_div"
@@ -211,7 +246,7 @@ const Hero = () => {
               <HappyCustomer />
               <img
                 className="hero_main_baklava_img"
-                src={AppUrl.image_url + "assets/images/hero_baklava.webp"}
+                src={AppUrl.image_url_backend + data3[0]?.hero_section_image}
                 alt="baklava"
                 data-aos="zoom-in"
                 data-aos-delay="0"
@@ -219,7 +254,7 @@ const Hero = () => {
 
               <div className="hero_large_slider_div">
                 <Slider {...settings1}>
-                  {data1.map((item) => (
+                  {data2.map((item) => (
                     <div
                       className="hero_large_slider_inside_div"
                       data-aos="zoom-in"

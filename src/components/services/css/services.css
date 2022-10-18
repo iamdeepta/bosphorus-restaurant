@@ -52,6 +52,9 @@
 .services_contents_icon {
   font-size: 44px;
   color: rgb(223, 124, 11);
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .services_contents_title {
